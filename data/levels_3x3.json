@@ -1,0 +1,427 @@
+[
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   "##S",
+   "#..",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 4,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   ".#S",
+   "##.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 4,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "###",
+   "#.S",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 5,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "###",
+   "#.#",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 5,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "##.",
+   "##S",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 5,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "##.",
+   "###",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 5,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   "..S",
+   "###",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 4,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   ".S#",
+   "###",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 5,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   ".##",
+   "##S",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 5,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "S##",
+   "###",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 6,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "##S",
+   "###",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 6,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "###",
+   "#S#",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 6,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "###",
+   "S##",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 6,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "###",
+   "#.S",
+   "##."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 6,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "S##",
+   ".##",
+   "##."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 6,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "###",
+   ".##",
+   "S#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 6,
+  "bitsWarns": 0
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "###",
+   "#.#",
+   "S.#"
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "trapSum": 0,
+  "choices": 0,
+  "states": 6,
+  "bitsWarns": 0
+ }
+]

@@ -1,0 +1,1916 @@
+[
+ {
+  "score": 0,
+  "n": 4,
+  "rows": [
+   "A.B",
+   "#..",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 2,
+  "moves": "DD",
+  "states": 2,
+  "turns": [
+   0,
+   0
+  ],
+  "lens": [
+   2,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "rows": [
+   "#.A",
+   "#..",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 2,
+  "moves": "UU",
+  "states": 2,
+  "turns": [
+   0,
+   0
+  ],
+  "lens": [
+   0,
+   2
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   "#AB",
+   "#..",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 3,
+  "moves": "LDD",
+  "states": 3,
+  "turns": [
+   1,
+   0
+  ],
+  "lens": [
+   3,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "rows": [
+   "..A",
+   "#B.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 2,
+  "moves": "LD",
+  "states": 2,
+  "turns": [
+   0,
+   1
+  ],
+  "lens": [
+   0,
+   2
+  ]
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "rows": [
+   "..A",
+   "##.",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 2,
+  "moves": "UR",
+  "states": 2,
+  "turns": [
+   0,
+   1
+  ],
+  "lens": [
+   0,
+   2
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   ".AB",
+   "##.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 3,
+  "moves": "DLD",
+  "states": 3,
+  "turns": [
+   2,
+   0
+  ],
+  "lens": [
+   3,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   ".#A",
+   "#B.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 1,
+  "moves": "LD",
+  "states": 2,
+  "turns": [
+   0,
+   1
+  ],
+  "lens": [
+   1,
+   2
+  ]
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "rows": [
+   "..A",
+   "B.#",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 0,
+  "moves": "D",
+  "states": 1,
+  "turns": [
+   0,
+   0
+  ],
+  "lens": [
+   1,
+   1
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   "A.B",
+   "#.#",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 1,
+  "moves": "DD",
+  "states": 2,
+  "turns": [
+   0,
+   0
+  ],
+  "lens": [
+   2,
+   1
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   "#.#",
+   "#.A",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 1,
+  "moves": "UU",
+  "states": 2,
+  "turns": [
+   0,
+   0
+  ],
+  "lens": [
+   1,
+   2
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   ".##",
+   "#.A",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 1,
+  "moves": "UL",
+  "states": 2,
+  "turns": [
+   1,
+   0
+  ],
+  "lens": [
+   2,
+   1
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "##A",
+   "#.B",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 4,
+  "moves": "LLDD",
+  "states": 4,
+  "turns": [
+   1,
+   0
+  ],
+  "lens": [
+   4,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "###",
+   "A.B",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 4,
+  "moves": "DULL",
+  "states": 4,
+  "turns": [
+   0,
+   1
+  ],
+  "lens": [
+   1,
+   3
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "###",
+   "A.#",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 4,
+  "moves": "URRD",
+  "states": 4,
+  "turns": [
+   2,
+   0
+  ],
+  "lens": [
+   4,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "rows": [
+   "A..",
+   "#.B",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 2,
+  "moves": "DD",
+  "states": 2,
+  "turns": [
+   0,
+   0
+  ],
+  "lens": [
+   2,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   "#A.",
+   "#.B",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 3,
+  "moves": "LDD",
+  "states": 3,
+  "turns": [
+   1,
+   0
+  ],
+  "lens": [
+   3,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   "##.",
+   "#.A",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 3,
+  "moves": "UUR",
+  "states": 3,
+  "turns": [
+   0,
+   1
+  ],
+  "lens": [
+   0,
+   3
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   ".A.",
+   "B##",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 1,
+  "moves": "DR",
+  "states": 2,
+  "turns": [
+   1,
+   0
+  ],
+  "lens": [
+   2,
+   1
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "A#.",
+   "B##",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 4,
+  "moves": "DRDR",
+  "states": 4,
+  "turns": [
+   2,
+   0
+  ],
+  "lens": [
+   3,
+   1
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "#A.",
+   "#B#",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 4,
+  "moves": "RLDD",
+  "states": 4,
+  "turns": [
+   1,
+   0
+  ],
+  "lens": [
+   3,
+   1
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "##.",
+   "A##",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 4,
+  "moves": "URDR",
+  "states": 4,
+  "turns": [
+   3,
+   0
+  ],
+  "lens": [
+   4,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "##.",
+   "#AB",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 4,
+  "moves": "ULDD",
+  "states": 4,
+  "turns": [
+   2,
+   0
+  ],
+  "lens": [
+   4,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "##.",
+   "#A#",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 4,
+  "moves": "RUUR",
+  "states": 4,
+  "turns": [
+   0,
+   1
+  ],
+  "lens": [
+   1,
+   3
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   "..A",
+   "B##",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 1,
+  "moves": "DL",
+  "states": 2,
+  "turns": [
+   1,
+   0
+  ],
+  "lens": [
+   2,
+   1
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   "..A",
+   "##B",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 3,
+  "moves": "LLD",
+  "states": 3,
+  "turns": [
+   0,
+   1
+  ],
+  "lens": [
+   0,
+   3
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   ".AB",
+   "###",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 2,
+  "moves": "DLD",
+  "states": 3,
+  "turns": [
+   2,
+   0
+  ],
+  "lens": [
+   3,
+   1
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   ".A#",
+   "B##",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 2,
+  "moves": "DRU",
+  "states": 3,
+  "turns": [
+   2,
+   0
+  ],
+  "lens": [
+   3,
+   1
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   ".#A",
+   "##B",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 2,
+  "moves": "LLD",
+  "states": 3,
+  "turns": [
+   0,
+   1
+  ],
+  "lens": [
+   1,
+   3
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "##A",
+   "B##",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 3,
+  "moves": "DLUL",
+  "states": 4,
+  "turns": [
+   3,
+   0
+  ],
+  "lens": [
+   4,
+   1
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "##A",
+   "##B",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 1,
+  "moves": "LLD",
+  "states": 3,
+  "turns": [
+   0,
+   1
+  ],
+  "lens": [
+   2,
+   3
+  ]
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "rows": [
+   ".A.",
+   ".##",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 2,
+  "moves": "DR",
+  "states": 2,
+  "turns": [
+   1,
+   0
+  ],
+  "lens": [
+   2,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   "A#.",
+   ".##",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 3,
+  "moves": "RDR",
+  "states": 3,
+  "turns": [
+   2,
+   0
+  ],
+  "lens": [
+   3,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   "##.",
+   ".#A",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 3,
+  "moves": "LUL",
+  "states": 3,
+  "turns": [
+   2,
+   0
+  ],
+  "lens": [
+   3,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "rows": [
+   ".A#",
+   "..#",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 2,
+  "moves": "RD",
+  "states": 2,
+  "turns": [
+   1,
+   0
+  ],
+  "lens": [
+   2,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   "A##",
+   "..#",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 3,
+  "moves": "RRD",
+  "states": 3,
+  "turns": [
+   1,
+   0
+  ],
+  "lens": [
+   3,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "rows": [
+   "###",
+   "..A",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 3,
+  "moves": "ULL",
+  "states": 3,
+  "turns": [
+   1,
+   0
+  ],
+  "lens": [
+   3,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "##A",
+   ".##",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 4,
+  "moves": "DLUL",
+  "states": 4,
+  "turns": [
+   3,
+   0
+  ],
+  "lens": [
+   4,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "###",
+   ".A#",
+   "B.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 4,
+  "moves": "RULL",
+  "states": 4,
+  "turns": [
+   2,
+   0
+  ],
+  "lens": [
+   4,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "###",
+   "A.#",
+   ".B."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 4,
+  "moves": "URRD",
+  "states": 4,
+  "turns": [
+   2,
+   0
+  ],
+  "lens": [
+   4,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "#A.",
+   "##B",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 0,
+  "moves": "LD",
+  "states": 2,
+  "turns": [
+   1,
+   1
+  ],
+  "lens": [
+   2,
+   2
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "#.#",
+   "A##",
+   ".B."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 2,
+  "moves": "URU",
+  "states": 3,
+  "turns": [
+   0,
+   2
+  ],
+  "lens": [
+   1,
+   3
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "A##",
+   "B##",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 3,
+  "moves": "RDRD",
+  "states": 4,
+  "turns": [
+   1,
+   1
+  ],
+  "lens": [
+   3,
+   2
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "#A#",
+   "B##",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 5,
+  "moves": "URDLD",
+  "states": 5,
+  "turns": [
+   3,
+   0
+  ],
+  "lens": [
+   4,
+   1
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "###",
+   "AB#",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 5,
+  "moves": "DURRD",
+  "states": 5,
+  "turns": [
+   2,
+   0
+  ],
+  "lens": [
+   4,
+   1
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "A.B",
+   "#.#",
+   "##."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 2,
+  "moves": "DDR",
+  "states": 3,
+  "turns": [
+   1,
+   0
+  ],
+  "lens": [
+   3,
+   1
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "##A",
+   "#.B",
+   "##."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 5,
+  "moves": "LLDDR",
+  "states": 5,
+  "turns": [
+   2,
+   0
+  ],
+  "lens": [
+   5,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "##A",
+   "#.#",
+   "#B."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 5,
+  "moves": "DLUUR",
+  "states": 5,
+  "turns": [
+   0,
+   2
+  ],
+  "lens": [
+   1,
+   4
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "A.#",
+   "B##",
+   "##."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 5,
+  "moves": "DRURU",
+  "states": 5,
+  "turns": [
+   0,
+   4
+  ],
+  "lens": [
+   0,
+   5
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "#.A",
+   "B##",
+   "##."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 5,
+  "moves": "UDLDL",
+  "states": 5,
+  "turns": [
+   3,
+   0
+  ],
+  "lens": [
+   4,
+   1
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "#.A",
+   "#B#",
+   "##."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 3,
+  "moves": "DLUU",
+  "states": 4,
+  "turns": [
+   0,
+   2
+  ],
+  "lens": [
+   1,
+   4
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "#.A",
+   "##B",
+   "##."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 5,
+  "moves": "LDLUU",
+  "states": 5,
+  "turns": [
+   0,
+   3
+  ],
+  "lens": [
+   0,
+   5
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "#.#",
+   "A##",
+   "B#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 5,
+  "moves": "URURU",
+  "states": 5,
+  "turns": [
+   0,
+   3
+  ],
+  "lens": [
+   1,
+   4
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "#.#",
+   "##A",
+   "B#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 3,
+  "moves": "RULU",
+  "states": 4,
+  "turns": [
+   0,
+   3
+  ],
+  "lens": [
+   1,
+   4
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "A.B",
+   ".##",
+   "##."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 4,
+  "moves": "DLDL",
+  "states": 4,
+  "turns": [
+   0,
+   3
+  ],
+  "lens": [
+   0,
+   4
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "##A",
+   "#..",
+   "#.B"
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 4,
+  "moves": "LLDD",
+  "states": 4,
+  "turns": [
+   1,
+   0
+  ],
+  "lens": [
+   4,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "rows": [
+   "A.B",
+   "#.#",
+   "#.#"
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 0,
+  "moves": "DD",
+  "states": 2,
+  "turns": [
+   0,
+   0
+  ],
+  "lens": [
+   2,
+   2
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "###",
+   "A.#",
+   "B.#"
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 5,
+  "moves": "URRDD",
+  "states": 5,
+  "turns": [
+   2,
+   0
+  ],
+  "lens": [
+   5,
+   0
+  ]
+ },
+ {
+  "score": 0,
+  "n": 7,
+  "rows": [
+   "###",
+   "A.#",
+   "#.B"
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "solo": 5,
+  "moves": "DUULL",
+  "states": 5,
+  "turns": [
+   0,
+   1
+  ],
+  "lens": [
+   1,
+   4
+  ]
+ }
+]

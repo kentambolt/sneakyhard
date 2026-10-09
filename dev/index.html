@@ -1,5 +1,3 @@
-<!doctype html>
-<html lang="da">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Hvert felt én gang</title>
@@ -1058,84 +1056,84 @@
 // Baner genereret af gen.js/gen-twins.js/gen-ice.js og skrevet ind af build.js/build-twins.js/build-ice.js.
 // LEVELS-VEJ-BEGIN
 const LEVELS_VEJ = [
-  {"id":"3-1","w":3,"h":3,"rows":["S##","###","#.."],"n":7,"score":0,"oneIn0":1,"oneIn4":1,"maxTrap":0,"warnsdorff":1,"rawOneIn":4,"paths":6,"near1":2,"near2":2,"nmoves":6},
-  {"id":"4-1","w":4,"h":4,"rows":["###.","####","####","S.#."],"n":13,"score":6,"oneIn0":2,"oneIn4":2,"maxTrap":5,"warnsdorff":2,"rawOneIn":24,"paths":56,"near1":8,"near2":10,"nmoves":12},
-  {"id":"4-2","w":4,"h":4,"rows":["####","#S##","####",".#.."],"n":13,"score":12.2,"oneIn0":9,"oneIn4":1,"maxTrap":4,"warnsdorff":0,"rawOneIn":24,"paths":64,"near1":11,"near2":18,"nmoves":12},
-  {"id":"5-1","w":5,"h":5,"rows":["#####","#S###","##.##",".####","###.."],"n":21,"score":36.5,"oneIn0":48,"oneIn4":12,"maxTrap":12,"warnsdorff":0,"rawOneIn":192,"paths":566,"near1":15,"near2":40,"nmoves":20},
-  {"id":"5-2","w":5,"h":5,"rows":["S####","##.##","#####","#####","##.#."],"n":22,"score":39,"oneIn0":16,"oneIn4":16,"maxTrap":10,"warnsdorff":8,"rawOneIn":1024,"paths":1413,"near1":29,"near2":75,"nmoves":21},
-  {"id":"5-3","w":5,"h":5,"rows":["#####","#S###","###.#","#####","##.#."],"n":22,"score":46.7,"oneIn0":24,"oneIn4":24,"maxTrap":13,"warnsdorff":0,"rawOneIn":384,"paths":873,"near1":34,"near2":60,"nmoves":21},
-  {"id":"6-1","w":6,"h":6,"rows":["##.##.",".#####","##.###","##.S##","######","######"],"n":31,"score":75,"oneIn0":2592,"oneIn4":192,"maxTrap":21,"warnsdorff":0,"rawOneIn":10368,"paths":27470,"near1":0,"near2":69,"nmoves":30},
-  {"id":"6-2","w":6,"h":6,"rows":[".#.###","######","######","####.#","######","S#####"],"n":33,"score":77.3,"oneIn0":384,"oneIn4":192,"maxTrap":16,"warnsdorff":0,"rawOneIn":221184,"paths":311123,"near1":335,"near2":2650,"nmoves":32},
-  {"id":"6-3","w":6,"h":6,"rows":[".#.##.","#####.","######","####.#","#S####","######"],"n":31,"score":78.8,"oneIn0":432,"oneIn4":216,"maxTrap":20,"warnsdorff":0,"rawOneIn":27648,"paths":59518,"near1":195,"near2":1183,"nmoves":30},
-  {"id":"7-1","w":7,"h":7,"rows":["..#.##.","#######","#######",".##S.##","####.##","#######",".######"],"n":41,"score":118.3,"oneIn0":31104,"oneIn4":4608,"maxTrap":31,"warnsdorff":0,"rawOneIn":1990656,"paths":3028572,"near1":373,"near2":1471,"nmoves":40},
-  {"id":"7-2","w":7,"h":7,"rows":["#######","#####.#","##.####","##.###.","##.S###","#######","####..#"],"n":42,"score":126.7,"oneIn0":41472,"oneIn4":9216,"maxTrap":33,"warnsdorff":0,"rawOneIn":663552,"paths":1347820,"near1":196,"near2":1386,"nmoves":41},
-  {"id":"8-1","w":8,"h":8,"rows":["#####..#","########","..######","#######.","#S######","########","########",".####.##"],"n":57,"score":150.7,"oneIn0":746496,"oneIn4":62208,"maxTrap":46,"warnsdorff":0,"rawOneIn":null,"paths":null,"near1":null,"near2":null,"nmoves":56},
-  {"id":"8-2","w":8,"h":8,"rows":["########","#.####.#","#.#.####","###.####","##.##S##","##.#####","########","#####.#."],"n":55,"score":161.4,"oneIn0":442368,"oneIn4":196608,"maxTrap":40,"warnsdorff":0,"rawOneIn":null,"paths":null,"near1":null,"near2":null,"nmoves":54}
+  {"id":"3-1","w":3,"h":3,"rows":["S##","###","#.."],"sol":[0,1,2,5,4,3,6],"n":7,"score":0,"oneIn0":1,"oneIn4":1,"maxTrap":0,"warnsdorff":1,"rawOneIn":4,"paths":6,"near1":2,"near2":2},
+  {"id":"4-1","w":4,"h":4,"rows":["###.","####","####","S.#."],"sol":[12,8,9,5,4,0,1,2,6,7,11,10,14],"n":13,"score":6,"oneIn0":2,"oneIn4":2,"maxTrap":5,"warnsdorff":2,"rawOneIn":24,"paths":56,"near1":8,"near2":10},
+  {"id":"4-2","w":4,"h":4,"rows":["####","#S##","####",".#.."],"sol":[5,6,10,11,7,3,2,1,0,4,8,9,13],"n":13,"score":12.2,"oneIn0":9,"oneIn4":1,"maxTrap":4,"warnsdorff":0,"rawOneIn":24,"paths":64,"near1":11,"near2":18},
+  {"id":"5-1","w":5,"h":5,"rows":["#####","#S###","##.##",".####","###.."],"sol":[6,7,8,13,18,19,14,9,4,3,2,1,0,5,10,11,16,17,22,21,20],"n":21,"score":36.5,"oneIn0":48,"oneIn4":12,"maxTrap":12,"warnsdorff":0,"rawOneIn":192,"paths":566,"near1":15,"near2":40},
+  {"id":"5-2","w":5,"h":5,"rows":["S####","##.##","#####","#####","##.#."],"sol":[0,5,10,15,20,21,16,17,12,11,6,1,2,3,4,9,8,13,14,19,18,23],"n":22,"score":39,"oneIn0":16,"oneIn4":16,"maxTrap":10,"warnsdorff":8,"rawOneIn":1024,"paths":1413,"near1":29,"near2":75},
+  {"id":"5-3","w":5,"h":5,"rows":["#####","#S###","###.#","#####","##.#."],"sol":[6,11,12,17,16,21,20,15,10,5,0,1,2,7,8,3,4,9,14,19,18,23],"n":22,"score":46.7,"oneIn0":24,"oneIn4":24,"maxTrap":13,"warnsdorff":0,"rawOneIn":384,"paths":873,"near1":34,"near2":60},
+  {"id":"6-1","w":6,"h":6,"rows":["##.##.",".#####","##.###","##.S##","######","######"],"sol":[21,15,16,22,28,27,26,25,19,13,12,18,24,30,31,32,33,34,35,29,23,17,11,10,4,3,9,8,7,1,0],"n":31,"score":75,"oneIn0":2592,"oneIn4":192,"maxTrap":21,"warnsdorff":0,"rawOneIn":10368,"paths":27470,"near1":0,"near2":69},
+  {"id":"6-2","w":6,"h":6,"rows":[".#.###","######","######","####.#","######","S#####"],"sol":[30,31,32,33,27,28,34,35,29,23,17,16,10,11,5,4,3,9,8,14,15,21,20,26,25,24,18,19,13,12,6,7,1],"n":33,"score":77.3,"oneIn0":384,"oneIn4":192,"maxTrap":16,"warnsdorff":0,"rawOneIn":221184,"paths":311123,"near1":335,"near2":2650},
+  {"id":"6-3","w":6,"h":6,"rows":[".#.##.","#####.","######","####.#","#S####","######"],"sol":[25,26,20,21,15,14,8,9,3,4,10,16,17,23,29,35,34,28,27,33,32,31,30,24,18,19,13,12,6,7,1],"n":31,"score":78.8,"oneIn0":432,"oneIn4":216,"maxTrap":20,"warnsdorff":0,"rawOneIn":27648,"paths":59518,"near1":195,"near2":1183},
+  {"id":"7-1","w":7,"h":7,"rows":["..#.##.","#######","#######",".##S.##","####.##","#######",".######"],"sol":[24,31,30,37,38,39,40,33,26,19,18,17,10,11,4,5,12,13,20,27,34,41,48,47,46,45,44,43,36,35,28,29,22,23,16,15,14,7,8,9,2],"n":41,"score":118.3,"oneIn0":31104,"oneIn4":4608,"maxTrap":31,"warnsdorff":0,"rawOneIn":1990656,"paths":3028572,"near1":373,"near2":1471},
+  {"id":"7-2","w":7,"h":7,"rows":["#######","#####.#","##.####","##.###.","##.S###","#######","####..#"],"sol":[31,24,17,18,11,10,9,8,15,22,29,36,37,38,45,44,43,42,35,28,21,14,7,0,1,2,3,4,5,6,13,20,19,26,25,32,39,40,33,34,41,48],"n":42,"score":126.7,"oneIn0":41472,"oneIn4":9216,"maxTrap":33,"warnsdorff":0,"rawOneIn":663552,"paths":1347820,"near1":196,"near2":1386},
+  {"id":"8-1","w":8,"h":8,"rows":["#####..#","########","..######","#######.","#S######","########","########",".####.##"],"sol":[33,41,42,34,35,43,44,36,37,29,30,38,39,47,55,63,62,54,46,45,53,52,60,59,51,50,58,57,49,48,40,32,24,25,26,18,10,9,8,0,1,2,3,4,12,11,19,27,28,20,21,13,14,22,23,15,7],"n":57,"score":150.7,"oneIn0":746496,"oneIn4":62208,"maxTrap":46,"warnsdorff":0,"rawOneIn":null,"paths":null,"near1":null,"near2":null},
+  {"id":"8-2","w":8,"h":8,"rows":["########","#.####.#","#.#.####","###.####","##.##S##","##.#####","########","#####.#."],"sol":[37,29,28,20,21,13,12,11,10,18,26,25,33,41,49,50,51,43,35,36,44,45,53,52,60,59,58,57,56,48,40,32,24,16,8,0,1,2,3,4,5,6,7,15,23,22,30,31,39,38,46,47,55,54,62],"n":55,"score":161.4,"oneIn0":442368,"oneIn4":196608,"maxTrap":40,"warnsdorff":0,"rawOneIn":null,"paths":null,"near1":null,"near2":null}
 ];
 // LEVELS-VEJ-END
 // LEVELS-TAKT-BEGIN
 const LEVELS_TAKT = [
-  {"id":"t3-1","w":3,"h":3,"rows":["#A#","B##",".#."],"n":7,"score":0,"oneIn0":1,"oneIn4":1,"maxTrap":0,"solo":5,"rawOneIn":8,"near":10,"nmoves":5},
-  {"id":"t4-1","w":4,"h":4,"rows":["..##","A###","##B#",".#.."],"n":11,"score":5.2,"oneIn0":6,"oneIn4":1,"maxTrap":3,"solo":7,"rawOneIn":48,"near":79,"nmoves":8},
-  {"id":"t4-2","w":4,"h":4,"rows":[".##A","####","##B.","#..."],"n":11,"score":10.2,"oneIn0":6,"oneIn4":2,"maxTrap":5,"solo":3,"rawOneIn":24,"near":47,"nmoves":6},
-  {"id":"t5-1","w":5,"h":5,"rows":[".##.#","#####","A##.#","#####","####B"],"n":22,"score":67.5,"oneIn0":768,"oneIn4":256,"maxTrap":13,"solo":4,"rawOneIn":9216,"near":74083,"nmoves":12},
-  {"id":"t5-2","w":5,"h":5,"rows":["####A","#####","B####","##.#.",".####"],"n":22,"score":71.7,"oneIn0":1152,"oneIn4":256,"maxTrap":13,"solo":8,"rawOneIn":13824,"near":95201,"nmoves":14},
-  {"id":"t5-3","w":5,"h":5,"rows":["A####","#####","#..##","####B",".#.##"],"n":21,"score":75.3,"oneIn0":1536,"oneIn4":432,"maxTrap":12,"solo":9,"rawOneIn":6144,"near":37064,"nmoves":14},
-  {"id":"t6-1","w":6,"h":6,"rows":["##.###","##.A##","######","#B####","..#.##",".#####"],"n":30,"score":77,"oneIn0":2592,"oneIn4":432,"maxTrap":20,"solo":8,"rawOneIn":13824,"near":591743,"nmoves":18},
-  {"id":"t6-2","w":6,"h":6,"rows":[".B####",".##.##","######","A#####","######",".####."],"n":31,"score":90.8,"oneIn0":1728,"oneIn4":1728,"maxTrap":21,"solo":17,"rawOneIn":41472,"near":1227930,"nmoves":23}
+  {"id":"t3-1","w":3,"h":3,"rows":["#A#","B##",".#."],"sol":"URDLD","n":7,"score":0,"oneIn0":1,"oneIn4":1,"maxTrap":0,"solo":5,"rawOneIn":8,"near":10},
+  {"id":"t4-1","w":4,"h":4,"rows":["..##","A###","##B#",".#.."],"sol":"DRDUULDL","n":11,"score":5.2,"oneIn0":6,"oneIn4":1,"maxTrap":3,"solo":7,"rawOneIn":48,"near":79},
+  {"id":"t4-2","w":4,"h":4,"rows":[".##A","####","##B.","#..."],"sol":"DLULDD","n":11,"score":10.2,"oneIn0":6,"oneIn4":2,"maxTrap":5,"solo":3,"rawOneIn":24,"near":47},
+  {"id":"t5-1","w":5,"h":5,"rows":[".##.#","#####","A##.#","#####","####B"],"sol":"LLLLURURDRRU","n":22,"score":67.5,"oneIn0":768,"oneIn4":256,"maxTrap":13,"solo":4,"rawOneIn":9216,"near":74083},
+  {"id":"t5-2","w":5,"h":5,"rows":["####A","#####","B####","##.#.",".####"],"sol":"LLLLDRDRURRDLD","n":22,"score":71.7,"oneIn0":1152,"oneIn4":256,"maxTrap":13,"solo":8,"rawOneIn":13824,"near":95201},
+  {"id":"t5-3","w":5,"h":5,"rows":["A####","#####","#..##","####B",".#.##"],"sol":"RRRRDDLULLDLDD","n":21,"score":75.3,"oneIn0":1536,"oneIn4":432,"maxTrap":12,"solo":9,"rawOneIn":6144,"near":37064},
+  {"id":"t6-1","w":6,"h":6,"rows":["##.###","##.A##","######","#B####","..#.##",".#####"],"sol":"LUUURRDLDRRDLDRDLL","n":30,"score":77,"oneIn0":2592,"oneIn4":432,"maxTrap":20,"solo":8,"rawOneIn":13824,"near":591743},
+  {"id":"t6-2","w":6,"h":6,"rows":[".B####",".##.##","######","A#####","######",".####."],"sol":"UDRUDRURDRURDDLDLULDLUL","n":31,"score":90.8,"oneIn0":1728,"oneIn4":1728,"maxTrap":21,"solo":17,"rawOneIn":41472,"near":1227930}
 ];
 // LEVELS-TAKT-END
 // LEVELS-IS-BEGIN
 const LEVELS_IS = [
-  {"id":"i3-1","w":3,"h":3,"rows":["#S#","#~#","~#."],"n":6,"ice":2,"score":2,"oneIn0":2,"oneIn4":1,"maxTrap":2,"iceMoves":2,"rawOneIn":6,"near":8,"nmoves":7},
-  {"id":"i4-1","w":4,"h":4,"rows":["#S##","###~","###~",".##~"],"n":12,"ice":3,"score":22.5,"oneIn0":24,"oneIn4":6,"maxTrap":7,"iceMoves":2,"rawOneIn":144,"near":127,"nmoves":12},
-  {"id":"i4-2","w":4,"h":4,"rows":["#~~#","###S","##..","##~#"],"n":11,"ice":3,"score":22.5,"oneIn0":24,"oneIn4":6,"maxTrap":7,"iceMoves":3,"rawOneIn":48,"near":45,"nmoves":11},
-  {"id":"i5-1","w":5,"h":5,"rows":["#~~##","S#~##","#~~.#","#~~##","#.~#."],"n":14,"ice":8,"score":78.9,"oneIn0":900,"oneIn4":675,"maxTrap":11,"iceMoves":10,"rawOneIn":1296,"near":365,"nmoves":19},
-  {"id":"i5-2","w":5,"h":5,"rows":["#.#~#","###S#","~.##~","~#~##","##~##"],"n":17,"ice":6,"score":79.6,"oneIn0":900,"oneIn4":576,"maxTrap":13,"iceMoves":7,"rawOneIn":2400,"near":780,"nmoves":19},
-  {"id":"i5-3","w":5,"h":5,"rows":["##~##","~###~","##S##","#~###","#~.#."],"n":18,"ice":5,"score":82.9,"oneIn0":3072,"oneIn4":864,"maxTrap":13,"iceMoves":7,"rawOneIn":9216,"near":1822,"nmoves":20},
-  {"id":"i6-1","w":6,"h":6,"rows":["######","~#~###","~#S~#.","###~.#","#~####","~.~###"],"n":25,"ice":8,"score":131.5,"oneIn0":147456,"oneIn4":18432,"maxTrap":20,"iceMoves":8,"rawOneIn":589824,"near":4542,"nmoves":28},
-  {"id":"i6-2","w":6,"h":6,"rows":["S#####","#~.#~~","####~#","#~~~##","#~#.##","~#.###"],"n":24,"ice":9,"score":135.4,"oneIn0":368640,"oneIn4":46080,"maxTrap":19,"iceMoves":10,"rawOneIn":737280,"near":6139,"nmoves":27}
+  {"id":"i3-1","w":3,"h":3,"rows":["#S#","#~#","~#."],"dirs":"LDDRURU","events":[[0],[3],[7],[5],[2]],"n":6,"ice":2,"score":2,"oneIn0":2,"oneIn4":1,"maxTrap":2,"iceMoves":2,"rawOneIn":6,"near":8},
+  {"id":"i4-1","w":4,"h":4,"rows":["#S##","###~","###~",".##~"],"dirs":"LDDRDRURULDL","events":[[0],[4],[8],[9],[13],[14],[10],[3],[2],[6],[5]],"n":12,"ice":3,"score":22.5,"oneIn0":24,"oneIn4":6,"maxTrap":7,"iceMoves":2,"rawOneIn":144,"near":127},
+  {"id":"i4-2","w":4,"h":4,"rows":["#~~#","###S","##..","##~#"],"dirs":"LURLDRDLDRR","events":[[6],[3],[0],[4],[5],[9],[8],[12],[13],[15]],"n":11,"ice":3,"score":22.5,"oneIn0":24,"oneIn4":6,"maxTrap":7,"iceMoves":3,"rawOneIn":48,"near":45},
+  {"id":"i5-1","w":5,"h":5,"rows":["#~~##","S#~##","#~~.#","#~~##","#.~#."],"dirs":"DRLURLDRLULRRDDDLLD","events":[[10],[6],[8],[23],[0],[3],[4],[9],[14],[19],[18],[15],[20]],"n":14,"ice":8,"score":78.9,"oneIn0":900,"oneIn4":675,"maxTrap":11,"iceMoves":10,"rawOneIn":1296,"near":365},
+  {"id":"i5-2","w":5,"h":5,"rows":["#.#~#","###S#","~.##~","~#~##","##~##"],"dirs":"DLDURLLDRRRUUULDLLU","events":[[13],[12],[18],[16],[20],[21],[23],[24],[19],[9],[4],[2],[7],[6],[5],[0]],"n":17,"ice":6,"score":79.6,"oneIn0":900,"oneIn4":576,"maxTrap":13,"iceMoves":7,"rawOneIn":2400,"near":780},
+  {"id":"i5-3","w":5,"h":5,"rows":["##~##","~###~","##S##","#~###","#~.#."],"dirs":"RULLDDLRURLUURRRDDLD","events":[[13],[8],[7],[6],[11],[20],[17],[15],[10],[0],[1],[3],[4],[14],[19],[18],[23]],"n":18,"ice":5,"score":82.9,"oneIn0":3072,"oneIn4":864,"maxTrap":13,"iceMoves":7,"rawOneIn":9216,"near":1822},
+  {"id":"i6-1","w":6,"h":6,"rows":["######","~#~###","~#S~#.","###~.#","#~####","~.~###"],"dirs":"DLULURRRRRDLDLULLDDRDRURDRUU","events":[[20],[19],[13],[0],[1],[2],[3],[4],[5],[11],[10],[16],[9],[7],[18],[24],[26],[33],[27],[28],[34],[35],[29],[23]],"n":25,"ice":8,"score":131.5,"oneIn0":147456,"oneIn4":18432,"maxTrap":20,"iceMoves":8,"rawOneIn":589824,"near":4542},
+  {"id":"i6-2","w":6,"h":6,"rows":["S#####","#~.#~~","####~#","#~~~##","#~#.##","~#.###"],"dirs":"DDDDRURDLDUURRDRLURDDLDRDLL","events":[[6],[12],[18],[24],[26],[14],[15],[31],[13],[1],[2],[3],[9],[4],[5],[17],[23],[22],[28],[29],[35],[34],[33]],"n":24,"ice":9,"score":135.4,"oneIn0":368640,"oneIn4":46080,"maxTrap":19,"iceMoves":10,"rawOneIn":737280,"near":6139}
 ];
 // LEVELS-IS-END
 // LEVELS-KRYDS-BEGIN
 const LEVELS_KRYDS = [
-  {"id":"k3-1","w":3,"h":3,"rows":["#+S",".##","###"],"n":7,"ice":0,"perm":1,"score":2,"oneIn0":2,"oneIn4":1,"maxTrap":2,"iceMoves":0,"permVisits":2,"solo":0,"near":8,"nmoves":8},
-  {"id":"k4-1","w":4,"h":4,"rows":["##+#","##..","####","#+#a"],"n":11,"ice":0,"perm":3,"score":32,"oneIn0":64,"oneIn4":16,"maxTrap":8,"iceMoves":0,"permVisits":2,"solo":0,"near":72,"nmoves":13},
-  {"id":"k4-2","w":4,"h":4,"rows":["#+#.","####","####","#a.#"],"n":12,"ice":0,"perm":2,"score":34,"oneIn0":128,"oneIn4":16,"maxTrap":8,"iceMoves":0,"permVisits":2,"solo":0,"near":118,"nmoves":14},
-  {"id":"k5-1","w":5,"h":5,"rows":["#.###","#####","####+",".a#++","#+###"],"n":18,"ice":0,"perm":5,"score":87.8,"oneIn0":6912,"oneIn4":432,"maxTrap":14,"iceMoves":0,"permVisits":4,"solo":0,"near":4260,"nmoves":22},
-  {"id":"k5-2","w":5,"h":5,"rows":["a####","#+#++","#####",".##++","###.#"],"n":17,"ice":0,"perm":6,"score":92.4,"oneIn0":9216,"oneIn4":1152,"maxTrap":13,"iceMoves":0,"permVisits":5,"solo":0,"near":3426,"nmoves":22},
-  {"id":"k5-3","w":5,"h":5,"rows":["#a.##","#####","#+###","###.+","#+#.#"],"n":18,"ice":0,"perm":4,"score":97,"oneIn0":4096,"oneIn4":2048,"maxTrap":15,"iceMoves":0,"permVisits":3,"solo":0,"near":430,"nmoves":21},
-  {"id":"k6-1","w":6,"h":6,"rows":["#.##+#","+#+#+#",".#####","+.#.+#","######","##+++S"],"n":23,"ice":0,"perm":9,"score":121.7,"oneIn0":17280,"oneIn4":8640,"maxTrap":19,"iceMoves":0,"permVisits":6,"solo":0,"near":5711,"nmoves":28},
-  {"id":"k6-2","w":6,"h":6,"rows":["###+#+","#+####","##.#.#","#+##+#","..####","#+##S#"],"n":26,"ice":0,"perm":6,"score":122.5,"oneIn0":124416,"oneIn4":31104,"maxTrap":20,"iceMoves":0,"permVisits":5,"solo":0,"near":3133,"nmoves":30}
+  {"id":"k3-1","w":3,"h":3,"rows":["#+S",".##","###"],"dirs":"LLRDRDLL","events":[[0],[4],[5],[8],[7],[6]],"n":7,"ice":0,"perm":1,"score":2,"oneIn0":2,"oneIn4":1,"maxTrap":2,"iceMoves":0,"permVisits":2,"solo":0,"near":8},
+  {"id":"k4-1","w":4,"h":4,"rows":["##+#","##..","####","#+#a"],"dirs":"ULDLLURULURRR","events":[[11],[10],[14],[12],[8],[9],[5],[4],[0],[1],[3]],"n":11,"ice":0,"perm":3,"score":32,"oneIn0":64,"oneIn4":16,"maxTrap":8,"iceMoves":0,"permVisits":2,"solo":0,"near":72},
+  {"id":"k4-2","w":4,"h":4,"rows":["#+#.","####","####","#a.#"],"dirs":"LUUURRLDDRURDD","events":[[12],[8],[4],[0],[2],[5],[9],[10],[6],[7],[11],[15]],"n":12,"ice":0,"perm":2,"score":34,"oneIn0":128,"oneIn4":16,"maxTrap":8,"iceMoves":0,"permVisits":2,"solo":0,"near":118},
+  {"id":"k5-1","w":5,"h":5,"rows":["#.###","#####","####+",".a#++","#+###"],"dirs":"DLRRRRULLURURULLDLDLUU","events":[[20],[22],[23],[24],[17],[12],[13],[8],[9],[4],[3],[2],[7],[6],[11],[10],[5],[0]],"n":18,"ice":0,"perm":5,"score":87.8,"oneIn0":6912,"oneIn4":432,"maxTrap":14,"iceMoves":0,"permVisits":4,"solo":0,"near":4260},
+  {"id":"k5-2","w":5,"h":5,"rows":["a####","#+#++","#####",".##++","###.#"],"dirs":"RRRRDDDDULULULLDRDRDLL","events":[[1],[2],[3],[4],[14],[24],[13],[12],[7],[5],[10],[11],[16],[17],[22],[21],[20]],"n":17,"ice":0,"perm":6,"score":92.4,"oneIn0":9216,"oneIn4":1152,"maxTrap":13,"iceMoves":0,"permVisits":5,"solo":0,"near":3426},
+  {"id":"k5-3","w":5,"h":5,"rows":["#a.##","#####","#+###","###.+","#+#.#"],"dirs":"LDDDDRRULUURDRUURDDDD","events":[[0],[5],[10],[15],[20],[22],[17],[16],[6],[7],[12],[13],[8],[3],[4],[9],[14],[24]],"n":18,"ice":0,"perm":4,"score":97,"oneIn0":4096,"oneIn4":2048,"maxTrap":15,"iceMoves":0,"permVisits":3,"solo":0,"near":430},
+  {"id":"k6-1","w":6,"h":6,"rows":["#.##+#","+#+#+#",".#####","+.#.+#","######","##+++S"],"dirs":"UUUUULLLDRDRDDLDLLLURRUULULU","events":[[29],[23],[17],[11],[5],[3],[2],[9],[15],[16],[28],[27],[31],[30],[24],[25],[26],[20],[14],[13],[7],[0]],"n":23,"ice":0,"perm":9,"score":121.7,"oneIn0":17280,"oneIn4":8640,"maxTrap":19,"iceMoves":0,"permVisits":6,"solo":0,"near":5711},
+  {"id":"k6-2","w":6,"h":6,"rows":["###+#+","#+####","##.#.#","#+##+#","..####","#+##S#"],"dirs":"RULURUULULLLLDDDRUURRDDLDRDLLL","events":[[35],[29],[28],[23],[17],[11],[10],[4],[2],[1],[0],[6],[12],[18],[13],[8],[9],[15],[21],[20],[26],[27],[33],[32],[30]],"n":26,"ice":0,"perm":6,"score":122.5,"oneIn0":124416,"oneIn4":31104,"maxTrap":20,"iceMoves":0,"permVisits":5,"solo":0,"near":3133}
 ];
 // LEVELS-KRYDS-END
 // LEVELS-MESTER-BEGIN
 const LEVELS_MESTER = [
-  {"id":"m4-1","w":4,"h":4,"rows":["#..#","####","##b#",".#a~"],"n":10,"ice":1,"perm":2,"score":35.6,"oneIn0":216,"oneIn4":12,"maxTrap":7,"iceMoves":1,"permVisits":3,"solo":12,"lens":[7,3],"near":984,"nmoves":13},
-  {"id":"m4-2","w":4,"h":4,"rows":["#~##","##.#","B###","#a.#"],"n":12,"ice":1,"perm":1,"score":38.8,"oneIn0":192,"oneIn4":16,"maxTrap":8,"iceMoves":2,"permVisits":1,"solo":3,"lens":[5,6],"near":230,"nmoves":8},
-  {"id":"m4-3","w":4,"h":4,"rows":["###~",".#.A","+##+","#b##"],"n":10,"ice":1,"perm":3,"score":48.7,"oneIn0":1386,"oneIn4":60,"maxTrap":6,"iceMoves":1,"permVisits":2,"solo":6,"lens":[3,6],"near":1427,"nmoves":9},
-  {"id":"m5-1","w":5,"h":5,"rows":["#+A##","b~##.","++##.","+.###","+###."],"n":14,"ice":1,"perm":6,"score":91.3,"oneIn0":3672,"oneIn4":1224,"maxTrap":10,"iceMoves":2,"permVisits":9,"solo":20,"lens":[2,11],"near":25496268,"nmoves":21},
-  {"id":"m5-2","w":5,"h":5,"rows":["A#+~~","##.#.","#####","#+###","#.+B#"],"n":17,"ice":2,"perm":3,"score":97.6,"oneIn0":15552,"oneIn4":8640,"maxTrap":13,"iceMoves":1,"permVisits":1,"solo":17,"lens":[4,11],"near":20046,"nmoves":17},
-  {"id":"m5-3","w":5,"h":5,"rows":["+A#..","##~#.","##.~#","####.","#b.+#"],"n":14,"ice":2,"perm":3,"score":98.1,"oneIn0":140000,"oneIn4":6000,"maxTrap":9,"iceMoves":2,"permVisits":1,"solo":8,"lens":[3,10],"near":4482,"nmoves":12},
-  {"id":"m5-4","w":5,"h":5,"rows":["B##..","####.","##+##","#+A~.","##.#."],"n":16,"ice":1,"perm":2,"score":110.7,"oneIn0":15360,"oneIn4":12800,"maxTrap":11,"iceMoves":2,"permVisits":1,"solo":12,"lens":[3,11],"near":11889,"nmoves":14}
+  {"id":"m4-1","w":4,"h":4,"rows":["#..#","####","##b#",".#a~"],"dirs":"RUULLRUULDLUU","events":[[11],[7],[3],[13],[6],[5],[9],[8],[4],[0]],"n":10,"ice":1,"perm":2,"score":35.6,"oneIn0":216,"oneIn4":12,"maxTrap":7,"iceMoves":1,"permVisits":3,"solo":12,"lens":[7,3],"near":984},
+  {"id":"m4-2","w":4,"h":4,"rows":["#~##","##.#","B###","#a.#"],"dirs":"LURULRRD","events":[[12],[4],[5],[9],[0],[2,10],[3,11],[7,15]],"n":12,"ice":1,"perm":1,"score":38.8,"oneIn0":192,"oneIn4":16,"maxTrap":8,"iceMoves":2,"permVisits":1,"solo":3,"lens":[5,6],"near":230},
+  {"id":"m4-3","w":4,"h":4,"rows":["###~",".#.A","+##+","#b##"],"dirs":"LRRRULLUL","events":[[12],[14],[15],[2,10],[1,9],[5],[0]],"n":10,"ice":1,"perm":3,"score":48.7,"oneIn0":1386,"oneIn4":60,"maxTrap":6,"iceMoves":1,"permVisits":2,"solo":6,"lens":[3,6],"near":1427},
+  {"id":"m5-1","w":5,"h":5,"rows":["#+A##","b~##.","++##.","+.###","+###."],"dirs":"URRDLDDRLUUURRDLDDRUR","events":[[0],[3],[4],[21],[7],[8],[13],[12],[17],[22],[23],[18],[19]],"n":14,"ice":1,"perm":6,"score":91.3,"oneIn0":3672,"oneIn4":1224,"maxTrap":10,"iceMoves":2,"permVisits":9,"solo":20,"lens":[2,11],"near":25496268},
+  {"id":"m5-2","w":5,"h":5,"rows":["A#+~~","##.#.","#####","#+###","#.+B#"],"dirs":"DDDDRUULUULLDDRDR","events":[[5],[10],[15],[20],[24],[19],[14],[13],[8],[1],[6],[11],[12],[17],[18]],"n":17,"ice":2,"perm":3,"score":97.6,"oneIn0":15552,"oneIn4":8640,"maxTrap":13,"iceMoves":1,"permVisits":1,"solo":17,"lens":[4,11],"near":20046},
+  {"id":"m5-3","w":5,"h":5,"rows":["+A#..","##~#.","##.~#","####.","#b.+#"],"dirs":"RLUUURDDRRDR","events":[[2],[20],[15],[10],[5],[6],[11],[16],[8,17],[18],[14,24]],"n":14,"ice":2,"perm":3,"score":98.1,"oneIn0":140000,"oneIn4":6000,"maxTrap":9,"iceMoves":2,"permVisits":1,"solo":8,"lens":[3,10],"near":4482},
+  {"id":"m5-4","w":5,"h":5,"rows":["B##..","####.","##+##","#+A~.","##.#."],"dirs":"DDDDRDURUUURDR","events":[[5],[10],[15],[20],[21],[23],[13],[14],[11],[6],[1],[2],[7],[8]],"n":16,"ice":1,"perm":2,"score":110.7,"oneIn0":15360,"oneIn4":12800,"maxTrap":11,"iceMoves":2,"permVisits":1,"solo":12,"lens":[3,11],"near":11889}
 ];
 // LEVELS-MESTER-END
 // LEVELS-POST-BEGIN
 const LEVELS_POST = [
-  {"id":"p3-1","w":3,"h":3,"rows":["#32","1S#","###"],"n":9,"ice":0,"perm":0,"score":9.3,"oneIn0":6,"oneIn4":2,"maxTrap":6,"iceMoves":0,"permVisits":0,"solo":0,"near":1,"K":3,"nmoves":8},
-  {"id":"p4-1","w":4,"h":4,"rows":["3###","4##1","####","2##S"],"n":16,"ice":0,"perm":0,"score":45,"oneIn0":128,"oneIn4":32,"maxTrap":12,"iceMoves":0,"permVisits":0,"solo":0,"near":7,"K":4,"nmoves":15},
-  {"id":"p4-2","w":4,"h":4,"rows":["4#23","#1##","##S#","####"],"n":16,"ice":0,"perm":0,"score":48.1,"oneIn0":144,"oneIn4":48,"maxTrap":11,"iceMoves":0,"permVisits":0,"solo":0,"near":24,"K":4,"nmoves":15},
-  {"id":"p5-1","w":5,"h":5,"rows":["4#2##","5##3#","#####","#####","1###S"],"n":25,"ice":0,"perm":0,"score":86,"oneIn0":4096,"oneIn4":1024,"maxTrap":19,"iceMoves":0,"permVisits":0,"solo":0,"near":53,"K":5,"nmoves":24},
-  {"id":"p5-2","w":5,"h":5,"rows":["#####","#####","2#S##","4#1##","3####"],"n":25,"ice":0,"perm":0,"score":103.1,"oneIn0":5184,"oneIn4":2592,"maxTrap":22,"iceMoves":0,"permVisits":0,"solo":0,"near":115,"K":4,"nmoves":24},
-  {"id":"p5-3","w":5,"h":5,"rows":["#####","###1#","#####","#####","S#243"],"n":25,"ice":0,"perm":0,"score":104,"oneIn0":32768,"oneIn4":4096,"maxTrap":22,"iceMoves":0,"permVisits":0,"solo":0,"near":69,"K":4,"nmoves":24},
-  {"id":"p6-1","w":6,"h":6,"rows":["######","#1##2#","4##S##","3#####","5#####","....##"],"n":32,"ice":0,"perm":0,"score":138.1,"oneIn0":41472,"oneIn4":41472,"maxTrap":28,"iceMoves":0,"permVisits":0,"solo":0,"near":106,"K":5,"nmoves":31},
-  {"id":"p6-2","w":6,"h":6,"rows":["#####1","3#####","4..###","2#####","######","S#####"],"n":34,"ice":0,"perm":0,"score":144,"oneIn0":65536,"oneIn4":65536,"maxTrap":30,"iceMoves":0,"permVisits":0,"solo":0,"near":12,"K":4,"nmoves":33}
+  {"id":"p3-1","w":3,"h":3,"rows":["#32","1S#","###"],"dirs":"LDRRUULL","events":[[3],[6],[7],[8],[5],[2],[1],[0]],"n":9,"ice":0,"perm":0,"score":9.3,"oneIn0":6,"oneIn4":2,"maxTrap":6,"iceMoves":0,"permVisits":0,"solo":0,"near":1,"sol":[4,3,6,7,8,5,2,1,0],"K":3},
+  {"id":"p4-1","w":4,"h":4,"rows":["3###","4##1","####","2##S"],"dirs":"UUULDDDLLURUULD","events":[[11],[7],[3],[2],[6],[10],[14],[13],[12],[8],[9],[5],[1],[0],[4]],"n":16,"ice":0,"perm":0,"score":45,"oneIn0":128,"oneIn4":32,"maxTrap":12,"iceMoves":0,"permVisits":0,"solo":0,"near":7,"sol":[15,11,7,3,2,6,10,14,13,12,8,9,5,1,0,4],"K":4},
+  {"id":"p4-2","w":4,"h":4,"rows":["4#23","#1##","##S#","####"],"dirs":"LURURDDDLLLUUUR","events":[[9],[5],[6],[2],[3],[7],[11],[15],[14],[13],[12],[8],[4],[0],[1]],"n":16,"ice":0,"perm":0,"score":48.1,"oneIn0":144,"oneIn4":48,"maxTrap":11,"iceMoves":0,"permVisits":0,"solo":0,"near":24,"sol":[10,9,5,6,2,3,7,11,15,14,13,12,8,4,0,1],"K":4},
+  {"id":"p5-1","w":5,"h":5,"rows":["4#2##","5##3#","#####","#####","1###S"],"dirs":"LLLLURRRRUUULLDRDLLUULDD","events":[[23],[22],[21],[20],[15],[16],[17],[18],[19],[14],[9],[4],[3],[2],[7],[8],[13],[12],[11],[6],[1],[0],[5],[10]],"n":25,"ice":0,"perm":0,"score":86,"oneIn0":4096,"oneIn4":1024,"maxTrap":19,"iceMoves":0,"permVisits":0,"solo":0,"near":53,"sol":[24,23,22,21,20,15,16,17,18,19,14,9,4,3,2,7,8,13,12,11,6,1,0,5,10],"K":5},
+  {"id":"p5-2","w":5,"h":5,"rows":["#####","#####","2#S##","4#1##","3####"],"dirs":"DRUULLDLUURRRRDDDDLLLLUR","events":[[17],[18],[13],[8],[7],[6],[11],[10],[5],[0],[1],[2],[3],[4],[9],[14],[19],[24],[23],[22],[21],[20],[15],[16]],"n":25,"ice":0,"perm":0,"score":103.1,"oneIn0":5184,"oneIn4":2592,"maxTrap":22,"iceMoves":0,"permVisits":0,"solo":0,"near":115,"sol":[12,17,18,13,8,7,6,11,10,5,0,1,2,3,4,9,14,19,24,23,22,21,20,15,16],"K":4},
+  {"id":"p5-3","w":5,"h":5,"rows":["#####","###1#","#####","#####","S#243"],"dirs":"UUUURRRRDLLLDDDRUURRDDLU","events":[[15],[10],[5],[0],[1],[2],[3],[4],[9],[8],[7],[6],[11],[16],[21],[22],[17],[12],[13],[14],[19],[24],[23],[18]],"n":25,"ice":0,"perm":0,"score":104,"oneIn0":32768,"oneIn4":4096,"maxTrap":22,"iceMoves":0,"permVisits":0,"solo":0,"near":69,"sol":[20,15,10,5,0,1,2,3,4,9,8,7,6,11,16,21,22,17,12,13,14,19,24,23,18],"K":4},
+  {"id":"p6-1","w":6,"h":6,"rows":["######","#1##2#","4##S##","3#####","5#####","....##"],"dirs":"LLURRRDDLLLLUUURRRRRDDDDDLULLLL","events":[[14],[13],[7],[8],[9],[10],[16],[22],[21],[20],[19],[18],[12],[6],[0],[1],[2],[3],[4],[5],[11],[17],[23],[29],[35],[34],[28],[27],[26],[25],[24]],"n":32,"ice":0,"perm":0,"score":138.1,"oneIn0":41472,"oneIn4":41472,"maxTrap":28,"iceMoves":0,"permVisits":0,"solo":0,"near":106,"sol":[15,14,13,7,8,9,10,16,22,21,20,19,18,12,6,0,1,2,3,4,5,11,17,23,29,35,34,28,27,26,25,24],"K":5},
+  {"id":"p6-2","w":6,"h":6,"rows":["#####1","3#####","4..###","2#####","######","S#####"],"dirs":"RRRRRUUUUULDDDDLLLLURRRUUULDLULDD","events":[[31],[32],[33],[34],[35],[29],[23],[17],[11],[5],[4],[10],[16],[22],[28],[27],[26],[25],[24],[18],[19],[20],[21],[15],[9],[3],[2],[8],[7],[1],[0],[6],[12]],"n":34,"ice":0,"perm":0,"score":144,"oneIn0":65536,"oneIn4":65536,"maxTrap":30,"iceMoves":0,"permVisits":0,"solo":0,"near":12,"sol":[30,31,32,33,34,35,29,23,17,11,5,4,10,16,22,28,27,26,25,24,18,19,20,21,15,9,3,2,8,7,1,0,6,12],"K":4}
 ];
 // LEVELS-POST-END
 
 (() => {
   // Den offentlige version (docs/) bygges med PUBLIC = true: ingen "Vis løsning" og ingen løsninger i siden.
-  const PUBLIC = true;
+  const PUBLIC = false;
   const $ = (id) => document.getElementById(id);
   // antal træk i løsningen (den offentlige version har kun tallet, ikke selve løsningen)
   const movesCount = (lv) => lv.nmoves != null ? lv.nmoves : lv.dirs ? lv.dirs.length : typeof lv.sol === 'string' ? lv.sol.length : lv.sol ? lv.sol.length - 1 : 0;

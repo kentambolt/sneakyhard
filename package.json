@@ -1,0 +1,12 @@
+{
+  "name": "sneakyhard",
+  "private": true,
+  "description": "Hvert felt én gang: seks simple, svære gitterspil med computergenererede baner",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node tools/build.js && node tools/build-twins.js && node tools/build-ice.js && node tools/build-mix.js && node tools/build-public.js",
+    "build:public": "node tools/build-public.js",
+    "test": "node tools/test.js && node tools/test-twins.js && node tools/test-ice.js && node tools/test-solvable.js",
+    "test:all": "npm test && node tools/test-mix.js"
+  }
+}

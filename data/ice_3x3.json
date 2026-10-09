@@ -1,0 +1,7802 @@
+[
+ {
+  "score": 2,
+  "n": 6,
+  "ice": 1,
+  "rows": [
+   "##S",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 1,
+  "dirs": "DLULDD",
+  "states": 7
+ },
+ {
+  "score": 2,
+  "n": 6,
+  "ice": 2,
+  "rows": [
+   "#S#",
+   "#~#",
+   "~#."
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 2,
+  "dirs": "LDDRURU",
+  "states": 7
+ },
+ {
+  "score": 2,
+  "n": 7,
+  "ice": 1,
+  "rows": [
+   "#S#",
+   "#~#",
+   "##."
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 1,
+  "dirs": "LDDRURU",
+  "states": 8
+ },
+ {
+  "score": 2,
+  "n": 6,
+  "ice": 2,
+  "rows": [
+   "###",
+   "S~~",
+   "##."
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 2,
+  "dirs": "URRDLDL",
+  "states": 7
+ },
+ {
+  "score": 2,
+  "n": 7,
+  "ice": 1,
+  "rows": [
+   "S##",
+   "~##",
+   "#.#"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 2,
+  "dirs": "DURURDD",
+  "states": 8
+ },
+ {
+  "score": 2,
+  "n": 7,
+  "ice": 1,
+  "rows": [
+   "###",
+   "~##",
+   "S.#"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 2,
+  "dirs": "UDRURDD",
+  "states": 8
+ },
+ {
+  "score": 2,
+  "n": 6,
+  "ice": 2,
+  "rows": [
+   "~##",
+   "~##",
+   "S.#"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 2,
+  "dirs": "UDRURDD",
+  "states": 7
+ },
+ {
+  "score": 2,
+  "n": 7,
+  "ice": 1,
+  "rows": [
+   "S##",
+   "###",
+   "~.#"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "dirs": "DRURDD",
+  "states": 8
+ },
+ {
+  "score": 2,
+  "n": 6,
+  "ice": 2,
+  "rows": [
+   "S##",
+   "~##",
+   "~.#"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 2,
+  "dirs": "DURURDD",
+  "states": 7
+ },
+ {
+  "score": 1,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "S#.",
+   "~~~",
+   "#.."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 2,
+  "dirs": "RDLD",
+  "states": 3
+ },
+ {
+  "score": 1,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   ".#S",
+   "~~~",
+   "#.."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 2,
+  "dirs": "LDLD",
+  "states": 3
+ },
+ {
+  "score": 1,
+  "n": 6,
+  "ice": 1,
+  "rows": [
+   "##~",
+   "##S",
+   "#.."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "dirs": "LULDD",
+  "states": 6
+ },
+ {
+  "score": 1,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   ".#S",
+   "#~#",
+   "#.."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 2,
+  "dirs": "LDRLD",
+  "states": 5
+ },
+ {
+  "score": 1,
+  "n": 5,
+  "ice": 2,
+  "rows": [
+   "~#S",
+   "#~#",
+   "#.."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 2,
+  "dirs": "LDRLD",
+  "states": 5
+ },
+ {
+  "score": 1,
+  "n": 5,
+  "ice": 2,
+  "rows": [
+   "#~S",
+   "#~#",
+   "#.."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 4,
+  "dirs": "LRDRLD",
+  "states": 5
+ },
+ {
+  "score": 1,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "#~.",
+   "S~#",
+   ".~."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 3,
+  "dirs": "RLUL",
+  "states": 3
+ },
+ {
+  "score": 1,
+  "n": 3,
+  "ice": 4,
+  "rows": [
+   "~S#",
+   "~~~",
+   ".#."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 3,
+  "dirs": "DURU",
+  "states": 3
+ },
+ {
+  "score": 1,
+  "n": 5,
+  "ice": 2,
+  "rows": [
+   "~#S",
+   ".~#",
+   "##."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 2,
+  "dirs": "DLUDL",
+  "states": 5
+ },
+ {
+  "score": 1,
+  "n": 5,
+  "ice": 2,
+  "rows": [
+   "#~S",
+   ".~#",
+   "##."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 4,
+  "dirs": "DLULRDL",
+  "states": 5
+ },
+ {
+  "score": 1,
+  "n": 4,
+  "ice": 3,
+  "rows": [
+   "S~#",
+   ".~#",
+   "#~."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 3,
+  "dirs": "RDLDL",
+  "states": 4
+ },
+ {
+  "score": 1,
+  "n": 3,
+  "ice": 4,
+  "rows": [
+   "~~S",
+   ".~#",
+   "#~."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 2,
+  "dirs": "DLDL",
+  "states": 3
+ },
+ {
+  "score": 1,
+  "n": 3,
+  "ice": 4,
+  "rows": [
+   "#.~",
+   "~~~",
+   "S#."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 2,
+  "dirs": "RULU",
+  "states": 3
+ },
+ {
+  "score": 1,
+  "n": 7,
+  "ice": 1,
+  "rows": [
+   "~##",
+   "###",
+   "S.#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "dirs": "URURDD",
+  "states": 7
+ },
+ {
+  "score": 1,
+  "n": 6,
+  "ice": 2,
+  "rows": [
+   "S~#",
+   "~##",
+   "#.#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 3,
+  "dirs": "DURURDD",
+  "states": 6
+ },
+ {
+  "score": 1,
+  "n": 6,
+  "ice": 2,
+  "rows": [
+   "S#~",
+   "~##",
+   "#.#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 3,
+  "dirs": "DURURDD",
+  "states": 6
+ },
+ {
+  "score": 1,
+  "n": 5,
+  "ice": 3,
+  "rows": [
+   "S~#",
+   "~~#",
+   "#.#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 6,
+  "dirs": "RLDLDURD",
+  "states": 5
+ },
+ {
+  "score": 1,
+  "n": 5,
+  "ice": 3,
+  "rows": [
+   "S#~",
+   "~~#",
+   "#.#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 4,
+  "dirs": "RDLDURD",
+  "states": 5
+ },
+ {
+  "score": 1,
+  "n": 6,
+  "ice": 2,
+  "rows": [
+   "~##",
+   "S##",
+   "~.#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "dirs": "RURDD",
+  "states": 6
+ },
+ {
+  "score": 1,
+  "n": 6,
+  "ice": 2,
+  "rows": [
+   "S~#",
+   "###",
+   "~.#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 1,
+  "dirs": "DRURDD",
+  "states": 6
+ },
+ {
+  "score": 1,
+  "n": 6,
+  "ice": 2,
+  "rows": [
+   "S#~",
+   "###",
+   "~.#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 1,
+  "dirs": "DRURDD",
+  "states": 6
+ },
+ {
+  "score": 1,
+  "n": 5,
+  "ice": 3,
+  "rows": [
+   "S~#",
+   "#~#",
+   "~.#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 4,
+  "dirs": "RLDLRD",
+  "states": 5
+ },
+ {
+  "score": 1,
+  "n": 5,
+  "ice": 3,
+  "rows": [
+   "S#~",
+   "#~#",
+   "~.#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 2,
+  "dirs": "RDLRD",
+  "states": 5
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   "~#S",
+   "#..",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LLDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   "#~S",
+   "#..",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   "#~#",
+   "#..",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UUR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~~S",
+   "#..",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~~#",
+   "#..",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "UUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 1,
+  "rows": [
+   "S.~",
+   "#..",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 1,
+  "rows": [
+   "#.~",
+   "#..",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   "#S~",
+   "#..",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   "##~",
+   "#..",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UUR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~S~",
+   "#..",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~#~",
+   "#..",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "S~~",
+   "#..",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "#~~",
+   "#..",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "#~S",
+   "~..",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "#S~",
+   "~..",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "##~",
+   "~..",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "~#S",
+   "##.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LDLD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   ".~S",
+   "##.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   ".~#",
+   "##.",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "URUR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "S~#",
+   "##.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "RLDLD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "#~S",
+   "##.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "LRDLD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "#~#",
+   "#S.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "URLDD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~~S",
+   "##.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "LRDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~~#",
+   "#S.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "URLDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 1,
+  "rows": [
+   "..~",
+   "#S.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 1,
+  "rows": [
+   "..~",
+   "##.",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~.~",
+   "#S.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~.~",
+   "##.",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   ".S~",
+   "##.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   ".#~",
+   "##.",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "URU",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "S#~",
+   "##.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "RDLD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "##~",
+   "#S.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "ULDD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~S~",
+   "##.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~#~",
+   "#S.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "ULDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".~~",
+   "#S.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".~~",
+   "##.",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "S~~",
+   "##.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "RLDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "#~~",
+   "#S.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "ULDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~~~",
+   "#S.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~~~",
+   "##.",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".~S",
+   "~#.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "LDLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "S.~",
+   "~#.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "DUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "#.~",
+   "~#.",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "UDR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".S~",
+   "~#.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".#~",
+   "~#.",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "URU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "#~~",
+   "~#.",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "UDR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   "~#S",
+   ".#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   "~##",
+   ".#.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UUR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   "S~#",
+   ".#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "RLDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~~S",
+   ".#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "LRDD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~~#",
+   ".#.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~S~",
+   ".#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~#~",
+   ".#.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "~#S",
+   "##.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LLDRD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "~##",
+   "##.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "ULURR",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "#~S",
+   "##.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDRD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "#~#",
+   "S#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "URLDD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~~S",
+   "##.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDRD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~~#",
+   "S#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 4,
+  "dirs": "URLRDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 1,
+  "rows": [
+   "..~",
+   "S#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "RD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   "S.~",
+   "##.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DRD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   "#.~",
+   "##.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "ULU",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~.~",
+   "S#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "RD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~.~",
+   "##.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UL",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "#S~",
+   "##.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LDRD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "##~",
+   "S#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "URDD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~S~",
+   "##.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDRD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~#~",
+   "S#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "URDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".~~",
+   "S#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "RD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".~~",
+   "##.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UL",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "S~~",
+   "##.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DRD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "#~~",
+   "S#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "URLDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~~~",
+   "S#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "RD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~~~",
+   "##.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UL",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   ".#S",
+   "~#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   ".##",
+   "~#.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UUR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "##S",
+   "~#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LLDRD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "###",
+   "~#.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "ULURR",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~#S",
+   "~#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~##",
+   "~#.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UUR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".~S",
+   "~#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".~#",
+   "~#.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "S~#",
+   "~#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "RLDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "#~S",
+   "~#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "LRDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~~S",
+   "~#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "LRDD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~~#",
+   "~#.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "S.~",
+   "~#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DRD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "#.~",
+   "~#.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "ULU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".S~",
+   "~#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".#~",
+   "~#.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "S#~",
+   "~#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "RDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "#S~",
+   "~#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDRD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~S~",
+   "~#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~#~",
+   "~#.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "S~~",
+   "~#.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DRD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "#~~",
+   "~#.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UUL",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~#S",
+   ".~.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~##",
+   ".~.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "S~#",
+   ".~.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 3,
+  "dirs": "RLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   ".#S",
+   "#~.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "LDUL",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   ".##",
+   "S~.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "RDUR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "S##",
+   "#~.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "DRDUR",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~##",
+   "S~.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "RDUR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".~S",
+   "#~.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 4,
+  "dirs": "LDUDL",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "S.~",
+   "#~.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DRD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "#.~",
+   "#~.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "ULU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".S~",
+   "#~.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "DUL",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".#~",
+   "#~.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "UDL",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~#~",
+   "#~.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "UDL",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".#S",
+   "~~.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".##",
+   "~~.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "S##",
+   "~~.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 3,
+  "dirs": "DRDUR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~#S",
+   "~~.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~##",
+   "~~.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "#~S",
+   "~~.",
+   ".#."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 3,
+  "dirs": "LRD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "##~",
+   "~~.",
+   ".S."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UL",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 1,
+  "rows": [
+   "S..",
+   "#.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   "#S.",
+   "#.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   "##.",
+   "#.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UUR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~S.",
+   "#.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~#.",
+   "#.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "S~.",
+   "#.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "#~.",
+   "#.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "##S",
+   "#.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LLDD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "###",
+   "#.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UURR",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~#S",
+   "#.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LLDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~##",
+   "#.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UURR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "#~S",
+   "#.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "#~#",
+   "#.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UUR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~~S",
+   "#.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~~#",
+   "#.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "UUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "S.~",
+   "#.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "#.~",
+   "#.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "#S~",
+   "#.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "##~",
+   "#.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UUR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~S~",
+   "#.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~#~",
+   "#.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "S~~",
+   "#.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "#~~",
+   "#.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "#S.",
+   "~.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "##.",
+   "~.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "##S",
+   "~.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "###",
+   "~.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "URR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~#S",
+   "~.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "LLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~##",
+   "~.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "URR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "#~S",
+   "~.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "#~#",
+   "~.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "#S~",
+   "~.~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "##~",
+   "~.~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~..",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "~..",
+   "##~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   ".S.",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   ".#.",
+   "##~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "URU",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "S#.",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "RDLD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "##.",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "ULDD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~S.",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~#.",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "ULDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".~.",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".~.",
+   "##~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "S~.",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "RDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "#~.",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "ULDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~~.",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~~.",
+   "##~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   "..S",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DLLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   "..#",
+   "##~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "URRU",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~.S",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DLLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~.#",
+   "##~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "URRU",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   ".S#",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "RDLLD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   ".#S",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LDLD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "ice": 1,
+  "rows": [
+   "S##",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "RRDLLD",
+  "states": 5
+ },
+ {
+  "score": 0,
+  "n": 6,
+  "ice": 1,
+  "rows": [
+   "###",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "RULLDD",
+  "states": 5
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 2,
+  "rows": [
+   "~S#",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "RDLLD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 2,
+  "rows": [
+   "~##",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "RULLDD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   ".~S",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DLLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   ".~#",
+   "##~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "URUR",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 2,
+  "rows": [
+   "S~#",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "RDLLD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 2,
+  "rows": [
+   "#~#",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "URLDD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 3,
+  "rows": [
+   "~~S",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DLLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 3,
+  "rows": [
+   "~~#",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "URLDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "..~",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "..~",
+   "##~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~.~",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~.~",
+   "##~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   ".S~",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   ".#~",
+   "##~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "URU",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 2,
+  "rows": [
+   "S#~",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "RDLD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 2,
+  "rows": [
+   "##~",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "ULDD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 3,
+  "rows": [
+   "~S~",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 3,
+  "rows": [
+   "~#~",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "ULDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   ".~~",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   ".~~",
+   "##~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 3,
+  "rows": [
+   "S~~",
+   "##~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "RDLLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 3,
+  "rows": [
+   "#~~",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "ULDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 4,
+  "rows": [
+   "~~~",
+   "#S~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 4,
+  "rows": [
+   "~~~",
+   "##~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "S..",
+   "~#~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "DUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".S.",
+   "~#~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".#.",
+   "~#~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "URU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "#~.",
+   "~#~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "URD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "..S",
+   "~#~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "DLLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "S.#",
+   "~#~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 3,
+  "dirs": "DURRU",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "#.#",
+   "~#~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 3,
+  "dirs": "UDRRU",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~.S",
+   "~#~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "DLLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~.#",
+   "~#~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 3,
+  "dirs": "UDRRU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   ".S#",
+   "~#~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "RDLLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   ".#S",
+   "~#~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   ".~S",
+   "~#~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "DLLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   ".~#",
+   "~#~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "URUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "S.~",
+   "~#~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "DUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "#.~",
+   "~#~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "UDR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   ".S~",
+   "~#~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   ".#~",
+   "~#~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "URU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 4,
+  "rows": [
+   "#~~",
+   "~#~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "UDR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "S..",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".S.",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".#.",
+   "#~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "URLU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "S#.",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "RDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "#S.",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~S.",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~#.",
+   "#~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "S~.",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "#~.",
+   "#~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "..S",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "DLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "..#",
+   "#~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "URU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~.S",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "DLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~.#",
+   "#~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "URU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   ".S#",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "RDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   ".#S",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 2,
+  "rows": [
+   "S##",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "RRDLD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 2,
+  "rows": [
+   "##S",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LLDD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 3,
+  "rows": [
+   "~S#",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "RDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 3,
+  "rows": [
+   "~#S",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   ".~S",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "DLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   ".~#",
+   "#~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "URU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 3,
+  "rows": [
+   "S~#",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 3,
+  "dirs": "RDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 3,
+  "rows": [
+   "#~S",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 4,
+  "rows": [
+   "~~S",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "DLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 4,
+  "rows": [
+   "~~#",
+   "#~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "UUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "S.~",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "#.~",
+   "#~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   ".S~",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   ".#~",
+   "#~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "URUL",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 3,
+  "rows": [
+   "S#~",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "RDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 3,
+  "rows": [
+   "#S~",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 4,
+  "rows": [
+   "~S~",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 4,
+  "rows": [
+   "~#~",
+   "#~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 4,
+  "rows": [
+   "S~~",
+   "#~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 4,
+  "rows": [
+   "#~~",
+   "#~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "##.",
+   "~~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "S.#",
+   "~~~",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 3,
+  "dirs": "DURU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "#.#",
+   "~~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 3,
+  "dirs": "UDRU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   ".##",
+   "~~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "URUL",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 4,
+  "rows": [
+   "#~#",
+   "~~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 4,
+  "rows": [
+   "##~",
+   "~~~",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "UR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "#S~",
+   "#..",
+   "~.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 1,
+  "rows": [
+   ".#S",
+   "#~.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 5,
+  "ice": 1,
+  "rows": [
+   "##S",
+   "#~.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "LLDD",
+  "states": 4
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "~#S",
+   "#~.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".~S",
+   "#~.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "LDLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".~#",
+   "#~.",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "URUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "S~#",
+   "#~.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 3,
+  "dirs": "RLDLD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 4,
+  "ice": 2,
+  "rows": [
+   "#~S",
+   "#~.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDD",
+  "states": 3
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~~S",
+   "#~.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "LDD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 3,
+  "rows": [
+   "~~#",
+   "#~.",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 2,
+  "dirs": "UUR",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "S.~",
+   "#~.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "DD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   "#.~",
+   "#~.",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 0,
+  "dirs": "UU",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".S~",
+   "#~.",
+   "#.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "DLD",
+  "states": 2
+ },
+ {
+  "score": 0,
+  "n": 3,
+  "ice": 2,
+  "rows": [
+   ".#~",
+   "#~.",
+   "S.."
+  ],
+  "bits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 0,
+  "choices": 0,
+  "iceMoves": 1,
+  "dirs": "URU",
+  "states": 2
+ }
+]
