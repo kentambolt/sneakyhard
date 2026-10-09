@@ -20,8 +20,8 @@ Den spilbare version ligger i `docs/` og vises med GitHub Pages.
 
 | Mappe | Indhold |
 | --- | --- |
-| `docs/` | Den offentlige side (genereres). Ingen "Vis løsning", og løsningerne ligger slet ikke i siden. |
-| `dev/` | Udviklerversionen med "Vis løsning". Build-scriptene skriver banerne herind. |
+| `docs/` | Den offentlige side (genereres). Ingen løsninger og ingen sværhedstal i siden. |
+| `dev/` | Udviklerversionen: samme spil, men tasten L (to tryk) viser løsningen. Build-scriptene skriver banerne herind. |
 | `tools/` | Solvere, generatorer, build-scripts og tests (Node 18+, ingen afhængigheder). |
 | `data/` | Kandidatbaner fra søgningerne, så siderne kan bygges uden at søge forfra. |
 
@@ -35,8 +35,11 @@ npm run build          # alle baner ind i dev/index.html, og derefter docs/index
 npm run build:public   # kun docs/index.html ud fra dev/index.html
 ```
 
-"Tjek kurs" regner selv i browseren (med `solvableFrom` i motoren), om banen stadig kan løses fra den
-aktuelle stilling. Derfor behøver den offentlige side ikke at indeholde løsningerne.
+Ved brættet er der kun én knap: *Forfra*, som bliver grøn og går til næste bane, når banen er løst.
+På mobil passer spillet på én skærm, og reglerne ligger bag info-ikonet.
+Tastatur: piletaster/WASD flytter, Z fortryder, R starter forfra, N/Enter går videre efter en løst bane,
+H tjekker kursen. "Tjek kurs" regner selv i browseren (med `solvableFrom` i motoren), om banen stadig kan
+løses fra den aktuelle stilling, så den offentlige side behøver ikke at indeholde løsningerne.
 
 ## Find nye baner
 

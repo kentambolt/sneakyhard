@@ -32,6 +32,7 @@
     --muted: #56635e;
     --danger: #c2402b;
     --good: #1f7a4a;
+    --good-ink: #ffffff;
     --sans: "Bricolage Grotesque", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
   }
@@ -61,6 +62,7 @@
       --muted: #8f9d98;
       --danger: #ff7c66;
       --good: #63cf93;
+      --good-ink: #0f1517;
     }
   }
   :root[data-theme="dark"] {
@@ -88,11 +90,13 @@
     --muted: #8f9d98;
     --danger: #ff7c66;
     --good: #63cf93;
+    --good-ink: #0f1517;
   }
 
   [hidden] { display: none !important; }
   html, body { height: 100%; }
   body {
+    margin: 0;
     background: var(--ground);
     color: var(--text);
     font-family: var(--sans);
@@ -196,15 +200,6 @@
     background: var(--ink);
   }
   .mini .t.sb::after { background: var(--amber); }
-  .facts {
-    margin: 4px 0 0;
-    padding: 14px 0 0;
-    border-top: 1px solid var(--line);
-    color: var(--muted);
-    font-size: 13.5px;
-    max-width: 70ch;
-  }
-
   /* ---------- spilvisning ---------- */
   .top {
     display: flex;
@@ -345,7 +340,7 @@
     content: "";
     position: absolute;
     left: 50%;
-    top: 47%;
+    top: 48.5%;
     width: 15%;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -353,7 +348,7 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
   }
-  .cell.ice.next-a::after, .cell.ice.next-b::after { top: 53%; opacity: 0.55; }
+  .cell.ice.next-a::after, .cell.ice.next-b::after { top: 56.5%; opacity: 0.55; }
   .cell.next-a::after { background: var(--ink); }
   .cell.next-b::after { background: var(--amber); }
   .cell.next-a, .cell.next-b { cursor: pointer; }
@@ -375,7 +370,6 @@
   .ink .ring { fill: none; stroke-width: 0.045; opacity: 0.55; }
   .ink .ring-a { stroke: var(--ink); }
   .ink .ring-b { stroke: var(--amber); }
-  .ink .piece { transition: transform var(--dur, 90ms) ease; }
   .ink .piece circle { stroke: var(--tile); stroke-width: 0.07; transition: fill 160ms ease, opacity 160ms ease; }
   .ink .piece-a circle { fill: var(--ink); }
   .ink .piece-b circle { fill: var(--amber); }
@@ -436,71 +430,102 @@
   .status.bad { color: var(--danger); }
   .status.good { color: var(--good); }
 
-  .pad {
-    display: grid;
-    grid-template-columns: repeat(3, 52px);
-    grid-template-rows: repeat(2, 44px);
-    gap: 6px;
-    justify-content: start;
-  }
-  .pad button {
-    border-radius: 10px;
-    border: 1px solid var(--line);
-    background: var(--panel);
-    color: var(--text);
-    font: 600 18px/1 var(--sans);
-    cursor: pointer;
-  }
-  .pad button:hover:not(:disabled) { border-color: var(--ink); }
-  .pad button:disabled { opacity: 0.35; cursor: default; }
-  .pad .up { grid-column: 2; grid-row: 1; }
-  .pad .left { grid-column: 1; grid-row: 2; }
-  .pad .down { grid-column: 2; grid-row: 2; }
-  .pad .right { grid-column: 3; grid-row: 2; }
-
-  .controls { display: flex; flex-wrap: wrap; gap: 8px; }
+  .actions { display: grid; gap: 14px; }
   .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    height: 40px;
-    padding: 0 14px;
-    border-radius: 10px;
+    justify-self: start;
+    min-width: 150px;
+    height: 46px;
+    padding: 0 22px;
+    border-radius: 12px;
     border: 1px solid var(--line);
     background: var(--panel);
     color: var(--text);
-    font: 600 14px/1 var(--sans);
+    font: 650 15px/1 var(--sans);
     cursor: pointer;
+    transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
   }
   .btn:hover { border-color: var(--ink); }
-  .btn:disabled { opacity: 0.45; cursor: default; border-color: var(--line); }
-  .btn kbd { font: 500 11px/1 var(--mono); color: var(--muted); padding: 3px 5px; border-radius: 4px; border: 1px solid var(--line); }
-  .btn.primary { background: var(--ink); border-color: var(--ink); color: var(--ink-contrast); }
-  .btn.primary kbd { color: inherit; border-color: color-mix(in srgb, var(--ink-contrast) 45%, transparent); }
-  .btn.arm { border-color: var(--danger); color: var(--danger); }
+  /* kørt fast: Forfra er det eneste, man kan gøre */
+  .btn.alert { background: var(--ink); border-color: var(--ink); color: var(--ink-contrast); }
+  /* banen er løst: knappen bliver grøn og går videre */
+  .btn.go { background: var(--good); border-color: var(--good); color: var(--good-ink); }
   button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
-
-  .why { border-top: 1px solid var(--line); padding-top: 14px; display: grid; gap: 10px; }
-  .why h3 { margin: 0; font-size: 15px; font-weight: 700; }
-  .why dl { margin: 0; display: grid; gap: 10px; }
-  .why .row { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: baseline; }
-  .why dt { font-family: var(--mono); font-weight: 600; font-size: 14px; font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; }
-  .why dd { margin: 0; color: var(--muted); font-size: 13.5px; line-height: 1.4; }
   .keys { margin: 0; font-size: 12.5px; color: var(--muted); line-height: 1.5; }
 
+  /* info-ikon og regler (kun på mobil; på større skærme står reglerne under titlen) */
+  .info {
+    display: none;
+    place-items: center;
+    flex: none;
+    width: 36px;
+    height: 36px;
+    margin-left: auto;
+    border-radius: 50%;
+    border: 1.5px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    font: 700 17px/1 var(--sans);
+    cursor: pointer;
+  }
+  .info-panel {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: grid;
+    place-items: end center;
+    padding: 16px;
+    padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    background: color-mix(in srgb, var(--ground) 60%, transparent);
+  }
+  .info-card {
+    width: min(100%, 520px);
+    display: grid;
+    gap: 10px;
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    box-shadow: 0 12px 32px rgb(0 0 0 / 0.18);
+  }
+  .info-card h2 { margin: 0; font-size: 20px; font-weight: 750; }
+  .info-card p { margin: 0; }
+  .info-card .close-hint { color: var(--muted); font-size: 13px; }
+
   @media (max-width: 860px) {
-    .cards { grid-template-columns: minmax(0, 1fr); }
-    .card, .card.wide { grid-column: auto; grid-template-columns: 120px minmax(0, 1fr); grid-template-rows: auto auto 1fr; column-gap: 16px; }
-    .card .mini { grid-row: 1 / span 3; align-self: start; }
-    .card .meta, .card.wide .meta { grid-column: 1 / -1; }
+    .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 780px) {
-    .play { grid-template-columns: minmax(0, 1fr); gap: 22px; }
-    .board { width: min(100%, 520px); }
-    .lvl-title { font-size: 36px; }
-  }
-  @media (max-width: 420px) {
-    .card { grid-template-columns: 88px minmax(0, 1fr); }
+    /* forside: kompakt gitter uden beskrivelser */
+    .app { padding-block: 12px; }
+    .hero { padding-block: 4px 0; gap: 6px; }
+    .hero .brand { font-size: clamp(36px, 11vw, 48px); }
+    .lede { font-size: 15px; }
+    .cards { gap: 10px; padding-top: 4px; }
+    .card { padding: 12px; gap: 8px; grid-template-rows: auto auto auto; }
+    .card p, .card .go { display: none; }
+    .card h2 { font-size: 22px; }
+    .card .mini { width: min(100%, 96px); gap: 2px; }
+    .mini span { font-size: 8px; }
+
+    /* spil: alt på én skærm uden scroll */
+    #game { height: calc(100vh - 24px); height: calc(100dvh - 24px); display: flex; flex-direction: column; gap: 10px; }
+    .top { flex-wrap: nowrap; align-items: center; gap: 12px; }
+    .title-block { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+    .title-block .brand { font-size: 28px; white-space: nowrap; }
+    .tagline { display: none; }
+    .info { display: grid; }
+    .levels { flex: none; flex-wrap: nowrap; overflow-x: auto; gap: 6px 14px; padding-block: 6px; scrollbar-width: none; }
+    .levels::-webkit-scrollbar { display: none; }
+    .group { flex: none; }
+    .chip { min-width: 32px; height: 32px; padding: 0 8px; font-size: 13px; }
+    .play { flex: 1; min-height: 0; display: flex; flex-direction: column; align-items: stretch; gap: 10px; }
+    .board-wrap { flex: 1; min-height: 0; container-type: size; display: grid; place-items: center; }
+    .board { width: min(100cqw, calc(100cqh * var(--w) / var(--h))); }
+    .side { display: flex; flex: none; }
+    .side > :not(.actions) { display: none; }
+    .actions { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
+    .status { flex: 1; min-width: 0; min-height: 0; font-size: 14px; line-height: 1.3; }
+    .btn { flex: none; min-width: 112px; }
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -511,10 +536,9 @@
   <section class="view" id="home">
     <header class="hero">
       <h1 class="brand">Hvert felt <em>én</em> gang</h1>
-      <p class="lede">Seks simple spil med samme regel: brug hvert felt præcis én gang. Banerne er små, og hver har nøjagtig én løsning. En computer har gennemsøgt millioner af baner for at finde dem, hvor fælderne først afslører sig sent.</p>
+      <p class="lede">Seks simple spil med samme regel: brug hvert felt præcis én gang.</p>
     </header>
     <div class="cards" id="cards"></div>
-    <p class="facts" id="facts"></p>
   </section>
 
   <section class="view" id="game" hidden>
@@ -524,6 +548,7 @@
         <h1 class="brand" id="gameName"></h1>
       </div>
       <p class="tagline" id="gameRules"></p>
+      <button class="info" id="info" type="button" aria-label="Sådan spiller du" aria-controls="infoPanel">i</button>
     </header>
 
     <nav class="levels" id="levels" aria-label="Baner"></nav>
@@ -544,31 +569,23 @@
           <div class="bar"><i id="bar"></i></div>
         </div>
 
-        <p class="status" id="status" aria-live="polite"></p>
-
-        <div class="pad" role="group" aria-label="Retning">
-          <button type="button" class="up" data-d="0" aria-label="Op">↑</button>
-          <button type="button" class="left" data-d="3" aria-label="Venstre">←</button>
-          <button type="button" class="down" data-d="2" aria-label="Ned">↓</button>
-          <button type="button" class="right" data-d="1" aria-label="Højre">→</button>
+        <div class="actions">
+          <p class="status" id="status" aria-live="polite"></p>
+          <button class="btn" id="restart" type="button">Forfra</button>
         </div>
-
-        <div class="controls">
-          <button class="btn" id="undo" type="button">Fortryd <kbd>Z</kbd></button>
-          <button class="btn" id="restart" type="button">Forfra <kbd>R</kbd></button>
-          <button class="btn" id="hint" type="button">Tjek kurs <kbd>H</kbd></button>
-          <button class="btn" id="reveal" type="button">Vis løsning <kbd>L</kbd></button>
-          <button class="btn primary" id="next" type="button" hidden>Næste bane <kbd>N</kbd></button>
-        </div>
-
-        <section class="why" aria-labelledby="whyTitle">
-          <h3 id="whyTitle">Hvorfor er den svær?</h3>
-          <dl id="why"></dl>
-        </section>
 
         <p class="keys" id="keys"></p>
       </aside>
     </section>
+
+    <div class="info-panel" id="infoPanel" role="dialog" aria-modal="true" aria-labelledby="infoTitle" hidden>
+      <div class="info-card">
+        <h2 id="infoTitle">Sådan spiller du</h2>
+        <p id="infoRules"></p>
+        <p id="infoKeys"></p>
+        <p class="close-hint">Tryk et vilkårligt sted for at lukke.</p>
+      </div>
+    </div>
   </section>
 </main>
 
@@ -1058,78 +1075,78 @@
 // Baner genereret af gen.js/gen-twins.js/gen-ice.js og skrevet ind af build.js/build-twins.js/build-ice.js.
 // LEVELS-VEJ-BEGIN
 const LEVELS_VEJ = [
-  {"id":"3-1","w":3,"h":3,"rows":["S##","###","#.."],"n":7,"score":0,"oneIn0":1,"oneIn4":1,"maxTrap":0,"warnsdorff":1,"rawOneIn":4,"paths":6,"near1":2,"near2":2,"nmoves":6},
-  {"id":"4-1","w":4,"h":4,"rows":["###.","####","####","S.#."],"n":13,"score":6,"oneIn0":2,"oneIn4":2,"maxTrap":5,"warnsdorff":2,"rawOneIn":24,"paths":56,"near1":8,"near2":10,"nmoves":12},
-  {"id":"4-2","w":4,"h":4,"rows":["####","#S##","####",".#.."],"n":13,"score":12.2,"oneIn0":9,"oneIn4":1,"maxTrap":4,"warnsdorff":0,"rawOneIn":24,"paths":64,"near1":11,"near2":18,"nmoves":12},
-  {"id":"5-1","w":5,"h":5,"rows":["#####","#S###","##.##",".####","###.."],"n":21,"score":36.5,"oneIn0":48,"oneIn4":12,"maxTrap":12,"warnsdorff":0,"rawOneIn":192,"paths":566,"near1":15,"near2":40,"nmoves":20},
-  {"id":"5-2","w":5,"h":5,"rows":["S####","##.##","#####","#####","##.#."],"n":22,"score":39,"oneIn0":16,"oneIn4":16,"maxTrap":10,"warnsdorff":8,"rawOneIn":1024,"paths":1413,"near1":29,"near2":75,"nmoves":21},
-  {"id":"5-3","w":5,"h":5,"rows":["#####","#S###","###.#","#####","##.#."],"n":22,"score":46.7,"oneIn0":24,"oneIn4":24,"maxTrap":13,"warnsdorff":0,"rawOneIn":384,"paths":873,"near1":34,"near2":60,"nmoves":21},
-  {"id":"6-1","w":6,"h":6,"rows":["##.##.",".#####","##.###","##.S##","######","######"],"n":31,"score":75,"oneIn0":2592,"oneIn4":192,"maxTrap":21,"warnsdorff":0,"rawOneIn":10368,"paths":27470,"near1":0,"near2":69,"nmoves":30},
-  {"id":"6-2","w":6,"h":6,"rows":[".#.###","######","######","####.#","######","S#####"],"n":33,"score":77.3,"oneIn0":384,"oneIn4":192,"maxTrap":16,"warnsdorff":0,"rawOneIn":221184,"paths":311123,"near1":335,"near2":2650,"nmoves":32},
-  {"id":"6-3","w":6,"h":6,"rows":[".#.##.","#####.","######","####.#","#S####","######"],"n":31,"score":78.8,"oneIn0":432,"oneIn4":216,"maxTrap":20,"warnsdorff":0,"rawOneIn":27648,"paths":59518,"near1":195,"near2":1183,"nmoves":30},
-  {"id":"7-1","w":7,"h":7,"rows":["..#.##.","#######","#######",".##S.##","####.##","#######",".######"],"n":41,"score":118.3,"oneIn0":31104,"oneIn4":4608,"maxTrap":31,"warnsdorff":0,"rawOneIn":1990656,"paths":3028572,"near1":373,"near2":1471,"nmoves":40},
-  {"id":"7-2","w":7,"h":7,"rows":["#######","#####.#","##.####","##.###.","##.S###","#######","####..#"],"n":42,"score":126.7,"oneIn0":41472,"oneIn4":9216,"maxTrap":33,"warnsdorff":0,"rawOneIn":663552,"paths":1347820,"near1":196,"near2":1386,"nmoves":41},
-  {"id":"8-1","w":8,"h":8,"rows":["#####..#","########","..######","#######.","#S######","########","########",".####.##"],"n":57,"score":150.7,"oneIn0":746496,"oneIn4":62208,"maxTrap":46,"warnsdorff":0,"rawOneIn":null,"paths":null,"near1":null,"near2":null,"nmoves":56},
-  {"id":"8-2","w":8,"h":8,"rows":["########","#.####.#","#.#.####","###.####","##.##S##","##.#####","########","#####.#."],"n":55,"score":161.4,"oneIn0":442368,"oneIn4":196608,"maxTrap":40,"warnsdorff":0,"rawOneIn":null,"paths":null,"near1":null,"near2":null,"nmoves":54}
+  {"id":"3-1","w":3,"h":3,"rows":["S##","###","#.."]},
+  {"id":"4-1","w":4,"h":4,"rows":["###.","####","####","S.#."]},
+  {"id":"4-2","w":4,"h":4,"rows":["####","#S##","####",".#.."]},
+  {"id":"5-1","w":5,"h":5,"rows":["#####","#S###","##.##",".####","###.."]},
+  {"id":"5-2","w":5,"h":5,"rows":["S####","##.##","#####","#####","##.#."]},
+  {"id":"5-3","w":5,"h":5,"rows":["#####","#S###","###.#","#####","##.#."]},
+  {"id":"6-1","w":6,"h":6,"rows":["##.##.",".#####","##.###","##.S##","######","######"]},
+  {"id":"6-2","w":6,"h":6,"rows":[".#.###","######","######","####.#","######","S#####"]},
+  {"id":"6-3","w":6,"h":6,"rows":[".#.##.","#####.","######","####.#","#S####","######"]},
+  {"id":"7-1","w":7,"h":7,"rows":["..#.##.","#######","#######",".##S.##","####.##","#######",".######"]},
+  {"id":"7-2","w":7,"h":7,"rows":["#######","#####.#","##.####","##.###.","##.S###","#######","####..#"]},
+  {"id":"8-1","w":8,"h":8,"rows":["#####..#","########","..######","#######.","#S######","########","########",".####.##"]},
+  {"id":"8-2","w":8,"h":8,"rows":["########","#.####.#","#.#.####","###.####","##.##S##","##.#####","########","#####.#."]}
 ];
 // LEVELS-VEJ-END
 // LEVELS-TAKT-BEGIN
 const LEVELS_TAKT = [
-  {"id":"t3-1","w":3,"h":3,"rows":["#A#","B##",".#."],"n":7,"score":0,"oneIn0":1,"oneIn4":1,"maxTrap":0,"solo":5,"rawOneIn":8,"near":10,"nmoves":5},
-  {"id":"t4-1","w":4,"h":4,"rows":["..##","A###","##B#",".#.."],"n":11,"score":5.2,"oneIn0":6,"oneIn4":1,"maxTrap":3,"solo":7,"rawOneIn":48,"near":79,"nmoves":8},
-  {"id":"t4-2","w":4,"h":4,"rows":[".##A","####","##B.","#..."],"n":11,"score":10.2,"oneIn0":6,"oneIn4":2,"maxTrap":5,"solo":3,"rawOneIn":24,"near":47,"nmoves":6},
-  {"id":"t5-1","w":5,"h":5,"rows":[".##.#","#####","A##.#","#####","####B"],"n":22,"score":67.5,"oneIn0":768,"oneIn4":256,"maxTrap":13,"solo":4,"rawOneIn":9216,"near":74083,"nmoves":12},
-  {"id":"t5-2","w":5,"h":5,"rows":["####A","#####","B####","##.#.",".####"],"n":22,"score":71.7,"oneIn0":1152,"oneIn4":256,"maxTrap":13,"solo":8,"rawOneIn":13824,"near":95201,"nmoves":14},
-  {"id":"t5-3","w":5,"h":5,"rows":["A####","#####","#..##","####B",".#.##"],"n":21,"score":75.3,"oneIn0":1536,"oneIn4":432,"maxTrap":12,"solo":9,"rawOneIn":6144,"near":37064,"nmoves":14},
-  {"id":"t6-1","w":6,"h":6,"rows":["##.###","##.A##","######","#B####","..#.##",".#####"],"n":30,"score":77,"oneIn0":2592,"oneIn4":432,"maxTrap":20,"solo":8,"rawOneIn":13824,"near":591743,"nmoves":18},
-  {"id":"t6-2","w":6,"h":6,"rows":[".B####",".##.##","######","A#####","######",".####."],"n":31,"score":90.8,"oneIn0":1728,"oneIn4":1728,"maxTrap":21,"solo":17,"rawOneIn":41472,"near":1227930,"nmoves":23}
+  {"id":"t3-1","w":3,"h":3,"rows":["#A#","B##",".#."]},
+  {"id":"t4-1","w":4,"h":4,"rows":["..##","A###","##B#",".#.."]},
+  {"id":"t4-2","w":4,"h":4,"rows":[".##A","####","##B.","#..."]},
+  {"id":"t5-1","w":5,"h":5,"rows":[".##.#","#####","A##.#","#####","####B"]},
+  {"id":"t5-2","w":5,"h":5,"rows":["####A","#####","B####","##.#.",".####"]},
+  {"id":"t5-3","w":5,"h":5,"rows":["A####","#####","#..##","####B",".#.##"]},
+  {"id":"t6-1","w":6,"h":6,"rows":["##.###","##.A##","######","#B####","..#.##",".#####"]},
+  {"id":"t6-2","w":6,"h":6,"rows":[".B####",".##.##","######","A#####","######",".####."]}
 ];
 // LEVELS-TAKT-END
 // LEVELS-IS-BEGIN
 const LEVELS_IS = [
-  {"id":"i3-1","w":3,"h":3,"rows":["#S#","#~#","~#."],"n":6,"ice":2,"score":2,"oneIn0":2,"oneIn4":1,"maxTrap":2,"iceMoves":2,"rawOneIn":6,"near":8,"nmoves":7},
-  {"id":"i4-1","w":4,"h":4,"rows":["#S##","###~","###~",".##~"],"n":12,"ice":3,"score":22.5,"oneIn0":24,"oneIn4":6,"maxTrap":7,"iceMoves":2,"rawOneIn":144,"near":127,"nmoves":12},
-  {"id":"i4-2","w":4,"h":4,"rows":["#~~#","###S","##..","##~#"],"n":11,"ice":3,"score":22.5,"oneIn0":24,"oneIn4":6,"maxTrap":7,"iceMoves":3,"rawOneIn":48,"near":45,"nmoves":11},
-  {"id":"i5-1","w":5,"h":5,"rows":["#~~##","S#~##","#~~.#","#~~##","#.~#."],"n":14,"ice":8,"score":78.9,"oneIn0":900,"oneIn4":675,"maxTrap":11,"iceMoves":10,"rawOneIn":1296,"near":365,"nmoves":19},
-  {"id":"i5-2","w":5,"h":5,"rows":["#.#~#","###S#","~.##~","~#~##","##~##"],"n":17,"ice":6,"score":79.6,"oneIn0":900,"oneIn4":576,"maxTrap":13,"iceMoves":7,"rawOneIn":2400,"near":780,"nmoves":19},
-  {"id":"i5-3","w":5,"h":5,"rows":["##~##","~###~","##S##","#~###","#~.#."],"n":18,"ice":5,"score":82.9,"oneIn0":3072,"oneIn4":864,"maxTrap":13,"iceMoves":7,"rawOneIn":9216,"near":1822,"nmoves":20},
-  {"id":"i6-1","w":6,"h":6,"rows":["######","~#~###","~#S~#.","###~.#","#~####","~.~###"],"n":25,"ice":8,"score":131.5,"oneIn0":147456,"oneIn4":18432,"maxTrap":20,"iceMoves":8,"rawOneIn":589824,"near":4542,"nmoves":28},
-  {"id":"i6-2","w":6,"h":6,"rows":["S#####","#~.#~~","####~#","#~~~##","#~#.##","~#.###"],"n":24,"ice":9,"score":135.4,"oneIn0":368640,"oneIn4":46080,"maxTrap":19,"iceMoves":10,"rawOneIn":737280,"near":6139,"nmoves":27}
+  {"id":"i3-1","w":3,"h":3,"rows":["#S#","#~#","~#."]},
+  {"id":"i4-1","w":4,"h":4,"rows":["#S##","###~","###~",".##~"]},
+  {"id":"i4-2","w":4,"h":4,"rows":["#~~#","###S","##..","##~#"]},
+  {"id":"i5-1","w":5,"h":5,"rows":["#~~##","S#~##","#~~.#","#~~##","#.~#."]},
+  {"id":"i5-2","w":5,"h":5,"rows":["#.#~#","###S#","~.##~","~#~##","##~##"]},
+  {"id":"i5-3","w":5,"h":5,"rows":["##~##","~###~","##S##","#~###","#~.#."]},
+  {"id":"i6-1","w":6,"h":6,"rows":["######","~#~###","~#S~#.","###~.#","#~####","~.~###"]},
+  {"id":"i6-2","w":6,"h":6,"rows":["S#####","#~.#~~","####~#","#~~~##","#~#.##","~#.###"]}
 ];
 // LEVELS-IS-END
 // LEVELS-KRYDS-BEGIN
 const LEVELS_KRYDS = [
-  {"id":"k3-1","w":3,"h":3,"rows":["#+S",".##","###"],"n":7,"ice":0,"perm":1,"score":2,"oneIn0":2,"oneIn4":1,"maxTrap":2,"iceMoves":0,"permVisits":2,"solo":0,"near":8,"nmoves":8},
-  {"id":"k4-1","w":4,"h":4,"rows":["##+#","##..","####","#+#a"],"n":11,"ice":0,"perm":3,"score":32,"oneIn0":64,"oneIn4":16,"maxTrap":8,"iceMoves":0,"permVisits":2,"solo":0,"near":72,"nmoves":13},
-  {"id":"k4-2","w":4,"h":4,"rows":["#+#.","####","####","#a.#"],"n":12,"ice":0,"perm":2,"score":34,"oneIn0":128,"oneIn4":16,"maxTrap":8,"iceMoves":0,"permVisits":2,"solo":0,"near":118,"nmoves":14},
-  {"id":"k5-1","w":5,"h":5,"rows":["#.###","#####","####+",".a#++","#+###"],"n":18,"ice":0,"perm":5,"score":87.8,"oneIn0":6912,"oneIn4":432,"maxTrap":14,"iceMoves":0,"permVisits":4,"solo":0,"near":4260,"nmoves":22},
-  {"id":"k5-2","w":5,"h":5,"rows":["a####","#+#++","#####",".##++","###.#"],"n":17,"ice":0,"perm":6,"score":92.4,"oneIn0":9216,"oneIn4":1152,"maxTrap":13,"iceMoves":0,"permVisits":5,"solo":0,"near":3426,"nmoves":22},
-  {"id":"k5-3","w":5,"h":5,"rows":["#a.##","#####","#+###","###.+","#+#.#"],"n":18,"ice":0,"perm":4,"score":97,"oneIn0":4096,"oneIn4":2048,"maxTrap":15,"iceMoves":0,"permVisits":3,"solo":0,"near":430,"nmoves":21},
-  {"id":"k6-1","w":6,"h":6,"rows":["#.##+#","+#+#+#",".#####","+.#.+#","######","##+++S"],"n":23,"ice":0,"perm":9,"score":121.7,"oneIn0":17280,"oneIn4":8640,"maxTrap":19,"iceMoves":0,"permVisits":6,"solo":0,"near":5711,"nmoves":28},
-  {"id":"k6-2","w":6,"h":6,"rows":["###+#+","#+####","##.#.#","#+##+#","..####","#+##S#"],"n":26,"ice":0,"perm":6,"score":122.5,"oneIn0":124416,"oneIn4":31104,"maxTrap":20,"iceMoves":0,"permVisits":5,"solo":0,"near":3133,"nmoves":30}
+  {"id":"k3-1","w":3,"h":3,"rows":["#+S",".##","###"]},
+  {"id":"k4-1","w":4,"h":4,"rows":["##+#","##..","####","#+#a"]},
+  {"id":"k4-2","w":4,"h":4,"rows":["#+#.","####","####","#a.#"]},
+  {"id":"k5-1","w":5,"h":5,"rows":["#.###","#####","####+",".a#++","#+###"]},
+  {"id":"k5-2","w":5,"h":5,"rows":["a####","#+#++","#####",".##++","###.#"]},
+  {"id":"k5-3","w":5,"h":5,"rows":["#a.##","#####","#+###","###.+","#+#.#"]},
+  {"id":"k6-1","w":6,"h":6,"rows":["#.##+#","+#+#+#",".#####","+.#.+#","######","##+++S"]},
+  {"id":"k6-2","w":6,"h":6,"rows":["###+#+","#+####","##.#.#","#+##+#","..####","#+##S#"]}
 ];
 // LEVELS-KRYDS-END
 // LEVELS-MESTER-BEGIN
 const LEVELS_MESTER = [
-  {"id":"m4-1","w":4,"h":4,"rows":["#..#","####","##b#",".#a~"],"n":10,"ice":1,"perm":2,"score":35.6,"oneIn0":216,"oneIn4":12,"maxTrap":7,"iceMoves":1,"permVisits":3,"solo":12,"lens":[7,3],"near":984,"nmoves":13},
-  {"id":"m4-2","w":4,"h":4,"rows":["#~##","##.#","B###","#a.#"],"n":12,"ice":1,"perm":1,"score":38.8,"oneIn0":192,"oneIn4":16,"maxTrap":8,"iceMoves":2,"permVisits":1,"solo":3,"lens":[5,6],"near":230,"nmoves":8},
-  {"id":"m4-3","w":4,"h":4,"rows":["###~",".#.A","+##+","#b##"],"n":10,"ice":1,"perm":3,"score":48.7,"oneIn0":1386,"oneIn4":60,"maxTrap":6,"iceMoves":1,"permVisits":2,"solo":6,"lens":[3,6],"near":1427,"nmoves":9},
-  {"id":"m5-1","w":5,"h":5,"rows":["#+A##","b~##.","++##.","+.###","+###."],"n":14,"ice":1,"perm":6,"score":91.3,"oneIn0":3672,"oneIn4":1224,"maxTrap":10,"iceMoves":2,"permVisits":9,"solo":20,"lens":[2,11],"near":25496268,"nmoves":21},
-  {"id":"m5-2","w":5,"h":5,"rows":["A#+~~","##.#.","#####","#+###","#.+B#"],"n":17,"ice":2,"perm":3,"score":97.6,"oneIn0":15552,"oneIn4":8640,"maxTrap":13,"iceMoves":1,"permVisits":1,"solo":17,"lens":[4,11],"near":20046,"nmoves":17},
-  {"id":"m5-3","w":5,"h":5,"rows":["+A#..","##~#.","##.~#","####.","#b.+#"],"n":14,"ice":2,"perm":3,"score":98.1,"oneIn0":140000,"oneIn4":6000,"maxTrap":9,"iceMoves":2,"permVisits":1,"solo":8,"lens":[3,10],"near":4482,"nmoves":12},
-  {"id":"m5-4","w":5,"h":5,"rows":["B##..","####.","##+##","#+A~.","##.#."],"n":16,"ice":1,"perm":2,"score":110.7,"oneIn0":15360,"oneIn4":12800,"maxTrap":11,"iceMoves":2,"permVisits":1,"solo":12,"lens":[3,11],"near":11889,"nmoves":14}
+  {"id":"m4-1","w":4,"h":4,"rows":["#..#","####","##b#",".#a~"]},
+  {"id":"m4-2","w":4,"h":4,"rows":["#~##","##.#","B###","#a.#"]},
+  {"id":"m4-3","w":4,"h":4,"rows":["###~",".#.A","+##+","#b##"]},
+  {"id":"m5-1","w":5,"h":5,"rows":["#+A##","b~##.","++##.","+.###","+###."]},
+  {"id":"m5-2","w":5,"h":5,"rows":["A#+~~","##.#.","#####","#+###","#.+B#"]},
+  {"id":"m5-3","w":5,"h":5,"rows":["+A#..","##~#.","##.~#","####.","#b.+#"]},
+  {"id":"m5-4","w":5,"h":5,"rows":["B##..","####.","##+##","#+A~.","##.#."]}
 ];
 // LEVELS-MESTER-END
 // LEVELS-POST-BEGIN
 const LEVELS_POST = [
-  {"id":"p3-1","w":3,"h":3,"rows":["#32","1S#","###"],"n":9,"ice":0,"perm":0,"score":9.3,"oneIn0":6,"oneIn4":2,"maxTrap":6,"iceMoves":0,"permVisits":0,"solo":0,"near":1,"K":3,"nmoves":8},
-  {"id":"p4-1","w":4,"h":4,"rows":["3###","4##1","####","2##S"],"n":16,"ice":0,"perm":0,"score":45,"oneIn0":128,"oneIn4":32,"maxTrap":12,"iceMoves":0,"permVisits":0,"solo":0,"near":7,"K":4,"nmoves":15},
-  {"id":"p4-2","w":4,"h":4,"rows":["4#23","#1##","##S#","####"],"n":16,"ice":0,"perm":0,"score":48.1,"oneIn0":144,"oneIn4":48,"maxTrap":11,"iceMoves":0,"permVisits":0,"solo":0,"near":24,"K":4,"nmoves":15},
-  {"id":"p5-1","w":5,"h":5,"rows":["4#2##","5##3#","#####","#####","1###S"],"n":25,"ice":0,"perm":0,"score":86,"oneIn0":4096,"oneIn4":1024,"maxTrap":19,"iceMoves":0,"permVisits":0,"solo":0,"near":53,"K":5,"nmoves":24},
-  {"id":"p5-2","w":5,"h":5,"rows":["#####","#####","2#S##","4#1##","3####"],"n":25,"ice":0,"perm":0,"score":103.1,"oneIn0":5184,"oneIn4":2592,"maxTrap":22,"iceMoves":0,"permVisits":0,"solo":0,"near":115,"K":4,"nmoves":24},
-  {"id":"p5-3","w":5,"h":5,"rows":["#####","###1#","#####","#####","S#243"],"n":25,"ice":0,"perm":0,"score":104,"oneIn0":32768,"oneIn4":4096,"maxTrap":22,"iceMoves":0,"permVisits":0,"solo":0,"near":69,"K":4,"nmoves":24},
-  {"id":"p6-1","w":6,"h":6,"rows":["######","#1##2#","4##S##","3#####","5#####","....##"],"n":32,"ice":0,"perm":0,"score":138.1,"oneIn0":41472,"oneIn4":41472,"maxTrap":28,"iceMoves":0,"permVisits":0,"solo":0,"near":106,"K":5,"nmoves":31},
-  {"id":"p6-2","w":6,"h":6,"rows":["#####1","3#####","4..###","2#####","######","S#####"],"n":34,"ice":0,"perm":0,"score":144,"oneIn0":65536,"oneIn4":65536,"maxTrap":30,"iceMoves":0,"permVisits":0,"solo":0,"near":12,"K":4,"nmoves":33}
+  {"id":"p3-1","w":3,"h":3,"rows":["#32","1S#","###"]},
+  {"id":"p4-1","w":4,"h":4,"rows":["3###","4##1","####","2##S"]},
+  {"id":"p4-2","w":4,"h":4,"rows":["4#23","#1##","##S#","####"]},
+  {"id":"p5-1","w":5,"h":5,"rows":["4#2##","5##3#","#####","#####","1###S"]},
+  {"id":"p5-2","w":5,"h":5,"rows":["#####","#####","2#S##","4#1##","3####"]},
+  {"id":"p5-3","w":5,"h":5,"rows":["#####","###1#","#####","#####","S#243"]},
+  {"id":"p6-1","w":6,"h":6,"rows":["######","#1##2#","4##S##","3#####","5#####","....##"]},
+  {"id":"p6-2","w":6,"h":6,"rows":["#####1","3#####","4..###","2#####","######","S#####"]}
 ];
 // LEVELS-POST-END
 
@@ -1137,8 +1154,6 @@ const LEVELS_POST = [
   // Den offentlige version (docs/) bygges med PUBLIC = true: ingen "Vis løsning" og ingen løsninger i siden.
   const PUBLIC = true;
   const $ = (id) => document.getElementById(id);
-  // antal træk i løsningen (den offentlige version har kun tallet, ikke selve løsningen)
-  const movesCount = (lv) => lv.nmoves != null ? lv.nmoves : lv.dirs ? lv.dirs.length : typeof lv.sol === 'string' ? lv.sol.length : lv.sol ? lv.sol.length - 1 : 0;
   const fmt = (x) => Number(x).toLocaleString('da-DK');
   const SVGNS = 'http://www.w3.org/2000/svg';
   const DX = [0, 1, 0, -1], DY = [-1, 0, 1, 0], DIRS = 'URDL';
@@ -1205,7 +1220,6 @@ const LEVELS_POST = [
       },
       solverState: () => ({ used: path.slice(), pos: [head()] }),
       stuckMsg: (left) => left === 1 ? 'Så tæt på! Kun ét felt mangler, men der er ingen vej derhen.' : `Kørt fast med ${left} felter tilbage.`,
-      startMsg: 'Start i ringen. Du kan ikke gå på et felt, du allerede har besøgt.',
       serialize: () => path.slice(1).map((c, k) => DIRS[dirBetween(B, path[k], c)]).join(''),
       scene() {
         const own = new Uint8Array(B.N), order = new Int32Array(B.N), next = [];
@@ -1255,7 +1269,6 @@ const LEVELS_POST = [
         return { used, pos: [a, b] };
       },
       stuckMsg: (left) => left === 1 ? 'Så tæt på! Kun ét felt mangler, men ingen brik kan nå det.' : `Kørt fast med ${left} felter tilbage.`,
-      startMsg: 'Begge brikker flytter, når du vælger en retning. Brug kanter og huller til at holde den ene tilbage.',
       serialize: () => hist.map(h => DIRS[h.d]).join(''),
       scene() {
         const own = owner.slice(), next = [];
@@ -1354,7 +1367,6 @@ const LEVELS_POST = [
         return { used, pos: pos.slice() };
       },
       stuckMsg: (left) => left === 1 ? 'Så tæt på! Kun ét felt mangler, men det kan ikke nås.' : `Kørt fast: ingen af de ${left} resterende felter kan nås.`,
-      startMsg: lv.startMsg || 'Is og kryds forsvinder aldrig. Felterne forsvinder, når du har brugt dem.',
       serialize: () => hist.map(h => DIRS[h.d]).join(''),
       scene() {
         const next = [];
@@ -1383,96 +1395,39 @@ const LEVELS_POST = [
       id: 'vej', name: 'Kun én vej', brand: 'Kun <em>én</em> vej', levels: LEVELS_VEJ, make: makeVej,
       rules: 'Besøg hvert felt præcis én gang. Der findes kun én rute fra start.',
       card: 'Én brik. Gå felt for felt, og besøg hvert felt præcis én gang. Felterne forsvinder bag dig.',
-      keys: 'Træk med mus eller finger, brug piletasterne eller knapperne. Klik på et felt, du har besøgt, for at gå tilbage dertil.',
-      why(lv) {
-        const rows = [];
-        if (lv.oneIn0 > 1) {
-          rows.push([`1 : ${fmt(lv.oneIn0)}`, 'chance for at ramme ruten i første forsøg, selv om du aldrig går ind i en åbenlys blindgyde']);
-          if (lv.oneIn4 > 1) rows.push([`1 : ${fmt(lv.oneIn4)}`, '… og selv om du altid kan se 4 træk frem']);
-        } else rows.push(['1 : 1', 'Opvarmning. Ingen fælder, så længe du ikke går direkte ind i en blindgyde.']);
-        if (lv.maxTrap > 1) rows.push([`${lv.maxTrap} træk`, 'så langt kan du gå forkert, før fejlen overhovedet kan ses']);
-        if (lv.near1 != null && lv.near1 + lv.near2 > 0) rows.push([fmt(lv.near1 + lv.near2), 'forskellige måder at køre fast på med kun 1–2 felter tilbage']);
-        if (lv.oneIn0 > 1) rows.push([lv.warnsdorff === 0 ? 'virker ikke' : `1 : ${lv.warnsdorff}`, 'strategien "tag kanter og hjørner først"']);
-        return rows;
-      },
+      keys: 'Træk med fingeren eller musen hen over felterne, eller brug piletasterne. Træk tilbage, eller tryk på et felt du har besøgt, for at fortryde.',
     },
     takt: {
       id: 'takt', name: 'I takt', brand: '<em>I</em> <span class="b">takt</span>', levels: LEVELS_TAKT, make: makeTakt,
       rules: 'To brikker, én styring. Begge flytter samme vej, og en brik der ikke kan, bliver stående. Hvert felt kan kun bruges én gang.',
       card: 'To brikker, én styring. Begge flytter samme vej, og en brik der ikke kan, bliver stående.',
-      keys: 'Piletaster, knapperne, swipe på brættet, eller tryk på et felt på linje med en brik. Prikkerne viser, hvor hver brik kan gå hen.',
-      why(lv) {
-        const rows = [];
-        if (lv.oneIn0 > 1) {
-          rows.push([`1 : ${fmt(lv.oneIn0)}`, 'chance for at ramme løsningen i første forsøg, selv om du aldrig laver en åbenlys fejl']);
-          if (lv.oneIn4 > 1) rows.push([`1 : ${fmt(lv.oneIn4)}`, '… og selv om du altid kan se 4 træk frem']);
-        } else rows.push(['1 : 1', 'Opvarmning. Lær at bruge kanterne til at holde den ene brik tilbage.']);
-        if (lv.maxTrap > 1) rows.push([`${lv.maxTrap} træk`, 'så langt kan du gå forkert, før fejlen overhovedet kan ses']);
-        if (lv.near != null && lv.near > 0) rows.push([fmt(lv.near), 'forskellige måder at køre fast på med kun 1–2 felter tilbage']);
-        rows.push([`${lv.solo} af ${movesCount(lv)}`, 'træk i løsningen, hvor kun den ene brik flytter']);
-        return rows;
-      },
+      keys: 'Swipe på brættet, tryk på et felt på linje med en brik, eller brug piletasterne. Prikkerne viser, hvor hver brik kan gå hen.',
     },
     is: {
       id: 'is', name: 'Glatis', brand: 'Glat<span class="ice">is</span>', levels: LEVELS_IS, make: makeMix,
       rules: 'Brug hvert felt præcis én gang. Is forsvinder aldrig, men på is glider du, til du rammer et felt (og lander på det) eller noget, du ikke kan gå på.',
       card: 'Én brik og et nyt felt: is. Den forsvinder aldrig, men du glider, til du rammer noget.',
-      startMsg: 'Is forsvinder aldrig, men du glider, til du rammer et felt eller noget, du ikke kan gå på.',
-      keys: 'Piletaster, knapperne, swipe på brættet, eller tryk på et felt på linje med brikken. Prikkerne viser, hvor hvert tryk fører dig hen.',
-      why(lv) {
-        const rows = [];
-        if (lv.oneIn0 > 1) {
-          rows.push([`1 : ${fmt(lv.oneIn0)}`, 'chance for at vælge den rigtige rækkefølge i første forsøg, selv om du aldrig laver en åbenlys fejl']);
-          if (lv.oneIn4 > 1) rows.push([`1 : ${fmt(lv.oneIn4)}`, '… og selv om du altid kan se 4 felter frem']);
-        } else rows.push(['1 : 1', 'Opvarmning. Lær hvordan isen fører dig rundt.']);
-        if (lv.maxTrap > 1) rows.push([`${lv.maxTrap} felter`, 'så langt kan du gå forkert, før fejlen overhovedet kan ses']);
-        if (lv.near != null && lv.near > 0) rows.push([fmt(lv.near), 'forskellige måder at køre fast på med kun 1–2 felter tilbage']);
-        rows.push([`${lv.iceMoves} af ${movesCount(lv)}`, 'tryk i løsningen, hvor du glider på is']);
-        return rows;
-      },
+      keys: 'Swipe på brættet, tryk på et felt på linje med brikken, eller brug piletasterne. Prikkerne viser, hvor hvert tryk fører dig hen.',
     },
     kryds: {
       id: 'kryds', name: 'Korsvej', brand: 'Kors<span class="perm">vej</span>', levels: LEVELS_KRYDS, make: makeMix,
       rules: 'Brug hvert felt præcis én gang. Kryds (de mørke sten) forsvinder aldrig, så dem kan du gå over lige så tit, du vil.',
       card: 'Én brik og et nyt felt: kryds. Det forsvinder aldrig, så du kan krydse din egen vej.',
-      startMsg: 'Krydsene forsvinder aldrig. Brug dem som rundkørsler, men husk at felterne kun kan bruges én gang.',
-      keys: 'Piletaster, knapperne, swipe på brættet, eller tryk på et felt på linje med brikken. Prikkerne viser, hvor hvert tryk fører dig hen.',
-      why(lv) { return mixWhy(lv, 'Opvarmning. Lær at bruge krydsene som rundkørsler.'); },
+      keys: 'Swipe på brættet, tryk på et felt på linje med brikken, eller brug piletasterne. Prikkerne viser, hvor hvert tryk fører dig hen.',
     },
     post: {
       id: 'post', name: 'Postløb', brand: 'Post<em>løb</em>', levels: LEVELS_POST, make: makeVej,
       rules: 'Besøg hvert felt præcis én gang, og tag posterne i rækkefølge: du kan ikke gå ind på post 2, før du har stået på post 1. Posterne forsvinder bag dig ligesom de andre felter.',
-      card: 'Én brik og nummererede poster, der skal tages i rækkefølge. Selv et fyldt bræt uden huller kan være svært.',
-      keys: 'Træk med mus eller finger, brug piletasterne eller knapperne. Den næste post, du må tage, står med blåt.',
-      startMsg: 'Tag posterne i rækkefølge, og brug hvert felt præcis én gang.',
-      why(lv) {
-        const rows = mixWhy(lv, 'Opvarmning. Lær at planlægge ruten mellem posterne.');
-        rows.push([`${lv.K} poster`, 'uden dem ville banen have mere end én løsning']);
-        return rows;
-      },
+      card: 'Én brik og nummererede poster, der skal tages i rækkefølge.',
+      keys: 'Træk med fingeren eller musen hen over felterne, eller brug piletasterne. Den næste post, du må tage, står med blåt.',
     },
     mester: {
       id: 'mester', name: 'Mesterprøven', brand: 'Mester<em>prøven</em>', levels: LEVELS_MESTER, make: makeMix,
       rules: 'Alt på én gang: to brikker med fælles styring, is du glider på, og kryds der aldrig forsvinder. Brug hvert felt præcis én gang.',
-      card: 'Alt på én gang: to brikker med fælles styring, is og kryds. De sværeste baner på mindst mulig plads.',
-      startMsg: 'Begge brikker flytter samme vej. Is og kryds forsvinder aldrig. Felterne kan kun bruges én gang.',
-      keys: 'Piletaster, knapperne, swipe på brættet, eller tryk på et felt på linje med en brik. Står brikkerne på samme linje, flytter den forreste først.',
-      why(lv) { return mixWhy(lv, ''); },
+      card: 'Alt på én gang: to brikker med fælles styring, is og kryds.',
+      keys: 'Swipe på brættet, tryk på et felt på linje med en brik, eller brug piletasterne. Står brikkerne på samme linje, flytter den forreste først.',
     },
   };
-  function mixWhy(lv, warm) {
-    const rows = [];
-    if (lv.oneIn0 > 1) {
-      rows.push([`1 : ${fmt(lv.oneIn0)}`, 'chance for at vælge den rigtige rækkefølge i første forsøg, selv om du aldrig laver en åbenlys fejl']);
-      if (lv.oneIn4 > 1) rows.push([`1 : ${fmt(lv.oneIn4)}`, '… og selv om du altid kan se 4 felter frem']);
-    } else rows.push(['1 : 1', warm]);
-    if (lv.maxTrap > 1) rows.push([`${lv.maxTrap} felter`, 'så langt kan du gå forkert, før fejlen overhovedet kan ses']);
-    if (lv.near != null && lv.near > 0) rows.push([fmt(lv.near), 'forskellige måder at køre fast på med kun 1–2 felter tilbage']);
-    if (lv.ice) rows.push([`${lv.iceMoves} af ${movesCount(lv)}`, 'tryk i løsningen, hvor en brik glider på is']);
-    if (lv.perm) rows.push([`${lv.permVisits} af ${movesCount(lv)}`, 'tryk i løsningen, der ender på et kryds']);
-    if (lv.lens && lv.lens.length === 2) rows.push([`${lv.lens[0]} + ${lv.lens[1]}`, 'felter brugt af hver brik']);
-    return rows;
-  }
   const ORDER = ['vej', 'takt', 'is', 'kryds', 'post', 'mester'];
 
   // ---------- tilstand ----------
@@ -1525,8 +1480,6 @@ const LEVELS_POST = [
       card.addEventListener('click', () => openGame(id));
       wrap.appendChild(card);
     }
-    const best = (g) => g.levels.reduce((m, l) => Math.max(m, l.oneIn4 || 0), 0);
-    $('facts').textContent = `Sværhedsgraden er målt som chancen for at løse en bane i første forsøg for en spiller, der aldrig laver åbenlyse fejl og kan se 4 træk frem. Den sværeste bane i hvert spil: ${ORDER.map(id => `${GAMES[id].name} 1 : ${fmt(best(GAMES[id]))}`).join(', ')}.`;
   }
 
   function showView(v) {
@@ -1545,7 +1498,10 @@ const LEVELS_POST = [
     game = GAMES[id];
     $('gameName').innerHTML = game.brand;
     $('gameRules').textContent = game.rules;
-    $('keys').textContent = game.keys;
+    $('keys').textContent = game.keys + ' Tastatur: Z fortryder, R starter forfra.';
+    $('infoRules').textContent = game.rules;
+    $('infoKeys').textContent = game.keys;
+    $('infoPanel').hidden = true;
     showView(id);
     const solved = getSolved(game);
     let first = game.levels.findIndex(l => !solved.has(l.id));
@@ -1591,11 +1547,10 @@ const LEVELS_POST = [
   function loadLevel(i, restoreMoves) {
     stopAnim();
     revealed = false;
-    disarm();
+    armed = 0;
     li = i;
     const lv = game.levels[i];
     G = game.make(lv);
-    if (game.startMsg) G.startMsg = game.startMsg;
     fails = 0; wasStuck = false; hintMsg = null;
     if (typeof restoreMoves === 'string') for (const ch of restoreMoves) if (!G.dir(DIRS.indexOf(ch)).ok) break;
 
@@ -1620,7 +1575,7 @@ const LEVELS_POST = [
     const svg = (tag, attrs) => { const el = document.createElementNS(SVGNS, tag); for (const k in attrs) el.setAttribute(k, attrs[k]); return el; };
     const root = svg('svg', { class: 'ink', viewBox: `0 0 ${lv.w} ${lv.h}`, 'aria-hidden': 'true' });
     ink = {
-      rings: sc.rings.map(([who, c]) => { const [x, y] = center(c); return svg('circle', { class: `ring ring-${who}`, r: 0.33, cx: x, cy: y }); }),
+      rings: sc.rings.map(([who, c]) => { const [x, y] = center(c, sc.own); return svg('circle', { class: `ring ring-${who}`, r: 0.33, cx: x, cy: y }); }),
       trails: sc.trails.map(([who]) => svg('polyline', { class: `trail-${who}` })),
       pieces: sc.pieces.map(([who]) => { const g = svg('g', { class: `piece piece-${who}` }); g.appendChild(svg('circle', { r: 0.24, cx: 0, cy: 0 })); return g; }),
     };
@@ -1631,21 +1586,35 @@ const LEVELS_POST = [
     $('lvlEyebrow').textContent = `Bane ${i + 1} af ${game.levels.length} · ${G.B.n} felter` + (G.B.ice ? ` + ${G.B.ice} is` : '') + (G.B.perm ? ` + ${G.B.perm} kryds` : '');
     $('lvlTitle').textContent = `${lv.w} × ${lv.h}` + (same.length > 1 ? ` · ${same.indexOf(lv) + 1}` : '');
     $('tot').textContent = G.B.n;
-    const dl = $('why');
-    dl.textContent = '';
-    for (const [k, v] of game.why(lv)) {
-      const row = document.createElement('div');
-      row.className = 'row';
-      const dt = document.createElement('dt'); dt.textContent = k;
-      const dd = document.createElement('dd'); dd.textContent = v;
-      row.append(dt, dd);
-      dl.appendChild(row);
-    }
     renderLevelNav();
     update();
   }
 
-  function center(c) { const w = game.levels[li].w; return [c % w + 0.5, Math.floor(c / w) + 0.47]; }
+  // Midten af fliseoverfladen. Brugte felter og is er trykket ned (--lift = 0,065 felt); nye felter og kryds står oppe.
+  function center(c, own) {
+    const w = game.levels[li].w, t = G.B.type[c];
+    const dy = t === ICE ? 0.565 : t === TILE && own && own[c] ? 0.55 : 0.485;
+    return [c % w + 0.5, Math.floor(c / w) + dy];
+  }
+  // Brikkerne flyttes med SVG-attributten transform (ens i alle browsere) og glider med requestAnimationFrame.
+  function placePiece(el, x, y, dur) {
+    cancelAnimationFrame(el._raf);
+    const from = el._at;
+    const set = (px, py) => { el._at = [px, py]; el.setAttribute('transform', `translate(${px} ${py})`); };
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!from || reduce || (from[0] === x && from[1] === y)) { set(x, y); return; }
+    const t0 = performance.now();
+    const tick = (now) => {
+      const t = Math.min(1, (now - t0) / dur), e = 1 - (1 - t) ** 3;
+      set(from[0] + (x - from[0]) * e, from[1] + (y - from[1]) * e);
+      if (t < 1) el._raf = requestAnimationFrame(tick);
+    };
+    el._raf = requestAnimationFrame(tick);
+  }
+  function nextLevel() {
+    if (li < game.levels.length - 1) { loadLevel(li + 1); return; }
+    openGame(ORDER[(ORDER.indexOf(game.id) + 1) % ORDER.length]);
+  }
 
   // ---------- handlinger ----------
   function step(d) {
@@ -1706,16 +1675,11 @@ const LEVELS_POST = [
       update();
     }, 30);
   }
-  function revealClick() {
+  let armed = 0;
+  function revealKey() {
     if (PUBLIC || revealed || animTimer || G.won()) return;
-    const btn = $('reveal');
-    if (!btn.classList.contains('arm')) {
-      btn.classList.add('arm');
-      btn.firstChild.textContent = 'Sikker? Klik igen ';
-      armTimer = setTimeout(disarm, 3000);
-      return;
-    }
-    disarm();
+    if (Date.now() - armed > 3000) { armed = Date.now(); hintMsg = ['', 'Tryk L igen for at vise løsningen.']; update(); return; }
+    armed = 0;
     hintMsg = null;
     revealed = true;
     $('board').classList.remove('won');
@@ -1731,18 +1695,11 @@ const LEVELS_POST = [
     }, G.revealStep);
     update();
   }
-  function disarm() {
-    clearTimeout(armTimer);
-    const btn = $('reveal');
-    btn.classList.remove('arm');
-    btn.firstChild.textContent = 'Vis løsning ';
-  }
 
   // ---------- visning ----------
   function update(blocked) {
     const board = $('board');
     const won = G.won();
-    const dirs = [0, 1, 2, 3].map(d => G.canDir(d));
     const stuck = !won && G.stuck();
     if (stuck && !wasStuck) fails++;
     wasStuck = stuck;
@@ -1756,11 +1713,10 @@ const LEVELS_POST = [
       cells[c].style.setProperty('--i', sc.order[c]);
     }
     if (!won && !animTimer) for (const [c, who] of sc.next) cells[c].classList.add('next-' + who);
-    sc.trails.forEach(([, path], k) => ink.trails[k].setAttribute('points', path.map(c => center(c).join(',')).join(' ')));
+    sc.trails.forEach(([, path], k) => ink.trails[k].setAttribute('points', path.map(c => center(c, sc.own).join(',')).join(' ')));
     sc.pieces.forEach(([, c, dur], k) => {
-      const [x, y] = center(c), el = ink.pieces[k];
-      el.style.setProperty('--dur', `${dur || 90}ms`);
-      el.style.transform = `translate(${x}px, ${y}px)`;
+      const [x, y] = center(c, sc.own), el = ink.pieces[k];
+      placePiece(el, x, y, dur || 90);
       el.classList.remove('blocked');
       if (blocked === k) { void el.getBoundingClientRect(); el.classList.add('blocked'); }
     });
@@ -1778,22 +1734,18 @@ const LEVELS_POST = [
     $('moves').textContent = G.moves();
     $('bar').style.width = `${(used / n) * 100}%`;
     $('fails').textContent = fails ? `kørt fast ${fails}×` : '';
-    document.querySelectorAll('.pad button').forEach(btn => { btn.disabled = won || !!animTimer || !dirs[+btn.dataset.d]; });
-    $('undo').disabled = !G.canUndo() || !!animTimer;
-    $('restart').disabled = !G.canUndo() || !!animTimer;
-    $('hint').disabled = won || revealed;
-    $('reveal').disabled = revealed || won;
-    $('next').hidden = !won || li >= game.levels.length - 1;
+    const rb = $('restart');
+    rb.classList.toggle('go', won);
+    rb.classList.toggle('alert', stuck);
+    rb.textContent = won ? (li < game.levels.length - 1 ? 'Næste bane →' : 'Næste spil →') : 'Forfra';
 
     let cls = '', msg = '';
     if (revealed) msg = animTimer ? 'Viser løsningen …' : 'Her er den eneste løsning. Tryk Forfra for at prøve selv.';
     else if (won) {
       cls = 'good';
-      msg = fails === 0 ? 'Løst i første forsøg. Imponerende.' : `Løst! Du kørte fast ${fails} ${fails === 1 ? 'gang' : 'gange'} undervejs.`;
-      if (li >= game.levels.length - 1) msg += ' Det var den sidste bane. Prøv et af de andre spil.';
+      msg = fails === 0 ? 'Løst i første forsøg!' : `Løst! Kørt fast ${fails}× undervejs.`;
     } else if (stuck) { cls = 'bad'; msg = G.stuckMsg(left); }
     else if (hintMsg) [cls, msg] = hintMsg;
-    else if (!G.canUndo()) msg = G.startMsg;
     else msg = `${left} ${left === 1 ? 'felt' : 'felter'} tilbage.`;
     const st = $('status');
     st.className = 'status' + (cls ? ' ' + cls : '');
@@ -1844,23 +1796,20 @@ const LEVELS_POST = [
   const KEYDIR = { arrowup: 0, w: 0, arrowright: 1, d: 1, arrowdown: 2, s: 2, arrowleft: 3, a: 3 };
   document.addEventListener('keydown', (e) => {
     if (!G || $('game').hidden || e.altKey || e.metaKey) return;
+    if (!$('infoPanel').hidden) { if (e.key === 'Escape') $('infoPanel').hidden = true; return; }
     const k = e.key.toLowerCase();
     if (e.ctrlKey && k !== 'z') return;
     if (k in KEYDIR) { e.preventDefault(); step(KEYDIR[k]); return; }
     if (k === 'z' || k === 'backspace' || k === 'u') { e.preventDefault(); undo(); }
     else if (k === 'r') restart();
     else if (k === 'h') hint();
-    else if (k === 'l') revealClick();
-    else if (k === 'n' && G.won() && li < game.levels.length - 1) loadLevel(li + 1);
+    else if (k === 'l') revealKey();
+    else if ((k === 'n' || k === 'enter') && G.won()) nextLevel();
     else if (k === 'escape') goHome();
   });
-  document.querySelectorAll('.pad button').forEach(btn => btn.addEventListener('click', () => step(+btn.dataset.d)));
-  $('undo').addEventListener('click', () => undo());
-  $('restart').addEventListener('click', restart);
-  $('hint').addEventListener('click', hint);
-  $('reveal').addEventListener('click', revealClick);
-  if (PUBLIC) $('reveal').hidden = true;
-  $('next').addEventListener('click', () => loadLevel(li + 1));
+  $('restart').addEventListener('click', () => { if (G && G.won()) nextLevel(); else restart(); });
+  $('info').addEventListener('click', () => { $('infoPanel').hidden = false; });
+  $('infoPanel').addEventListener('click', () => { $('infoPanel').hidden = true; });
   $('back').addEventListener('click', goHome);
 
   // ---------- start ----------
