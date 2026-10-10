@@ -1,20 +1,23 @@
 'use strict';
-// Udvælger baner til Korsvej, Mesterprøven og Postløb og indsætter dem i dev/index.html
-// (mellem LEVELS-KRYDS-/LEVELS-MESTER-/LEVELS-POST-markørerne).
-// Brug: node build-mix.js            (alle tre)
-//       node build-mix.js post       (kun én variant)
+// Picks levels for Crossroads, The Gauntlet and Checkpoints and writes them into dev/index.html
+// (between the LEVELS-KRYDS-/LEVELS-MESTER-/LEVELS-POST- markers).
+// Usage: node build-mix.js            (all three)
+//        node build-mix.js post       (one variant only)
 const fs = require('fs');
+const path = require('path');
 const { data, DEV_PAGE } = require('./paths');
 const M = require('./mix');
 
 const PLANS = {
   kryds: { marker: 'KRYDS', prefix: 'k', sizes: [[3, 1], [4, 2], [5, 3], [6, 2]] },
-  mester: { marker: 'MESTER', prefix: 'm', sizes: [[4, 3], [5, 4]] }, // mindst mulig plads
+  // The Gauntlet: small boards, many combinations of elements (see gen-mix.js)
+  mester: { marker: 'MESTER', prefix: 'm', sizes: [[3, 2], [4, 6], [5, 6]] },
   post: { marker: 'POST', prefix: 'p', sizes: [[3, 1], [4, 2], [5, 3], [6, 2]] },
 };
 const ONLY = process.argv.slice(2);
 const MIN_DISTANCE = 4;
 const DX = [0, 1, 0, -1], DY = [-1, 0, 1, 0];
+const LEGACY_GAUNTLET_COMBO = 'ice+perm+two'; // mester_WxH.json from before combos existed
 
 function transformIndex(W, t, i) {
   const x = i % W, y = (i / W) | 0, m = W - 1;
@@ -25,12 +28,12 @@ function distance(W, p, q) {
   let best = Infinity;
   for (let t = 0; t < 8; t++) {
     let d = 0;
-    // almindelige felter tæller fuldt; forskelle mellem hul/is/kryds tæller halvt (ofte ren pynt)
+    // plain tiles count in full; differences between hole/ice/crossing count half (often just decoration)
     for (let i = 0; i < W * W; i++) {
       const pt = p.types[i], qt = q.types[transformIndex(W, t, i)];
       if ((pt === 1) !== (qt === 1)) d++;
       else if (pt !== qt) d += 0.5;
-      if (p.nums[i] !== q.nums[transformIndex(W, t, i)]) d++; // poster med andet nummer eller sted
+      if (p.nums[i] !== q.nums[transformIndex(W, t, i)]) d++; // checkpoints with another number or place
     }
     const ps = [p.a, p.b].filter(c => c >= 0).sort().join(), qs = [q.a, q.b].filter(c => c >= 0).map(c => transformIndex(W, t, c)).sort().join();
     if (ps !== qs) d += 2;
@@ -39,8 +42,8 @@ function distance(W, p, q) {
   return best;
 }
 
-// To baner med næsten samme løsning føles som den samme bane. Sammenlign løsningerne (som retninger)
-// under alle 8 spejlinger/rotationer af retningerne; for ens = redigeringsafstand under 35 %.
+// Two levels with almost the same solution feel like the same level. Compare the solutions (as directions)
+// under all 8 reflections/rotations of the directions; too similar = edit distance below 35 %.
 function lev(a, b) {
   const d = Array.from({ length: a.length + 1 }, (_, i) => [i]);
   for (let j = 1; j <= b.length; j++) d[0][j] = j;
@@ -55,7 +58,7 @@ function similarSolution(a, b) {
   return best < 0.35 * Math.max(a.length, b.length);
 }
 
-// Uafhængig afspilning (samme regler skrevet på ny): alle felter skal bruges
+// Independent replay (the same rules written again): every tile must be used
 function replay(w, h, types, starts, dirs, nums) {
   let total = 0;
   for (const t of types) if (t === 1) total++;
@@ -76,7 +79,7 @@ function replay(w, h, types, starts, dirs, nums) {
       if (!free(q, k)) continue;
       while (types[q] === 2) { const nx = step(q, d); if (!free(nx, k)) break; q = nx; }
       out[k] = q;
-      if (types[q] === 1) { used.add(q); if (nums[q]) done++; }
+      if (types[q] === 1) used.add(q); // done stays as it was before the press: pieces move at once
     }
     if (out.every((p, k) => p === pos[k])) return false;
     pos = out;
@@ -84,34 +87,55 @@ function replay(w, h, types, starts, dirs, nums) {
   return used.size === total;
 }
 
+// All candidates for a variant and size. The Gauntlet has one file per combination of elements.
+function candidates(variant, W) {
+  const files = [];
+  if (variant === 'mester') {
+    const dir = path.dirname(data('x'));
+    for (const f of fs.readdirSync(dir)) if (f === `mester_${W}x${W}.json` || (f.startsWith('mester-') && f.endsWith(`_${W}x${W}.json`))) files.push(path.join(dir, f));
+  } else if (fs.existsSync(data(`${variant}_${W}x${W}.json`))) files.push(data(`${variant}_${W}x${W}.json`));
+  const out = [];
+  for (const f of files) for (const c of JSON.parse(fs.readFileSync(f, 'utf8'))) {
+    out.push(Object.assign(c, { combo: c.combo || (variant === 'mester' ? LEGACY_GAUNTLET_COMBO : variant) }));
+  }
+  return out.sort((x, y) => y.score - x.score);
+}
+
 let html = fs.readFileSync(DEV_PAGE, 'utf8');
 for (const [variant, plan] of Object.entries(PLANS)) {
   if (ONLY.length && !ONLY.includes(variant)) continue;
   const out = [];
   for (const [W, count] of plan.sizes) {
-    const file = data(`${variant}_${W}x${W}.json`);
-    if (!fs.existsSync(file)) { console.warn(`mangler ${file}`); continue; }
-    const cands = JSON.parse(fs.readFileSync(file, 'utf8')).sort((x, y) => y.score - x.score);
-    // Opvarmning (3x3): skal lære mekanikken, så krydset skal faktisk bruges
+    const cands = candidates(variant, W);
+    if (!cands.length) { console.warn(`no candidates for ${variant} ${W}x${W}`); continue; }
+    // warm-up (3x3) for Crossroads: it should teach the mechanic, so the crossing must actually be used
     if (W <= 3 && variant === 'kryds') cands.sort((x, y) => Math.min(y.permVisits, 2) - Math.min(x.permVisits, 2) || y.score - x.score);
     const chosen = [];
-    for (const c of cands) {
+    const tryAdd = (c) => {
       const lv = M.parseLevel(c.rows);
-      if (!chosen.every(o => distance(W, lv, o.lv) >= MIN_DISTANCE)) continue;
+      if (!chosen.every(o => distance(W, lv, o.lv) >= MIN_DISTANCE)) return;
       if (!c.dirs) c.dirs = M.analyze(M.buildBoard(W, W, lv.types, lv.nums), lv.pieces, lv.a, lv.b, { budget: 2e7 }).dirs;
       if (chosen.every(o => !similarSolution(c.dirs, o.c.dirs))) chosen.push({ c, lv });
-      if (chosen.length >= count) break;
+    };
+    // The Gauntlet: first the best level of each combination, then fill up with the best of the rest.
+    // Checkpoints in at most half of the levels of a size (if possible), so the other combinations get room too.
+    const numCap = Math.ceil(count / 2);
+    const capOK = (c) => !c.combo.includes('num') || chosen.filter(o => o.c.combo.includes('num')).length < numCap;
+    if (variant === 'mester') {
+      for (const c of cands) { if (chosen.length >= count) break; if (capOK(c) && !chosen.some(o => o.c.combo === c.combo)) tryAdd(c); }
+      for (const c of cands) { if (chosen.length >= count) break; if (capOK(c) && !chosen.some(o => o.c === c)) tryAdd(c); }
     }
-    chosen.reverse(); // lettest først inden for samme størrelse
+    for (const c of cands) { if (chosen.length >= count) break; if (!chosen.some(o => o.c === c)) tryAdd(c); }
+    chosen.sort((x, y) => x.c.score - y.c.score); // easiest first within a size
     chosen.forEach(({ c, lv }, k) => {
       const g = M.buildBoard(W, W, lv.types, lv.nums);
       const an = M.analyze(g, lv.pieces, lv.a, lv.b, { budget: 2e7 });
       const raw = M.analyzeRaw(g, lv.pieces, lv.a, lv.b, { budget: 1e7 });
-      if (an.solutions !== 1) throw new Error('ikke unik: ' + c.rows.join('/'));
-      if (!replay(W, W, lv.types, lv.pieces === 2 ? [lv.a, lv.b] : [lv.a], an.dirs, lv.nums)) throw new Error('ugyldig løsning: ' + c.rows.join('/'));
+      if (an.solutions !== 1) throw new Error('not unique: ' + c.rows.join('/'));
+      if (!replay(W, W, lv.types, lv.pieces === 2 ? [lv.a, lv.b] : [lv.a], an.dirs, lv.nums)) throw new Error('invalid solution: ' + c.rows.join('/'));
       const item = {
         id: `${plan.prefix}${W}-${k + 1}`, w: W, h: W, rows: c.rows, dirs: an.dirs, events: an.events,
-        n: g.n, ice: g.ice, perm: g.perm, score: +c.score.toFixed(1),
+        n: g.n, ice: g.ice, perm: g.perm, K: g.K, combo: variant === 'mester' ? c.combo : undefined, score: +c.score.toFixed(1),
         oneIn0: Math.round(1 / an.P[0]),
         oneIn4: Math.round(1 / an.P[4]),
         maxTrap: an.maxTrap,
@@ -119,19 +143,19 @@ for (const [variant, plan] of Object.entries(PLANS)) {
         lens: lv.pieces === 2 ? an.lens : undefined,
         near: raw ? raw.near1 + raw.near2 : null,
       };
-      // Postløb spilles som en sti: løsningen som felter (start + hvert felt i rækkefølge)
-      if (variant === 'post') Object.assign(item, { sol: [lv.a, ...an.events.flat()], K: g.K });
+      // Checkpoints is played as a path: the solution as tiles (start + every tile in order)
+      if (variant === 'post') item.sol = [lv.a, ...an.events.flat()];
       out.push(item);
-      console.log(`${item.id}  score=${item.score}  felter=${item.n} is=${item.ice} kryds=${item.perm}  1:${item.oneIn0} (L0)  1:${item.oneIn4} (L4)  fælde=${item.maxTrap}  istræk=${item.iceMoves} krydsbesøg=${item.permVisits}${item.lens ? ' pr.brik=' + item.lens : ''}  tryk=${item.dirs.length}  næsten=${item.near}`);
+      console.log(`${item.id}  ${item.combo || ''}  score=${item.score}  tiles=${item.n} ice=${item.ice} crossings=${item.perm} checkpoints=${item.K}  1:${item.oneIn0} (L0)  1:${item.oneIn4} (L4)  trap=${item.maxTrap}${item.lens ? '  per piece=' + item.lens : ''}  presses=${item.dirs.length}`);
       console.log('      ' + c.rows.join('\n      '));
     });
   }
   const begin = `// LEVELS-${plan.marker}-BEGIN`, end = `// LEVELS-${plan.marker}-END`;
   const i0 = html.indexOf(begin), i1 = html.indexOf(end);
-  if (i0 < 0 || i1 < 0) throw new Error(`markører for ${variant} ikke fundet i dev/index.html`);
+  if (i0 < 0 || i1 < 0) throw new Error(`markers for ${variant} not found in dev/index.html`);
   const body = `\nconst LEVELS_${plan.marker} = [\n` + out.map(o => '  ' + JSON.stringify(o)).join(',\n') + '\n];\n';
   html = html.slice(0, i0 + begin.length) + body + html.slice(i1);
-  console.log(`${out.length} ${variant}-baner\n`);
+  console.log(`${out.length} ${variant} levels\n`);
 }
 fs.writeFileSync(DEV_PAGE, html);
-console.log('skrevet til dev/index.html');
+console.log('written to dev/index.html');

@@ -1,8 +1,8 @@
 'use strict';
-// Banegenerator. Finder de sværeste baner for et WxH-gitter.
-//   node gen.js exhaustive 5        (udtømmende, parallelt - realistisk op til 5x5)
-//   node gen.js anneal 6 [sekunder] (simulated annealing, parallelt)
-// Resultat: levels_WxH.json med de bedste baner (unik løsning, sorteret efter score).
+// Level generator. Finds the hardest levels for a WxH grid.
+//   node gen.js exhaustive 5        (exhaustive, parallel - realistic up to 5x5)
+//   node gen.js anneal 6 [seconds]  (simulated annealing, parallel)
+// Result: levels_WxH.json with the best levels (unique solution, sorted by score).
 const { Worker, isMainThread, parentPort, workerData } = require('worker_threads');
 const { data } = require('./paths');
 const os = require('os');
@@ -11,10 +11,10 @@ const P = require('./solver');
 
 const TOPK = 300;
 
-// Sværhedsscore: summen af "gætte-bits" for spillere med lookahead 0..LMAX.
-// Et forkert træk, hvis fælde først afsløres efter d træk, tæller med for alle spillere med lookahead < d,
-// så dybe fælder vægter tungere end fælder man ser med det samme.
-// Plus en bonus hvis "tag kanter/hjørner først"-strategien (Warnsdorff) ikke løser banen.
+// Difficulty score: the sum of "guessing bits" for players with lookahead 0..LMAX.
+// A wrong move whose trap is only revealed after d moves counts for every player with lookahead < d,
+// so deep traps weigh more than traps you see straight away.
+// Plus a bonus if the "take edges/corners first" strategy (Warnsdorff) doesn't solve the level.
 function score(a) {
   let s = 0;
   for (let L = 0; L <= P.LMAX; L++) s += a.bits[L];
@@ -28,7 +28,7 @@ function spansBox(W, H, mask) {
   return r0 && r1 && c0 && c1;
 }
 
-// Evaluerer alle startfelter for en maske. Returnerer bedste unikke start og fitness til annealing.
+// Evaluates all start tiles for a mask. Returns the best unique start and the fitness for annealing.
 function evalMask(W, H, mask, solCap) {
   if (!spansBox(W, H, mask)) return { fitness: -1000 };
   const g = P.buildGraph(W, H, mask);
@@ -75,7 +75,7 @@ class TopK {
   }
 }
 
-// ---------- Udtømmende ----------
+// ---------- Exhaustive ----------
 function exhaustiveWorker({ W, H, from, to }) {
   const N = W * H;
   const full = N === 32 ? 0xffffffff : (1 << N) - 1;
@@ -92,7 +92,7 @@ function exhaustiveWorker({ W, H, from, to }) {
     if (!(m & rowMask) || !(m & (rowMask << (W * (H - 1)))) || !(m & colL) || !(m & colR)) continue;
     const d = pop(m & black) - pop(m & ~black);
     if (d > 1 || d < -1) continue;
-    // sammenhæng via bit-flood-fill
+    // connectivity via bit flood fill
     let f = m & -m, prev = 0;
     while (f !== prev) {
       prev = f;
@@ -183,7 +183,7 @@ if (!isMainThread) {
     pump();
   });
   Promise.all(Array.from({ length: threads }, runNext)).then(() => {
-    console.error(`\n${mode} ${W}x${H}: ${JSON.stringify(stats)} på ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+    console.error(`\n${mode} ${W}x${H}: ${JSON.stringify(stats)} in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
     const out = data(`levels_${W}x${H}.json`);
     let prev = [];
     if (fs.existsSync(out)) prev = JSON.parse(fs.readFileSync(out, 'utf8'));

@@ -1,0 +1,10202 @@
+[
+ {
+  "score": 16.339850002884624,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "1#2",
+   "##A",
+   "B43"
+  ],
+  "bits": [
+   7.17,
+   4.585,
+   2.585,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 5,
+  "choices": 5,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 14.584962500721156,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#12",
+   "##A",
+   "B43"
+  ],
+  "bits": [
+   6.585,
+   4,
+   2,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 5,
+  "choices": 5,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 12.754887502163468,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "1A2",
+   "###",
+   "B43"
+  ],
+  "bits": [
+   5.585,
+   3.585,
+   1.585,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 5,
+  "choices": 4,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 11.92481250360578,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A##",
+   "1B#",
+   "324"
+  ],
+  "bits": [
+   3.585,
+   3.585,
+   3.17,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 10.92481250360578,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "A#2",
+   "1#B",
+   "435"
+  ],
+  "bits": [
+   4.17,
+   2.585,
+   2.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 9.754887502163468,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "1#B",
+   "A#.",
+   "23."
+  ],
+  "bits": [
+   4.585,
+   3.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 9,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "32.",
+   "#B.",
+   "A#1"
+  ],
+  "bits": [
+   4,
+   3,
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 8.92481250360578,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#1B",
+   "A#.",
+   "23."
+  ],
+  "bits": [
+   4.17,
+   3.17,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 8.754887502163468,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#1B",
+   "4#2",
+   "3A."
+  ],
+  "bits": [
+   2.585,
+   2.585,
+   2.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 8.754887502163468,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "##B",
+   "412",
+   "3A."
+  ],
+  "bits": [
+   2.585,
+   2.585,
+   2.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 8,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "A##",
+   "1B5",
+   "324"
+  ],
+  "bits": [
+   3,
+   3,
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 8,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#43",
+   "#A1",
+   "B#2"
+  ],
+  "bits": [
+   2,
+   2,
+   2,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 5,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 8,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "..B",
+   "4#1",
+   "3A2"
+  ],
+  "bits": [
+   4,
+   3,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 7.339850002884624,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#1B",
+   "A##",
+   "23."
+  ],
+  "bits": [
+   2.585,
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 7.339850002884624,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "1#B",
+   "A##",
+   "23."
+  ],
+  "bits": [
+   2.585,
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 7.339850002884624,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "1B2",
+   "3##",
+   "##A"
+  ],
+  "bits": [
+   2.585,
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 7.169925001442312,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A##",
+   "#B#",
+   "213"
+  ],
+  "bits": [
+   2,
+   2,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 6
+ },
+ {
+  "score": 6.754887502163468,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B34",
+   "#1#",
+   "#A2"
+  ],
+  "bits": [
+   2.585,
+   2.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 6.754887502163468,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B3#",
+   "#1#",
+   "#A2"
+  ],
+  "bits": [
+   2.585,
+   2.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 6.754887502163468,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B34",
+   "##1",
+   "#A2"
+  ],
+  "bits": [
+   2.585,
+   2.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 6.754887502163468,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B3#",
+   "##1",
+   "#A2"
+  ],
+  "bits": [
+   2.585,
+   2.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 6.584962500721156,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A#1",
+   "#3.",
+   "B2."
+  ],
+  "bits": [
+   3.585,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 6.584962500721156,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "..2",
+   "341",
+   "B#A"
+  ],
+  "bits": [
+   3.585,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 6.339850002884625,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "##3",
+   "B.2",
+   "#1A"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 6.339850002884625,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B#3",
+   "#.2",
+   "#1A"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 6.339850002884625,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A#2",
+   "1#B",
+   "43#"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 6.339850002884625,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#32",
+   "#.B",
+   "A#1"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 6.339850002884625,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".2#",
+   "#A1",
+   "43B"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 6.169925001442312,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "2A.",
+   "413",
+   "B##"
+  ],
+  "bits": [
+   2.585,
+   2.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 5
+ },
+ {
+  "score": 6.169925001442312,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "2A.",
+   "413",
+   "##B"
+  ],
+  "bits": [
+   2.585,
+   2.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 6,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#3.",
+   "B2.",
+   "A#1"
+  ],
+  "bits": [
+   3,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 6,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A3#",
+   "#2B",
+   "1.."
+  ],
+  "bits": [
+   3,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 6,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A32",
+   "##B",
+   "1.."
+  ],
+  "bits": [
+   3,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 6,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".B3",
+   ".#4",
+   "21A"
+  ],
+  "bits": [
+   3,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 6,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "1#2",
+   "#BA",
+   "#43"
+  ],
+  "bits": [
+   2,
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 5,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 6,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "543",
+   "#A1",
+   "B#2"
+  ],
+  "bits": [
+   2,
+   2,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 6,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B.#",
+   "#32",
+   "#1A"
+  ],
+  "bits": [
+   3,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 5
+ },
+ {
+  "score": 6,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B.4",
+   "#32",
+   "#1A"
+  ],
+  "bits": [
+   3,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 6,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B23",
+   "14.",
+   "##A"
+  ],
+  "bits": [
+   3,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 6,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B12",
+   "43.",
+   "#A."
+  ],
+  "bits": [
+   3,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 6,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "2#B",
+   "#A#",
+   "13#"
+  ],
+  "bits": [
+   2,
+   2,
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 5.754887502163468,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A#B",
+   "1##",
+   "324"
+  ],
+  "bits": [
+   2.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 6
+ },
+ {
+  "score": 5.754887502163468,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "4##",
+   "1B#",
+   "2A3"
+  ],
+  "bits": [
+   2.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 5.754887502163468,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "2B1",
+   "#3#",
+   ".#A"
+  ],
+  "bits": [
+   2.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 5.754887502163468,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".32",
+   "#4B",
+   "A#1"
+  ],
+  "bits": [
+   2.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 5.584962500721156,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "2A.",
+   "4#3",
+   "#1B"
+  ],
+  "bits": [
+   2.585,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 5.584962500721156,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A.#",
+   "1B#",
+   "324"
+  ],
+  "bits": [
+   2.585,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 5.584962500721156,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "A5#",
+   "1B#",
+   "324"
+  ],
+  "bits": [
+   2.585,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 5.584962500721156,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A1#",
+   "#3.",
+   "B2."
+  ],
+  "bits": [
+   2.585,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 4
+ },
+ {
+  "score": 5.169925001442312,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "A#5",
+   "1B#",
+   "324"
+  ],
+  "bits": [
+   3.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 5.169925001442312,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#4#",
+   "1B#",
+   "2A3"
+  ],
+  "bits": [
+   2.585,
+   2.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 5.169925001442312,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "3#B",
+   "A#2",
+   "14#"
+  ],
+  "bits": [
+   3.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 5,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".24",
+   ".A#",
+   "31B"
+  ],
+  "bits": [
+   3,
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 5,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B##",
+   "12#",
+   "4A3"
+  ],
+  "bits": [
+   2,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 5,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B4#",
+   "12#",
+   "#A3"
+  ],
+  "bits": [
+   2,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 5,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "B45",
+   "12#",
+   "#A3"
+  ],
+  "bits": [
+   2,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 5,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "5#B",
+   "412",
+   "3A."
+  ],
+  "bits": [
+   2,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 5,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "4#B",
+   "#12",
+   "3A."
+  ],
+  "bits": [
+   2,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 5,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "51B",
+   "4#2",
+   "3A."
+  ],
+  "bits": [
+   2,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 5,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B4#",
+   "3A1",
+   "2##"
+  ],
+  "bits": [
+   2,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 5,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B4#",
+   "3#1",
+   "2#A"
+  ],
+  "bits": [
+   2,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 5,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B4#",
+   "31#",
+   "2#A"
+  ],
+  "bits": [
+   2,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 5,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B4#",
+   "3A#",
+   "2#1"
+  ],
+  "bits": [
+   2,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 5,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "2#A",
+   "1#B",
+   "34#"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 5,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 6
+ },
+ {
+  "score": 5,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "3#4",
+   "B#1",
+   ".2A"
+  ],
+  "bits": [
+   2,
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 5,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#AB",
+   "21#",
+   "#43"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 5,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4.754887502163469,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".13",
+   "A#B",
+   "24#"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4.754887502163469,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   ".1.",
+   "A#B",
+   "23#"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 4.754887502163469,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#43",
+   "B.2",
+   "#1A"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4.754887502163469,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#3#",
+   "B.2",
+   "#1A"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4.754887502163469,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "1B2",
+   "3##",
+   "4#A"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4.754887502163469,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "3#2",
+   "#.B",
+   "A#1"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4.754887502163469,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "432",
+   "#.B",
+   "A#1"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4.754887502163469,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".B2",
+   "1#3",
+   "4A#"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 4.754887502163469,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#.#",
+   "#32",
+   "B1A"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 5
+ },
+ {
+  "score": 4.754887502163469,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B23",
+   "14.",
+   "A##"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4.754887502163469,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A#3",
+   "2#4",
+   "B1#"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4.754887502163469,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A#3",
+   "214",
+   "B##"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4.754887502163469,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A##",
+   "2#4",
+   "B13"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4.584962500721156,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "1#2",
+   "#BA",
+   "4#3"
+  ],
+  "bits": [
+   1.585,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 4.169925001442312,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   ".13",
+   ".A#",
+   "2#B"
+  ],
+  "bits": [
+   2.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 4.169925001442312,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 2,
+  "rows": [
+   "#12",
+   ".B#",
+   "A##"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4.169925001442312,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B3#",
+   "#A1",
+   "##2"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 4.169925001442312,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "1B2",
+   "3##",
+   "45A"
+  ],
+  "bits": [
+   2.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 4.169925001442312,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B##",
+   "3A1",
+   "2#4"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 4.169925001442312,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "3#B",
+   "A#2",
+   "145"
+  ],
+  "bits": [
+   2.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 4,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "1A.",
+   "3#2",
+   "##B"
+  ],
+  "bits": [
+   2,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 4,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#1A",
+   "B#4",
+   "23."
+  ],
+  "bits": [
+   2,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "1#2",
+   "#4A",
+   "B#3"
+  ],
+  "bits": [
+   3,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 4,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B23",
+   "#A#",
+   "#1."
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "1#2",
+   "3##",
+   "#BA"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "1#2",
+   "3B#",
+   "4#A"
+  ],
+  "bits": [
+   2,
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".32",
+   "4#B",
+   "A#1"
+  ],
+  "bits": [
+   2,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 4,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "1#5",
+   "#B4",
+   "2A3"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 4,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A#1",
+   "2B#",
+   "3#."
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 4,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A4#",
+   "#3#",
+   "1B2"
+  ],
+  "bits": [
+   3,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 4,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A12",
+   "3B#",
+   "4#."
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 4,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "23#",
+   "B45",
+   "1#A"
+  ],
+  "bits": [
+   3,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 3,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 4,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".B3",
+   "A#4",
+   "21#"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 4,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3.584962500721156,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A.2",
+   "#B#",
+   "13#"
+  ],
+  "bits": [
+   2.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3.584962500721156,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "2A.",
+   "413",
+   "#B#"
+  ],
+  "bits": [
+   2,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3.584962500721156,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#1#",
+   "#A3",
+   "2B#"
+  ],
+  "bits": [
+   2.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3.584962500721156,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".A#",
+   "312",
+   "4B."
+  ],
+  "bits": [
+   1.585,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3.584962500721156,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "A.5",
+   "1B#",
+   "324"
+  ],
+  "bits": [
+   2.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3.584962500721156,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A.#",
+   "#B#",
+   "213"
+  ],
+  "bits": [
+   1.585,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3.584962500721156,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A..",
+   "1B#",
+   "324"
+  ],
+  "bits": [
+   2.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3.584962500721156,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#41",
+   "#AB",
+   "2#3"
+  ],
+  "bits": [
+   2.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3.584962500721156,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "4#2",
+   "1B#",
+   "#A3"
+  ],
+  "bits": [
+   1.585,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3.584962500721156,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "##3",
+   "4A1",
+   "B#2"
+  ],
+  "bits": [
+   1.585,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3.584962500721156,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "4#3",
+   "#A1",
+   "B#2"
+  ],
+  "bits": [
+   2,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3.584962500721156,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "3#A",
+   "1B2",
+   "###"
+  ],
+  "bits": [
+   1.585,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3.584962500721156,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B#3",
+   "2A#",
+   "##1"
+  ],
+  "bits": [
+   1.585,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3.584962500721156,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B32",
+   "#A#",
+   "14#"
+  ],
+  "bits": [
+   2.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3.1699250014423126,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#A.",
+   "413",
+   ".B2"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3.1699250014423126,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "2A.",
+   "413",
+   ".B#"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 4
+ },
+ {
+  "score": 3.1699250014423126,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "2A.",
+   "413",
+   "#B5"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3.1699250014423126,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "2A.",
+   "413",
+   "#B."
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3.1699250014423126,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "2#A",
+   "413",
+   "##B"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3.1699250014423126,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "1B2",
+   "3##",
+   "..A"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3.1699250014423126,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "2..",
+   "#31",
+   "B#A"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 4
+ },
+ {
+  "score": 3.1699250014423126,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#..",
+   "23#",
+   "B1A"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 4
+ },
+ {
+  "score": 3.1699250014423126,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "4.#",
+   "#32",
+   "B1A"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3.1699250014423126,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "##.",
+   "23#",
+   "B1A"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 2,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 4
+ },
+ {
+  "score": 3.1699250014423126,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B23",
+   "14.",
+   "A#."
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3.1699250014423126,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "B23",
+   "14.",
+   "A#5"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3.1699250014423126,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 6,
+  "rows": [
+   "#12",
+   "6AB",
+   "543"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3.1699250014423126,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "#12",
+   "5AB",
+   "#43"
+  ],
+  "bits": [
+   1.585,
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#3.",
+   "B2.",
+   "A1#"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 4
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "3B.",
+   "2#A",
+   ".1#"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 4
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "3B.",
+   "2#A",
+   ".#1"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 1,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 3
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "32.",
+   "A1#",
+   ".B#"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 1,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 3
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "2A.",
+   "413",
+   "B#5"
+  ],
+  "bits": [
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "2A.",
+   "413",
+   "5#B"
+  ],
+  "bits": [
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#32",
+   "##B",
+   "1A."
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "2#.",
+   "A34",
+   "1#B"
+  ],
+  "bits": [
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "2#.",
+   "3B1",
+   "A##"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "2#.",
+   "3B1",
+   "#A#"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 2,
+  "rows": [
+   "##.",
+   "B#1",
+   ".A2"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 1,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 3
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "1#B",
+   "A4.",
+   "23."
+  ],
+  "bits": [
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "1#B",
+   "A3.",
+   "2#."
+  ],
+  "bits": [
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 2,
+  "rows": [
+   "B#A",
+   "#2#",
+   "#.1"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 2,
+  "rows": [
+   "B#A",
+   "12#",
+   "#.#"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B3#",
+   "#.2",
+   "#1A"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B43",
+   "#.2",
+   "#1A"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "##2",
+   "3B1",
+   "A4#"
+  ],
+  "bits": [
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#41",
+   "2AB",
+   "##3"
+  ],
+  "bits": [
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   ".##",
+   "1B#",
+   "2A3"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A21",
+   "3.B",
+   "###"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "1##",
+   "AB2",
+   "3#4"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "##1",
+   "AB2",
+   "3#4"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#1#",
+   "AB2",
+   "3#4"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "1#2",
+   "#5A",
+   "B43"
+  ],
+  "bits": [
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "21B",
+   "A.#",
+   "3##"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "4#B",
+   "312",
+   "#A."
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "B45",
+   "3A1",
+   "2##"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "B45",
+   "3#1",
+   "2#A"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "B45",
+   "31#",
+   "2#A"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "B45",
+   "3A#",
+   "2#1"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "2.#",
+   "#3#",
+   "B1A"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "2.#",
+   "13#",
+   "B#A"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#B3",
+   "42#",
+   "#1A"
+  ],
+  "bits": [
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#A1",
+   "2B#",
+   "3#."
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "1A.",
+   "3#B",
+   "##2"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#A.",
+   "1#B",
+   "#32"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "3##",
+   "AB2",
+   "145"
+  ],
+  "bits": [
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "512",
+   "#AB",
+   "#43"
+  ],
+  "bits": [
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#B1",
+   "23#",
+   "A##"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".B#",
+   "A12",
+   "43."
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 4
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "3#4",
+   "B21",
+   ".#A"
+  ],
+  "bits": [
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "23.",
+   "B45",
+   "1#A"
+  ],
+  "bits": [
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 6,
+  "rows": [
+   "236",
+   "B45",
+   "1#A"
+  ],
+  "bits": [
+   2,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".B3",
+   "A14",
+   "2##"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 3,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#A.",
+   "21B",
+   "#43"
+  ],
+  "bits": [
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 3,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2.584962500721156,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "4A2",
+   "1B#",
+   "##3"
+  ],
+  "bits": [
+   1.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 2.584962500721156,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "4#3",
+   ".A1",
+   "B#2"
+  ],
+  "bits": [
+   1.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2.584962500721156,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "4#3",
+   "5A1",
+   "B#2"
+  ],
+  "bits": [
+   1.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2.584962500721156,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "2..",
+   "#3#",
+   "B1A"
+  ],
+  "bits": [
+   1.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2.584962500721156,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A.3",
+   "1B#",
+   "4#2"
+  ],
+  "bits": [
+   1.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2.584962500721156,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "213",
+   "#B#",
+   "A.."
+  ],
+  "bits": [
+   1.585,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 4
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "32.",
+   "A1#",
+   ".B4"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 2,
+  "rows": [
+   "##.",
+   "A2#",
+   ".1B"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 1,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 3
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A.2",
+   "3##",
+   "#1B"
+  ],
+  "bits": [
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 2,
+  "rows": [
+   ".21",
+   "##B",
+   "#A."
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 1,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 3
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   ".#1",
+   "3#B",
+   "2A."
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#4A",
+   "3B1",
+   "..2"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "3#.",
+   "A#1",
+   ".B2"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "3A.",
+   "##1",
+   ".B2"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#A.",
+   "413",
+   "B2#"
+  ],
+  "bits": [
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   ".13",
+   "A#B",
+   "245"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   ".1.",
+   "A#B",
+   "2#3"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".1.",
+   "A#B",
+   "234"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B#A",
+   "#2#",
+   "1.3"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B#A",
+   "12#",
+   "#.3"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B#A",
+   "12#",
+   "4.3"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B##",
+   "123",
+   "4A#"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "##B",
+   "12#",
+   "4A3"
+  ],
+  "bits": [
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B#3",
+   "12#",
+   "4A#"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B#A",
+   ".#3",
+   "21#"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B#A",
+   ".13",
+   "2##"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B#A",
+   ".13",
+   "2#4"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B1A",
+   ".#3",
+   "2##"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 2,
+  "rows": [
+   "B#A",
+   ".#2",
+   "1##"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "543",
+   "B.2",
+   "#1A"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "43#",
+   "B.2",
+   "#1A"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "3##",
+   "B.2",
+   "#1A"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "4#3",
+   "B.2",
+   "#1A"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "3.B",
+   "2A#",
+   "#41"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "3.B",
+   "2A#",
+   "541"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "3#1",
+   "2#.",
+   "B#A"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B41",
+   "2A#",
+   "##3"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "AB#",
+   "#13",
+   "2.."
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 4
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A##",
+   "#13",
+   "2.B"
+  ],
+  "bits": [
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 6,
+  "rows": [
+   "635",
+   "4B.",
+   "21A"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "A#2",
+   "13B",
+   "4#5"
+  ],
+  "bits": [
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "32.",
+   "4B.",
+   "A#1"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#2.",
+   "3B.",
+   "A#1"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "###",
+   "AB2",
+   "314"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A#B",
+   ".#3",
+   "214"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   ".#.",
+   "A1B",
+   "3#2"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "2#1",
+   "A.B",
+   "3##"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "21#",
+   "A.B",
+   "3##"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "21B",
+   "A.#",
+   "34#"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "##2",
+   "3.B",
+   "A#1"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "3#2",
+   "4.B",
+   "A#1"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "#32",
+   "4.B",
+   "A#1"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "3B.",
+   "1##",
+   ".A2"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 4
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "##1",
+   "3AB",
+   "#2#"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#1#",
+   "3AB",
+   "#2#"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B3#",
+   "2.#",
+   "1#A"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "B3#",
+   "2A#",
+   "1#."
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "43B",
+   "#.2",
+   "#A1"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "2.4",
+   "#3#",
+   "B1A"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   ".##",
+   "1A3",
+   "#2B"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A34",
+   "1##",
+   "B.2"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "1A.",
+   "##B",
+   "432"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "1A.",
+   "3#B",
+   "4#2"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "2B#",
+   "#31",
+   "A#."
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "32B",
+   "A##",
+   "145"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "A#3",
+   "214",
+   "B#5"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A#4",
+   "2##",
+   "B13"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "A#5",
+   "2#4",
+   "B13"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "A15",
+   "2#4",
+   "B#3"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A14",
+   "2##",
+   "B#3"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A#3",
+   "21#",
+   "B#4"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "21.",
+   "AB#",
+   "34#"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B3#",
+   "#A2",
+   "14#"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   3,
+   4
+  ],
+  "presses": 7
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   ".A#",
+   "23#",
+   "#B1"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   ".#A",
+   "1##",
+   "2B3"
+  ],
+  "bits": [
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   ".#B",
+   "451",
+   "3A2"
+  ],
+  "bits": [
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 6,
+  "rows": [
+   "6#B",
+   "451",
+   "3A2"
+  ],
+  "bits": [
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "5#B",
+   "#41",
+   "3A2"
+  ],
+  "bits": [
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 7
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".#B",
+   "#41",
+   "3A2"
+  ],
+  "bits": [
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 2,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   ".B3",
+   "A14",
+   "2#5"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".B#",
+   "A13",
+   "2#4"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 2,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "AB#",
+   "#13",
+   "2#4"
+  ],
+  "bits": [
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 2,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 7
+ },
+ {
+  "score": 1.5849625007211563,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "1#3",
+   "#B#",
+   "2.A"
+  ],
+  "bits": [
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1.5849625007211563,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A.2",
+   "#B#",
+   "31#"
+  ],
+  "bits": [
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1.5849625007211563,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A.2",
+   "1B#",
+   "3##"
+  ],
+  "bits": [
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1.5849625007211563,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A.2",
+   "1B#",
+   "3#4"
+  ],
+  "bits": [
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   4,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 1.5849625007211563,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B#4",
+   "3A1",
+   "2##"
+  ],
+  "bits": [
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 1.5849625007211563,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "B43",
+   "#A1",
+   "2##"
+  ],
+  "bits": [
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   5,
+   2
+  ],
+  "presses": 6
+ },
+ {
+  "score": 1.5849625007211563,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "4#.",
+   "1AB",
+   "3#2"
+  ],
+  "bits": [
+   1.585,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   3,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   ".24",
+   ".A5",
+   "31B"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#B.",
+   "3#A",
+   ".21"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 4
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "4B.",
+   "3#A",
+   ".21"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 4
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "3B.",
+   "2#A",
+   ".41"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 4
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "3B.",
+   "21A",
+   ".4#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 4
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "..2",
+   "AB#",
+   "13#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "AB2",
+   "###",
+   "13#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "3#.",
+   "A2#",
+   ".1B"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "3#.",
+   "A21",
+   ".#B"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "A.3",
+   "42#",
+   "51B"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A.2",
+   "3##",
+   "41B"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A.2",
+   "3B#",
+   "#1#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 8,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "A.2",
+   "3B#",
+   "41#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 6,
+  "lens": [
+   2,
+   4
+  ],
+  "presses": 6
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   ".21",
+   "##B",
+   "3A."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 1,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 3
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "34.",
+   "A#1",
+   ".B2"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "3A.",
+   "4#1",
+   ".B2"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   "3A.",
+   "41#",
+   ".B2"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "5A.",
+   "413",
+   ".B2"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "2A.",
+   "413",
+   ".B5"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 6,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   ".A.",
+   "312",
+   ".B#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   2,
+   2
+  ],
+  "presses": 4
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 5,
+  "rows": [
+   "2A.",
+   "413",
+   "5B."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".14",
+   "AB#",
+   "23."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 4,
+  "rows": [
+   ".13",
+   "A#B",
+   "24."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 2,
+  "rows": [
+   "A.1",
+   "2##",
+   "#B."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 6,
+  "ice": 0,
+  "perm": 0,
+  "K": 2,
+  "rows": [
+   "A#.",
+   "#2B",
+   "1.."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   2,
+   2
+  ],
+  "presses": 4
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A#3",
+   "#2B",
+   "1.."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "A#2",
+   "#3B",
+   "1.."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   3
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "1#3",
+   "###",
+   "2BA"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 6
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#13",
+   "###",
+   "2BA"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 6
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "1##",
+   "##3",
+   "2BA"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 2,
+  "rows": [
+   "1##",
+   "###",
+   "2BA"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 2,
+  "rows": [
+   "##1",
+   "###",
+   "2BA"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 2,
+  "rows": [
+   "#1#",
+   "###",
+   "2BA"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 5
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "31#",
+   "###",
+   "2BA"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 5,
+  "lens": [
+   4,
+   3
+  ],
+  "presses": 6
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 9,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#1#",
+   "##3",
+   "2BA"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 7,
+  "lens": [
+   2,
+   5
+  ],
+  "presses": 7
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 2,
+  "rows": [
+   "..2",
+   "#1#",
+   "BA#"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 4
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 7,
+  "ice": 0,
+  "perm": 0,
+  "K": 3,
+  "rows": [
+   "#3.",
+   "B#1",
+   ".A2"
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 3,
+  "lens": [
+   3,
+   2
+  ],
+  "presses": 4
+ },
+ {
+  "score": 1,
+  "combo": "num+two",
+  "n": 6,
+  "ice": 0,
+  "perm": 0,
+  "K": 2,
+  "rows": [
+   "B..",
+   "2#1",
+   "#A."
+  ],
+  "bits": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "maxTrap": 1,
+  "choices": 1,
+  "iceMoves": 0,
+  "permVisits": 0,
+  "solo": 4,
+  "lens": [
+   2,
+   2
+  ],
+  "presses": 4
+ }
+]

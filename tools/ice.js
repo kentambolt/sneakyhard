@@ -1,9 +1,9 @@
 'use strict';
-// "Glatis": én brik, almindelige felter og is. Almindelige felter kan bruges én gang og forsvinder bagefter.
-// Is forsvinder aldrig: går man ind på is, glider man videre i samme retning, indtil man rammer et almindeligt felt
-// (og lander på det) eller noget man ikke kan gå på (kant, hul, brugt felt) - så stopper man på det sidste isfelt.
-// Mål: alle almindelige felter brugt. En løsning = rækkefølgen felterne bruges i (vandring på is er gratis).
-// Solver + sværhedsmåler i samme stil som solver.js. Virker i Node og browser (window.IceSolver).
+// "Black Ice": one piece, normal tiles and ice. Normal tiles can be used once and disappear afterwards.
+// Ice never disappears: step onto ice and you slide on in the same direction until you hit a normal tile
+// (and land on it) or something you can't walk on (edge, hole, used tile) - then you stop on the last ice tile.
+// Goal: every normal tile used. A solution = the order the tiles are used in (wandering on ice is free).
+// Solver + difficulty meter in the same style as solver.js. Works in Node and the browser (window.IceSolver).
 (function (root, factory) {
   if (typeof module === 'object' && module.exports) module.exports = factory();
   else root.IceSolver = factory();
@@ -68,7 +68,7 @@
       const t = this.g.types[c];
       return t === HOLE || (t === NORMAL && this.visited[c] === 1);
     }
-    // Ét tryk i retning d fra felt 'from'. -1 = intet sker; ellers (til << 1) | (1 hvis man lander på et nyt felt)
+    // One press in direction d from tile 'from'. -1 = nothing happens; otherwise (to << 1) | (1 if you land on a new tile)
     slide(from, d) {
       const nbr = this.g.nbr, types = this.g.types;
       let q = nbr[from * 4 + d];
@@ -80,7 +80,7 @@
         q = r;
       }
     }
-    // Alle nye felter, man kan nå (evt. via vandring på isen) uden at bruge andre felter først.
+    // All new tiles you can reach (possibly by wandering on the ice) without using other tiles first.
     targets(out) {
       const m = ++this.stamp, seen = this.seen, tmark = this.tmark, q = this.queue;
       let qh = 0, qt = 0, cnt = 0;
@@ -97,7 +97,7 @@
       }
       return cnt;
     }
-    // Korteste række tryk fra nuværende position til at lande på 'target'. Returnerer { dirs, iceMoves } eller null.
+    // Shortest sequence of presses from the current position to land on 'target'. Returns { dirs, iceMoves } or null.
     routeTo(target) {
       const N = this.g.N;
       const prev = new Int32Array(N).fill(-2), prevD = new Int8Array(N);
@@ -111,7 +111,7 @@
           const to = s >> 1;
           if ((s & 1) && to === target) {
             let dirs = DIRS[d], ice = this.g.types[this.g.nbr[r * 4 + d]] === ICE ? 1 : 0, c = r;
-            while (prev[c] >= 0) { dirs = DIRS[prevD[c]] + dirs; ice++; c = prev[c]; } // mellemstop er altid på is
+            while (prev[c] >= 0) { dirs = DIRS[prevD[c]] + dirs; ice++; c = prev[c]; } // intermediate stops are always on ice
             return { dirs, iceMoves: ice };
           }
           if (!(s & 1) && prev[to] === -2) { prev[to] = r; prevD[to] = d; q.push(to); }
@@ -119,9 +119,9 @@
       }
       return null;
     }
-    // "Åbenlyst død" for en fornuftig spiller (sikre regler, fjerner aldrig en rigtig løsning):
-    //  - et felt uden nogen vej ind, eller to felter der kun kan være slutfelt
-    //  - de resterende felter ligger ikke i ét sammenhængende område (felter + is), som brikken står ved siden af
+    // "Obviously dead" for a sensible player (safe rules, never removes a real solution):
+    //  - a tile with no way in, or two tiles that can only be the end tile
+    //  - the remaining tiles don't lie in one connected area (tiles + ice) that the piece is standing next to
     ok() {
       if (this.remaining === 0) return true;
       const g = this.g, types = g.types, nbr = g.nbr, vis = this.visited, p = this.p;
@@ -182,9 +182,9 @@
     return { count, minRem };
   }
 
-  // Samme model som de andre spil: et "træk" er valget af næste felt (vandring på isen imellem er gratis).
+  // Same model as the other games: a "move" is the choice of the next tile (wandering on the ice in between is free).
   function analyze(g, start, opts = {}) {
-    if (g.n > 47) throw new Error('for mange felter');
+    if (g.n > 47) throw new Error('too many tiles');
     const budget = opts.budget || 3e6;
     const S = new IceSearch(g);
     S.reset(start);
@@ -227,7 +227,7 @@
     const P = Array.from(root.subarray(2));
     const res = { solutions: root[0], states: nodes, P, bits: P.map(p => (p > 0 ? -Math.log2(p) : Infinity)) };
     if (root[0] !== 1) return res;
-    // Gå den unikke løsning igennem: rækkefølge, konkrete tryk og fælder
+    // Walk through the unique solution: order, concrete presses and traps
     S.reset(start);
     const order = [start];
     let dirs = '', iceMoves = 0, maxTrap = 0, choices = 0, depth = 0;
@@ -255,7 +255,7 @@
     return Object.assign(res, { order, dirs, iceMoves, maxTrap, choices });
   }
 
-  // Naiv spiller: vælger tilfældigt blandt alle felter, den kan nå. Tæller næsten-løsninger.
+  // Naive player: picks at random among all tiles it can reach. Counts near-solutions.
   function analyzeRaw(g, start, opts = {}) {
     const budget = opts.budget || 3e6;
     const S = new IceSearch(g);
@@ -287,7 +287,7 @@
     } catch (e) { if (e instanceof Budget) return null; throw e; }
   }
 
-  // Bane som tekst: '#' felt, '~' is, '.' hul, 'S' start (et almindeligt felt).
+  // Level as text: '#' tile, '~' ice, '.' hole, 'S' start (a normal tile).
   function parseLevel(rows) {
     const h = rows.length, w = rows[0].length;
     const types = new Uint8Array(w * h);

@@ -1,7 +1,7 @@
 'use strict';
-// "I takt": to brikker, én styring. Begge brikker flytter i samme retning; en brik der ikke kan, bliver stående.
-// Hvert felt kan kun betrædes én gang (startfelterne tæller som betrådt). Mål: alle felter betrådt.
-// Solver + sværhedsmåler i samme stil som solver.js. Virker i Node og browser (window.TwinSolver).
+// "Lockstep": two pieces, one control. Both pieces move in the same direction; a piece that can't stays put.
+// Each tile can only be stepped on once (the start tiles count as stepped on). Goal: every tile stepped on.
+// Solver + difficulty meter in the same style as solver.js. Works in Node and the browser (window.TwinSolver).
 (function (root, factory) {
   if (typeof module === 'object' && module.exports) module.exports = factory();
   else root.TwinSolver = factory();
@@ -30,7 +30,7 @@
     return { w, h, n, cells, id, nb };
   }
 
-  // Antal sammenhængende øer på brættet
+  // Number of connected islands on the board
   function components(g) {
     const seen = new Uint8Array(g.n);
     let c = 0;
@@ -84,7 +84,7 @@
       for (let d = 0; d < 4; d++) { const u = nb[v * 4 + d]; if (u >= 0) this.deg[u]++; }
       if (v < 32) this.lo &= ~(1 << v); else this.hi &= ~(1 << (v - 32));
     }
-    // Flyt i retning d. Returnerer 0 hvis ingen brik kan flytte, ellers bit0 = A flyttede, bit1 = B flyttede.
+    // Move in direction d. Returns 0 if no piece can move, otherwise bit0 = A moved, bit1 = B moved.
     move(d) {
       const nb = this.g.nb, vis = this.visited;
       const ta = nb[this.a * 4 + d], tb = nb[this.b * 4 + d];
@@ -99,8 +99,8 @@
       if (code & 2) this.unvisit(this.b);
       this.a = prevA; this.b = prevB;
     }
-    // "Åbenlyst død" for en fornuftig spiller: et felt kan ikke nås, for mange tvungne slutfelter,
-    // eller øer der ikke kan dækkes af hver sin brik.
+    // "Obviously dead" for a sensible player: a tile can't be reached, too many forced end tiles,
+    // or islands that can't each be covered by their own piece.
     ok() {
       const rem = this.remaining;
       if (rem === 0) return true;
@@ -156,7 +156,7 @@
     }
   }
 
-  // Antal løsninger (træksekvenser) op til cap. minRem = færrest resterende felter set (til annealing-gradient).
+  // Number of solutions (move sequences) up to cap. minRem = fewest remaining tiles seen (for the annealing gradient).
   function countSolutions(g, a, b, cap = 2, budget = 2e6, search) {
     const S = search || new TwinSearch(g);
     S.reset(a, b);
@@ -179,8 +179,8 @@
     return { count, minRem };
   }
 
-  // Fuld analyse, samme model som det første spil: P[L] = chancen for at løse banen i første forsøg for en spiller,
-  // der aldrig laver åbenlyse fejl og kan se L træk frem. bits[L] = -log2 P[L].
+  // Full analysis, same model as the first game: P[L] = the chance of solving the level on the first try for a player
+  // who never makes obvious mistakes and can see L moves ahead. bits[L] = -log2 P[L].
   function analyze(g, a0, b0, opts = {}) {
     const budget = opts.budget || 3e6;
     const S = new TwinSearch(g);
@@ -223,10 +223,10 @@
     const P = Array.from(root.subarray(2));
     const res = { solutions: root[0], states: nodes, P, bits: P.map(p => (p > 0 ? -Math.log2(p) : Infinity)) };
     if (root[0] !== 1) return res;
-    // Gå den unikke løsning igennem
+    // Walk through the unique solution
     S.reset(a0, b0);
     let moves = '', maxTrap = 0, choices = 0, solo = 0;
-    const turns = [0, 0], lens = [0, 0], last = [-1, -1]; // sving og antal felter pr. brik i løsningen
+    const turns = [0, 0], lens = [0, 0], last = [-1, -1]; // turns and number of tiles per piece in the solution
     while (S.remaining > 0) {
       let next = -1, real = false;
       for (let d = 0; d < 4; d++) {
@@ -254,7 +254,7 @@
     return Object.assign(res, { moves, maxTrap, choices, solo, turns, lens });
   }
 
-  // Helt naiv spiller: tilfældig retning blandt dem, der flytter noget. Tæller næsten-løsninger.
+  // Completely naive player: random direction among those that move something. Counts near-solutions.
   function analyzeRaw(g, a0, b0, opts = {}) {
     const budget = opts.budget || 3e6;
     const S = new TwinSearch(g);
@@ -286,7 +286,7 @@
     } catch (e) { if (e instanceof Budget) return null; throw e; }
   }
 
-  // Bane som tekst: '#' felt, '.' hul, 'A'/'B' brikkernes startfelter.
+  // Level as text: '#' tile, '.' hole, 'A'/'B' the pieces' start tiles.
   function parseLevel(rows) {
     const h = rows.length, w = rows[0].length;
     const mask = new Uint8Array(w * h);
@@ -308,7 +308,7 @@
     }
     return rows;
   }
-  // Kanonisk form: spejlinger/rotationer ændrer retningerne konsistent, så banen er den samme. A og B er ombyttelige.
+  // Canonical form: mirrors/rotations change the directions consistently, so the level is the same. A and B are interchangeable.
   function canonical(w, h, mask, a, b) {
     let best = null;
     const T = w === h ? 8 : 4;
@@ -334,10 +334,10 @@
     return best;
   }
 
-  // Begge brikker skal lave rigtigt arbejde: mindst 2 sving og mindst en fjerdedel af felterne hver.
-  // Ellers kører den ene bare i en lige linje, og banen er lettere at gennemskue.
+  // Both pieces must do real work: at least 2 turns and at least a quarter of the tiles each.
+  // Otherwise one of them just runs in a straight line, and the level is easier to see through.
   function shapeOK(an, n) {
-    if (n < 10) return true; // opvarmningsbaner er for små til kravet
+    if (n < 10) return true; // warm-up levels are too small for the requirement
     const minLen = Math.max(3, Math.floor((n - 2) / 4));
     return Math.min(an.turns[0], an.turns[1]) >= 2 && Math.min(an.lens[0], an.lens[1]) >= minLen;
   }

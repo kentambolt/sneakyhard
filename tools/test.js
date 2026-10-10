@@ -1,5 +1,5 @@
 'use strict';
-// Krydstjek: solverens beskårne optælling skal give samme antal løsninger som naiv brute-force.
+// Cross-check: the solver's pruned count must give the same number of solutions as naive brute force.
 const P = require('./solver');
 let seed = 12345;
 const rand = () => ((seed = (seed * 1103515245 + 12345) >>> 0) / 4294967296);
@@ -35,7 +35,7 @@ for (let t = 0; t < 4000; t++) {
     if (b !== c || a.solutions !== b) { fails++; console.log('MISMATCH', b, c, a.solutions, P.levelToRows(W, H, mask, g.cells[s])); }
     if (b === 1) {
       uniq++;
-      // stien skal være en gyldig Hamilton-sti
+      // the path must be a valid Hamiltonian path
       const seen = new Set(a.path);
       let okPath = seen.size === g.n && a.path[0] === s;
       for (let i = 1; i < a.path.length; i++) {
@@ -48,4 +48,4 @@ for (let t = 0; t < 4000; t++) {
     }
   }
 }
-console.log(`${tested} (bane, start)-par testet, ${uniq} med unik løsning, ${fails} fejl`);
+console.log(`${tested} (level, start) pairs tested, ${uniq} with a unique solution, ${fails} failures`);

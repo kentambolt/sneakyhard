@@ -1,12 +1,12 @@
 'use strict';
-// Krydstjek af ice.js mod en uafhængig, naiv implementering (egen glide-logik, ingen beskæring),
-// og afspilning af den fundne løsning tryk for tryk.
+// Cross-check of ice.js against an independent, naive implementation (own slide logic, no pruning),
+// and replay of the found solution press by press.
 const I = require('./ice');
 let seed = 777;
 const rand = () => ((seed = (seed * 1103515245 + 12345) >>> 0) / 4294967296);
 const DX = [0, 1, 0, -1], DY = [-1, 0, 1, 0];
 
-// Ét tryk: returnerer { x, y, landed } eller null hvis intet sker
+// One press: returns { x, y, landed } or null if nothing happens
 function press(w, h, types, used, x, y, d) {
   const blocked = (cx, cy) => cx < 0 || cy < 0 || cx >= w || cy >= h || types[cy * w + cx] === 0 || (types[cy * w + cx] === 1 && used[cy * w + cx]);
   let cx = x + DX[d], cy = y + DY[d];
@@ -27,7 +27,7 @@ function brute(w, h, types, start) {
   let count = 0;
   const rec = (pos, done) => {
     if (done === total) { count++; return; }
-    // alle nye felter der kan nås via vandring på is
+    // all new tiles that can be reached by wandering on ice
     const seen = new Set([pos]), q = [pos], targets = new Set();
     while (q.length) {
       const c = q.shift();
@@ -79,4 +79,4 @@ for (let t = 0; t < 2500; t++) {
     }
   }
 }
-console.log(`${tested} (bane, start)-par testet, ${uniq} med unik løsning, ${fails} fejl`);
+console.log(`${tested} (level, start) pairs tested, ${uniq} with a unique solution, ${fails} failures`);

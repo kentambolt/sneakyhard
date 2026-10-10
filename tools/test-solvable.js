@@ -1,6 +1,6 @@
 'use strict';
-// Krydstjek af solvableFrom (bruges af "Tjek kurs"): fra tilfældige stillinger midt i et spil skal svaret
-// stemme med en uafhængig, naiv søgning efter en vej i mål. Dækker alle felttyper, poster og 1-2 brikker.
+// Cross-check of solvableFrom (used by "Check course"): from random positions mid-game the answer must
+// match an independent, naive search for a way to the goal. Covers all tile types, checkpoints and 1-2 pieces.
 const M = require('./mix');
 let seed = 99;
 const rand = () => ((seed = (seed * 1103515245 + 12345) >>> 0) / 4294967296);
@@ -21,11 +21,10 @@ function press(w, h, types, nums, used, pos, d) {
     while (types[q] === 2) { const nx = step(q); if (!free(nx, k)) break; q = nx; }
     out[k] = q;
     land[k] = types[q] === 1;
-    if (land[k] && nums[q]) done++;
   }
   return out.some((p, k) => p !== pos[k]) ? { out, land } : null;
 }
-// Naiv søgning: kan man fra (used, pos) bruge alle felter? Gratis bevægelser håndteres med et besøgt-sæt pr. tilstand.
+// Naive search: can you use every tile from (used, pos)? Free movement is handled with a visited set per state.
 function naiveSolvable(w, h, types, nums, used, pos) {
   let total = 0;
   for (const t of types) if (t === 1) total++;
@@ -52,7 +51,7 @@ function naiveSolvable(w, h, types, nums, used, pos) {
 let tested = 0, yes = 0, fails = 0;
 for (let t = 0; t < 3000; t++) {
   const W = 3 + (t % 2), N = W * W;
-  const kind = t % 4; // 0: almindelig, 1: is+kryds, 2: poster, 3: to brikker blandet
+  const kind = t % 4; // 0: normal, 1: ice+crossing, 2: checkpoints, 3: two pieces mixed
   const types = new Uint8Array(N), nums = new Int8Array(N);
   for (let i = 0; i < N; i++) {
     const r = rand();
@@ -68,7 +67,7 @@ for (let t = 0; t < 3000; t++) {
     const free = normals.filter(c => !pos.includes(c));
     for (let k = 1; k <= 3 && free.length; k++) nums[free.splice((rand() * free.length) | 0, 1)[0]] = k;
   }
-  // spil et par tilfældige tryk for at komme midt ind i spillet
+  // play a few random presses to get into the middle of the game
   let used = new Set(pos.filter(c => types[c] === 1)), p = pos.slice();
   const steps = (rand() * 5) | 0;
   for (let s = 0; s < steps; s++) {
@@ -85,4 +84,4 @@ for (let t = 0; t < 3000; t++) {
   if (want) yes++;
   if (got !== want) { fails++; if (fails < 6) console.log('MISMATCH', want, got, M.levelToRows(W, W, types, p[0], p[1] ?? -1, nums).join('/'), [...used]); }
 }
-console.log(`${tested} stillinger testet (${yes} kan løses), ${fails} fejl`);
+console.log(`${tested} positions tested (${yes} solvable), ${fails} failures`);

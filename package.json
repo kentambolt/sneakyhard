@@ -1,7 +1,7 @@
 {
   "name": "sneakyhard",
   "private": true,
-  "description": "Hvert felt én gang: seks simple, svære gitterspil med computergenererede baner",
+  "description": "Every Tile Once: six simple, hard grid puzzles with computer-generated levels",
   "engines": { "node": ">=18" },
   "scripts": {
     "build": "node tools/build.js && node tools/build-twins.js && node tools/build-ice.js && node tools/build-mix.js && node tools/build-public.js",

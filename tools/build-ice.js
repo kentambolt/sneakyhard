@@ -1,11 +1,11 @@
 'use strict';
-// Udvælger baner fra ice_NxN.json og indsætter dem i dev/index.html (mellem LEVELS-IS-BEGIN/LEVELS-IS-END).
-// Brug: node build-ice.js
+// Selects levels from ice_NxN.json and inserts them into dev/index.html (between LEVELS-IS-BEGIN/LEVELS-IS-END).
+// Usage: node build-ice.js
 const fs = require('fs');
 const { data, DEV_PAGE } = require('./paths');
 const I = require('./ice');
 
-// [størrelse, antal baner]
+// [size, number of levels]
 const PLAN = [[3, 1], [4, 2], [5, 3], [6, 2]];
 const MIN_DISTANCE = 4;
 const DX = [0, 1, 0, -1], DY = [-1, 0, 1, 0];
@@ -19,7 +19,7 @@ function distance(W, p, q) {
   let best = Infinity;
   for (let t = 0; t < 8; t++) {
     let d = 0;
-    // almindelige felter tæller fuldt; forskelle mellem hul/is/kryds tæller halvt (ofte ren pynt)
+    // normal tiles count fully; differences between hole/ice/crossing count half (often pure decoration)
     for (let i = 0; i < W * W; i++) {
       const pt = p.types[i], qt = q.types[transformIndex(W, t, i)];
       if ((pt === 1) !== (qt === 1)) d++;
@@ -30,8 +30,8 @@ function distance(W, p, q) {
   }
   return best;
 }
-// To baner med næsten samme løsning føles som den samme bane. Sammenlign løsningerne (som retninger)
-// under alle 8 spejlinger/rotationer af retningerne; for ens = redigeringsafstand under 35 %.
+// Two levels with nearly the same solution feel like the same level. Compare the solutions (as directions)
+// under all 8 mirrors/rotations of the directions; too similar = edit distance below 35 %.
 function lev(a, b) {
   const d = Array.from({ length: a.length + 1 }, (_, i) => [i]);
   for (let j = 1; j <= b.length; j++) d[0][j] = j;
@@ -46,7 +46,7 @@ function similarSolution(a, b) {
   return best < 0.35 * Math.max(a.length, b.length);
 }
 
-// Uafhængig afspilning af løsningen: alle felter skal bruges, i den forventede rækkefølge
+// Independent replay of the solution: every tile must be used, in the expected order
 function replay(w, h, types, start, dirs, order) {
   const used = new Uint8Array(w * h);
   const blocked = (x, y) => x < 0 || y < 0 || x >= w || y >= h || types[y * w + x] === 0 || (types[y * w + x] === 1 && used[y * w + x]);
@@ -72,7 +72,7 @@ function replay(w, h, types, start, dirs, order) {
 const out = [];
 for (const [W, count] of PLAN) {
   const file = data(`ice_${W}x${W}.json`);
-  if (!fs.existsSync(file)) { console.warn(`mangler ${file}`); continue; }
+  if (!fs.existsSync(file)) { console.warn(`missing ${file}`); continue; }
   const cands = JSON.parse(fs.readFileSync(file, 'utf8')).sort((x, y) => y.score - x.score || y.iceMoves - x.iceMoves);
   const chosen = [];
   for (const c of cands) {
@@ -80,13 +80,13 @@ for (const [W, count] of PLAN) {
     if (chosen.every(o => distance(W, lv, o.lv) >= MIN_DISTANCE && !similarSolution(c.dirs, o.c.dirs))) chosen.push({ c, lv });
     if (chosen.length >= count) break;
   }
-  chosen.reverse(); // lettest først inden for samme størrelse
+  chosen.reverse(); // easiest first within the same size
   chosen.forEach(({ c, lv }, k) => {
     const g = I.buildBoard(W, W, lv.types);
     const an = I.analyze(g, lv.start, { budget: 2e7 });
     const raw = I.analyzeRaw(g, lv.start, { budget: 2e7 });
-    if (an.solutions !== 1) throw new Error('ikke unik: ' + c.rows.join('/'));
-    if (!replay(W, W, lv.types, lv.start, an.dirs, an.order)) throw new Error('ugyldig løsning: ' + c.rows.join('/'));
+    if (an.solutions !== 1) throw new Error('not unique: ' + c.rows.join('/'));
+    if (!replay(W, W, lv.types, lv.start, an.dirs, an.order)) throw new Error('invalid solution: ' + c.rows.join('/'));
     const item = {
       id: `i${W}-${k + 1}`, w: W, h: W, rows: c.rows, dirs: an.dirs, events: an.order.slice(1).map(t => [t]), n: g.n, ice: g.ice,
       score: +c.score.toFixed(1),
@@ -98,7 +98,7 @@ for (const [W, count] of PLAN) {
       near: raw ? raw.near1 + raw.near2 : null,
     };
     out.push(item);
-    console.log(`${item.id}  score=${item.score}  felter=${item.n} is=${item.ice}  1:${item.oneIn0} (L0)  1:${item.oneIn4} (L4)  fælde=${item.maxTrap}  istræk=${item.iceMoves}/${item.dirs.length}  naiv 1:${item.rawOneIn}  næsten=${item.near}`);
+    console.log(`${item.id}  score=${item.score}  tiles=${item.n} ice=${item.ice}  1:${item.oneIn0} (L0)  1:${item.oneIn4} (L4)  trap=${item.maxTrap}  iceMoves=${item.iceMoves}/${item.dirs.length}  naive 1:${item.rawOneIn}  near=${item.near}`);
     console.log('      ' + c.rows.join('\n      '));
   });
 }
@@ -106,7 +106,7 @@ for (const [W, count] of PLAN) {
 const html = fs.readFileSync(DEV_PAGE, 'utf8');
 const begin = '// LEVELS-IS-BEGIN', end = '// LEVELS-IS-END';
 const i0 = html.indexOf(begin), i1 = html.indexOf(end);
-if (i0 < 0 || i1 < 0) throw new Error('markører ikke fundet i dev/index.html');
+if (i0 < 0 || i1 < 0) throw new Error('markers not found in dev/index.html');
 const body = '\nconst LEVELS_IS = [\n' + out.map(o => '  ' + JSON.stringify(o)).join(',\n') + '\n];\n';
 fs.writeFileSync(DEV_PAGE, html.slice(0, i0 + begin.length) + body + html.slice(i1));
-console.log(`\n${out.length} baner skrevet til dev/index.html`);
+console.log(`\n${out.length} levels written to dev/index.html`);

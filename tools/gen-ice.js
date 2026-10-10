@@ -1,8 +1,8 @@
 'use strict';
-// Banegenerator til "Glatis" (én brik, almindelige felter + is).
-//   node gen-ice.js exhaustive 3            (alle 3^9 brætter x alle starter)
-//   node gen-ice.js anneal 5 [sekunder]     (simulated annealing på alle kerner)
-// Resultat flettes ind i ice_WxH.json.
+// Level generator for "Black Ice" (one piece, normal tiles + ice).
+//   node gen-ice.js exhaustive 3            (all 3^9 boards x all starts)
+//   node gen-ice.js anneal 5 [seconds]      (simulated annealing on all cores)
+// Result is merged into ice_WxH.json.
 const { Worker, isMainThread, parentPort, workerData } = require('worker_threads');
 const { data } = require('./paths');
 const os = require('os');
@@ -16,7 +16,7 @@ function score(a) {
   for (let L = 0; L <= I.LMAX; L++) s += a.bits[L];
   return s;
 }
-// Isen skal bruges i løsningen, ellers er det bare "Kun én vej" med pynt
+// The ice must be used in the solution, otherwise it's just "One Path" with decoration
 const iceOK = (an, n) => n < 8 || an.iceMoves >= 2;
 
 function spansBox(W, H, types) {
@@ -63,7 +63,7 @@ function evalStart(W, H, types, g, s, cap) {
   return { fitness: sc, item: itemFor(W, H, types, s, an, sc, g) };
 }
 
-// ---------- Udtømmende (kun 3x3) ----------
+// ---------- Exhaustive (3x3 only) ----------
 function exhaustiveWorker({ W, H, from, to }) {
   const N = W * H;
   const top = new TopK(TOPK);
@@ -179,12 +179,12 @@ if (!isMainThread) {
     pump();
   });
   Promise.all(Array.from({ length: threads }, runNext)).then(() => {
-    console.log(`${mode} ${W}x${H}: ${JSON.stringify(stats)} på ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+    console.log(`${mode} ${W}x${H}: ${JSON.stringify(stats)} in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
     const out = data(`ice_${W}x${H}.json`);
     if (fs.existsSync(out)) for (const it of JSON.parse(fs.readFileSync(out, 'utf8'))) all.add(W, H, it);
     fs.writeFileSync(out, JSON.stringify(all.items, null, 1));
     for (const it of all.items.slice(0, 4)) {
-      console.log(`score=${it.score.toFixed(1)} n=${it.n} is=${it.ice} bits=[${it.bits.map(x => x.toFixed(1)).join(' ')}] fælde=${it.maxTrap} valg=${it.choices} istræk=${it.iceMoves} tryk=${it.dirs.length}`);
+      console.log(`score=${it.score.toFixed(1)} n=${it.n} ice=${it.ice} bits=[${it.bits.map(x => x.toFixed(1)).join(' ')}] trap=${it.maxTrap} choices=${it.choices} iceMoves=${it.iceMoves} presses=${it.dirs.length}`);
       console.log('   ' + it.rows.join('\n   '));
     }
   });

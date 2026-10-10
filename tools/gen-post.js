@@ -1,7 +1,7 @@
 'use strict';
-// Banegenerator til "Postløb": én brik, almindelige felter og nummererede poster, der skal tages i rækkefølge.
-//   node gen-post.js 5 300 [tråde]
-// Resultat flettes ind i post_WxH.json.
+// Level generator for "Checkpoints": one piece, normal tiles and numbered checkpoints that must be taken in order.
+//   node gen-post.js 5 300 [threads]
+// Result is merged into post_WxH.json.
 const { Worker, isMainThread, parentPort, workerData } = require('worker_threads');
 const { data } = require('./paths');
 const os = require('os');
@@ -51,7 +51,7 @@ function evalState(W, H, types, nums, start) {
   const an = M.analyze(g, 1, start, -1, { budget: 3e6 });
   if (an.solutions !== 1) return { fitness: -40 };
   const sc = score(an);
-  // Posterne skal gøre en forskel: uden numrene må banen ikke have en unik løsning
+  // The checkpoints must make a difference: without the numbers the level must not have a unique solution
   const plain = M.countSolutions(M.buildBoard(W, H, types), 1, start, -1, 2, 1e6).count;
   if ((g.n >= 8 && g.K < 2) || plain === 1) return { fitness: sc * 0.3 };
   return {
@@ -67,7 +67,7 @@ function rng(seed) {
   let s = seed >>> 0;
   return () => { s = (s + 0x6D2B79F5) >>> 0; let t = s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
 }
-// Fjern post k og ryk de højere numre én ned
+// Remove checkpoint k and shift the higher numbers down by one
 function removeNum(nums, k) {
   for (let i = 0; i < nums.length; i++) { if (nums[i] === k) nums[i] = 0; else if (nums[i] > k) nums[i]--; }
 }
@@ -101,29 +101,29 @@ function annealWorker({ W, H, seconds, seed }) {
       let s2 = start;
       const r = rand();
       if (r < 0.5) {
-        // felt <-> hul
+        // tile <-> hole
         const i = pick();
         if (i === s2) continue;
         if (t2[i] === M.NORMAL) { if (n2[i]) removeNum(n2, n2[i]); t2[i] = M.HOLE; } else t2[i] = M.NORMAL;
       } else if (r < 0.65) {
-        // ny post med næste nummer
+        // new checkpoint with the next number
         const K = maxNum(n2), f = freeNormal(t2, n2, s2);
         if (K >= MAXK || !f.length) continue;
         n2[f[(rand() * f.length) | 0]] = K + 1;
       } else if (r < 0.75) {
-        // fjern en post
+        // remove a checkpoint
         const K = maxNum(n2);
         if (K <= 1) continue;
         removeNum(n2, 1 + ((rand() * K) | 0));
       } else if (r < 0.9) {
-        // flyt en post
+        // move a checkpoint
         const K = maxNum(n2), f = freeNormal(t2, n2, s2);
         if (!K || !f.length) continue;
         const k = 1 + ((rand() * K) | 0);
         for (let i = 0; i < N; i++) if (n2[i] === k) n2[i] = 0;
         n2[f[(rand() * f.length) | 0]] = k;
       } else {
-        // flyt starten
+        // move the start
         const i = pick();
         if (n2[i]) continue;
         t2[i] = M.NORMAL;
@@ -158,12 +158,12 @@ if (!isMainThread) {
     w.on('exit', resolve);
   }));
   Promise.all(runs).then(() => {
-    console.log(`post ${W}x${H}: ${JSON.stringify(stats)} på ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+    console.log(`post ${W}x${H}: ${JSON.stringify(stats)} in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
     const out = data(`post_${W}x${H}.json`);
     if (fs.existsSync(out)) for (const it of JSON.parse(fs.readFileSync(out, 'utf8'))) all.add(W, H, it);
     fs.writeFileSync(out, JSON.stringify(all.items, null, 1));
     for (const it of all.items.slice(0, 4)) {
-      console.log(`score=${it.score.toFixed(1)} felter=${it.n} poster=${it.K} bits=[${it.bits.map(x => x.toFixed(1)).join(' ')}] fælde=${it.maxTrap} uden-numre=${it.plain} løsninger`);
+      console.log(`score=${it.score.toFixed(1)} tiles=${it.n} checkpoints=${it.K} bits=[${it.bits.map(x => x.toFixed(1)).join(' ')}] trap=${it.maxTrap} without-numbers=${it.plain} solutions`);
       console.log('   ' + it.rows.join('\n   '));
     }
   });

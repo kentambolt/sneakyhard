@@ -1,18 +1,18 @@
 'use strict';
-// Solver og sværhedsmåler for "besøg alle felter én gang"-baner (Hamilton-sti fra fast start).
-// Virker både i Node (require) og i browseren (window.PathSolver).
+// Solver and difficulty meter for "visit every tile once" levels (Hamiltonian path from a fixed start).
+// Works both in Node (require) and in the browser (window.PathSolver).
 (function (root, factory) {
   if (typeof module === 'object' && module.exports) module.exports = factory();
   else root.PathSolver = factory();
 })(typeof self !== 'undefined' ? self : this, function () {
 
   const INF = 1e9;
-  const LMAX = 8; // største lookahead vi måler med
+  const LMAX = 8; // largest lookahead we measure with
 
-  // Regler en "fornuftig" spiller (og solveren) bruger til at afvise træk med det samme:
-  const RULE_DEG = 1;    // et felt kan ikke længere nås, eller to felter er blindgyder (kun én slutning)
-  const RULE_CONN = 2;   // de resterende felter er delt i to øer
-  const RULE_PARITY = 4; // tvunget slutfelt har forkert skakbrætfarve (subtilt - kun til tælling)
+  // Rules a "sensible" player (and the solver) uses to reject moves immediately:
+  const RULE_DEG = 1;    // a tile can no longer be reached, or two tiles are dead ends (only one ending)
+  const RULE_CONN = 2;   // the remaining tiles are split into two islands
+  const RULE_PARITY = 4; // forced end tile has the wrong checkerboard color (subtle - only for counting)
   const RULES_HUMAN = RULE_DEG | RULE_CONN;
   const RULES_ALL = RULE_DEG | RULE_CONN | RULE_PARITY;
 
@@ -54,7 +54,7 @@
     return cnt === g.n;
   }
 
-  // Skakbræt-paritet: en sti skifter farve hvert skridt, så startfarven skal være i flertal (eller lige mange).
+  // Checkerboard parity: a path changes color every step, so the start color must be in the majority (or a tie).
   function parityAllowsStart(g, s) {
     let same = 0;
     for (let k = 0; k < g.n; k++) if (g.color[k] === g.color[s]) same++;
@@ -94,7 +94,7 @@
       for (let j = g.nbStart[v]; j < g.nbStart[v + 1]; j++) this.deg[g.nb[j]]++;
       if (v < 32) this.lo &= ~(1 << v); else this.hi &= ~(1 << (v - 32));
     }
-    // Kan stillingen (hoved = head, besøgte felter) stadig føre til en løsning ifølge reglerne?
+    // Can the position (head, visited tiles) still lead to a solution according to the rules?
     ok(head, rules) {
       const rem = this.remaining;
       if (rem === 0) return true;
@@ -134,7 +134,7 @@
       }
       return true;
     }
-    // Nøgle for (besøgte felter, hoved). Op til 47 felter passer i ét tal; derover bruges en Map i to niveauer.
+    // Key for (visited tiles, head). Up to 47 tiles fit in one number; above that a two-level Map is used.
     key(head) {
       return ((this.hi >>> 0) * 4294967296 + (this.lo >>> 0)) * 64 + head;
     }
@@ -151,7 +151,7 @@
     }
   }
 
-  // Antal løsninger fra start (stopper ved cap). Returnerer -1 hvis budgettet sprænges.
+  // Number of solutions from start (stops at cap). Returns -1 if the budget is exceeded.
   function countSolutions(g, start, cap = 2, budget = 5e6, search) {
     const S = search || new Search(g);
     S.reset();
@@ -175,12 +175,12 @@
     return count;
   }
 
-  // Fuld analyse af søgetræet som en "fornuftig" spiller ser det.
-  //  - Spilleren laver aldrig et træk, der STRAKS efterlader et utilgængeligt felt, to blindgyder eller to øer.
-  //  - Med lookahead L kan spilleren desuden se, at et træk er dødt, hvis alle fortsættelser dør inden for L træk.
-  //  - P[L] = sandsynligheden for at løse banen i første forsøg, hvis man vælger tilfældigt blandt de træk
-  //    der stadig ser mulige ud. bits[L] = -log2(P[L]) = "hvor mange møntkast skal man vinde".
-  // Fælde-dybde h(stilling) = hvor mange træk man kan fortsætte før det går op for en at man er død.
+  // Full analysis of the search tree as a "sensible" player sees it.
+  //  - The player never makes a move that IMMEDIATELY leaves an unreachable tile, two dead ends or two islands.
+  //  - With lookahead L the player can also see that a move is dead if all continuations die within L moves.
+  //  - P[L] = the probability of solving the level on the first try when picking at random among the moves
+  //    that still look possible. bits[L] = -log2(P[L]) = "how many coin flips you have to win".
+  // Trap depth h(position) = how many moves you can keep going before you realise you are dead.
   function analyze(g, start, opts = {}) {
     const budget = opts.budget || 2e6;
     const rules = opts.rules || RULES_HUMAN;
@@ -230,7 +230,7 @@
     return res;
   }
 
-  // Gå den (unikke) løsning igennem og beskriv hvert valg: hvilke forkerte træk fandtes og hvor dybe var fælderne.
+  // Walk through the (unique) solution and describe each choice: which wrong moves existed and how deep the traps were.
   function solutionDetails(g, start, rules, memo, S) {
     S.reset();
     S.visit(start);
@@ -238,8 +238,8 @@
     const path = [start];
     const steps = [];
     let head = start;
-    // Warnsdorff-spiller: blandt træk der ikke er åbenlyst dårlige, vælg feltet med færrest videre udgange
-    // ("tag kanterne og hjørnerne først"). Sandsynligheden for at den strategi løser banen:
+    // Warnsdorff player: among moves that are not obviously bad, pick the tile with the fewest onward exits
+    // ("take the edges and corners first"). The probability that this strategy solves the level:
     let pWarns = 1;
     while (S.remaining > 0) {
       let next = -1;
@@ -254,7 +254,7 @@
           if (d < minDeg) { minDeg = d; nMin = 1; } else if (d === minDeg) nMin++;
           const r = S.remaining === 0 ? null : S.memoGet(memo, u);
           if (!r || r[0] > 0) { next = u; nextDeg = d; } else traps.push(r[1]);
-        } else traps.push(-1); // åbenlyst dårligt træk
+        } else traps.push(-1); // obviously bad move
         S.unvisit(u);
       }
       pWarns *= nextDeg === minDeg ? 1 / nMin : 0;
@@ -263,7 +263,7 @@
       path.push(next);
       head = next;
     }
-    // Største fælde-dybde og summen af fælde-dybder (kun ikke-åbenlyse fælder)
+    // Largest trap depth and the sum of trap depths (only non-obvious traps)
     let maxTrap = 0, trapSum = 0, choices = 0;
     for (const t of steps) {
       let real = false;
@@ -273,8 +273,8 @@
     return { path, steps, maxTrap, trapSum, choices, pWarns, bitsWarns: pWarns > 0 ? -Math.log2(pWarns) : Infinity };
   }
 
-  // Helt naiv spiller: vælger tilfældigt blandt alle lovlige træk. Tæller også "næsten-løsninger":
-  // forskellige måder at sidde fast på, hvor der kun manglede 1-2 felter.
+  // Completely naive player: picks at random among all legal moves. Also counts "near-solutions":
+  // different ways of getting stuck where only 1-2 tiles were missing.
   function analyzeRaw(g, start, opts = {}) {
     const budget = opts.budget || 3e6;
     const S = new Search(g);
@@ -283,7 +283,7 @@
     const nbS = g.nbStart, nb = g.nb, vis = S.visited;
     const memo = new Map();
     let nodes = 0;
-    // [P(løs), antal maksimale stier, antal næsten-løsninger (1 felt mangler), (2 felter mangler)]
+    // [P(solve), number of maximal paths, number of near-solutions (1 tile missing), (2 tiles missing)]
     const node = (head) => {
       if (S.remaining === 0) return [1, 1, 0, 0];
       let r = S.memoGet(memo, head);
@@ -310,8 +310,8 @@
     } catch (e) { if (e instanceof Budget) return null; throw e; }
   }
 
-  // ---- Hjælpefunktioner til baner ----
-  // Bane som tekst: '#' = felt, '.' = hul, 'S' = start.
+  // ---- Level helpers ----
+  // Level as text: '#' = tile, '.' = hole, 'S' = start.
   function parseLevel(rows) {
     const h = rows.length, w = rows[0].length;
     const mask = new Uint8Array(w * h);
@@ -335,7 +335,7 @@
     }
     return rows;
   }
-  // Kanonisk form under de 8 symmetrier (kun kvadratiske gitre) - til at fjerne dubletter.
+  // Canonical form under the 8 symmetries (square grids only) - for removing duplicates.
   function canonical(w, h, mask, startCell) {
     let best = null;
     const T = w === h ? 8 : 4;

@@ -1,13 +1,13 @@
 'use strict';
-// Udvælger baner fra levels_NxN.json og indsætter dem i dev/index.html (mellem LEVELS-VEJ-BEGIN/LEVELS-VEJ-END).
-// Brug: node build.js
+// Selects levels from levels_NxN.json and inserts them into dev/index.html (between LEVELS-VEJ-BEGIN/LEVELS-VEJ-END).
+// Usage: node build.js
 const fs = require('fs');
 const { data, DEV_PAGE } = require('./paths');
 const P = require('./solver');
 
-// [størrelse, antal baner]
+// [size, number of levels]
 const PLAN = [[3, 1], [4, 2], [5, 3], [6, 3], [7, 2], [8, 2]];
-const MIN_DISTANCE = 4; // baner skal adskille sig med mindst så mange felter (efter spejling/rotation)
+const MIN_DISTANCE = 4; // levels must differ by at least this many tiles (after mirroring/rotation)
 
 function transformIndex(W, t, i) {
   const x = i % W, y = (i / W) | 0, m = W - 1;
@@ -28,9 +28,9 @@ function distance(W, a, b) {
 const out = [];
 for (const [W, count] of PLAN) {
   const file = data(`levels_${W}x${W}.json`);
-  if (!fs.existsSync(file)) { console.warn(`mangler ${file}`); continue; }
+  if (!fs.existsSync(file)) { console.warn(`missing ${file}`); continue; }
   const cands = JSON.parse(fs.readFileSync(file, 'utf8')).sort((a, b) => b.score - a.score);
-  // 3x3 er altid triviel for en fornuftig spiller - vælg i stedet den med flest naive fælder (opvarmning)
+  // 3x3 is always trivial for a sensible player - pick the one with the most naive traps instead (warm-up)
   if (W <= 3) {
     const rawBits = (c) => { const lv = P.parseLevel(c.rows), g = P.buildGraph(W, W, lv.mask); return P.analyzeRaw(g, g.id[lv.startCell]).bits; };
     for (const c of cands) c.rawBits = rawBits(c);
@@ -42,17 +42,17 @@ for (const [W, count] of PLAN) {
     if (chosen.every(o => distance(W, lv, o.lv) >= MIN_DISTANCE)) chosen.push({ c, lv });
     if (chosen.length >= count) break;
   }
-  chosen.reverse(); // lettest først inden for samme størrelse
+  chosen.reverse(); // easiest first within the same size
   chosen.forEach(({ c, lv }, k) => {
     const g = P.buildGraph(W, W, lv.mask);
     const s = g.id[lv.startCell];
     const a = P.analyze(g, s, { budget: 2e7 });
     const raw = P.analyzeRaw(g, s, { budget: W >= 8 ? 1e7 : 2e7 });
-    if (a.solutions !== 1) throw new Error('ikke unik: ' + c.rows.join('/'));
-    // Løsningen vises i spillet, så den skal være en gyldig rute gennem alle felter
+    if (a.solutions !== 1) throw new Error('not unique: ' + c.rows.join('/'));
+    // The solution is shown in the game, so it must be a valid route through every tile
     const adj = (u, v) => g.nb.subarray(g.nbStart[u], g.nbStart[u + 1]).includes(v);
     if (a.path[0] !== s || new Set(a.path).size !== g.n || !a.path.every((v, i) => i === 0 || adj(a.path[i - 1], v))) {
-      throw new Error('ugyldig løsning: ' + c.rows.join('/'));
+      throw new Error('invalid solution: ' + c.rows.join('/'));
     }
     const item = {
       id: `${W}-${k + 1}`, w: W, h: W, rows: c.rows,
@@ -69,7 +69,7 @@ for (const [W, count] of PLAN) {
       near2: raw ? raw.near2 : null,
     };
     out.push(item);
-    console.log(`${item.id}  score=${item.score}  n=${item.n}  1:${item.oneIn0} (L0)  1:${item.oneIn4} (L4)  fælde=${item.maxTrap}  naiv 1:${item.rawOneIn}  stier=${item.paths}  mangler-1=${item.near1}`);
+    console.log(`${item.id}  score=${item.score}  n=${item.n}  1:${item.oneIn0} (L0)  1:${item.oneIn4} (L4)  trap=${item.maxTrap}  naive 1:${item.rawOneIn}  paths=${item.paths}  missing-1=${item.near1}`);
     console.log('      ' + c.rows.join('\n      '));
   });
 }
@@ -77,7 +77,7 @@ for (const [W, count] of PLAN) {
 const html = fs.readFileSync(DEV_PAGE, 'utf8');
 const begin = '// LEVELS-VEJ-BEGIN', end = '// LEVELS-VEJ-END';
 const i0 = html.indexOf(begin), i1 = html.indexOf(end);
-if (i0 < 0 || i1 < 0) throw new Error('markører ikke fundet i dev/index.html');
+if (i0 < 0 || i1 < 0) throw new Error('markers not found in dev/index.html');
 const body = '\nconst LEVELS_VEJ = [\n' + out.map(o => '  ' + JSON.stringify(o)).join(',\n') + '\n];\n';
 fs.writeFileSync(DEV_PAGE, html.slice(0, i0 + begin.length) + body + html.slice(i1));
-console.log(`\n${out.length} baner skrevet til dev/index.html`);
+console.log(`\n${out.length} levels written to dev/index.html`);

@@ -1,12 +1,12 @@
 'use strict';
-// Generel motor for alle varianter: 1 eller 2 brikker (fælles styring), felttyper:
-//   hul, almindeligt felt (bruges én gang og forsvinder), is (permanent; man glider), kryds (permanent; man stopper).
-// Et tryk flytter alle brikker i samme retning; står de på samme linje, flytter den forreste først.
-// Glider man på is, fortsætter man til man rammer noget man ikke kan gå på (stop på isen),
-// eller et almindeligt felt/kryds (man lander/stopper på det).
-// Mål: alle almindelige felter brugt. Bevægelser på is/kryds uden nye felter er gratis; et "træk" i
-// sværhedsmodellen er derfor en "hændelse" = et tryk der bruger nye felter (1 eller 2).
-// Virker i Node og browser (window.MixSolver).
+// General engine for all variants: 1 or 2 pieces (shared control), tile types:
+//   hole, normal tile (used once and disappears), ice (permanent; you slide), crossing (permanent; you stop).
+// A press moves all pieces in the same direction; if they are on the same line, the one in front moves first.
+// When sliding on ice you keep going until you hit something you can't walk on (stop on the ice),
+// or a normal tile/crossing (you land/stop on it).
+// Goal: every normal tile used. Movement on ice/crossings without new tiles is free; a "move" in
+// the difficulty model is therefore an "event" = a press that uses new tiles (1 or 2).
+// Works in Node and the browser (window.MixSolver).
 (function (root, factory) {
   if (typeof module === 'object' && module.exports) module.exports = factory();
   else root.MixSolver = factory();
@@ -44,7 +44,7 @@
     return { w, h, N, types: Uint8Array.from(types), nid, normals, n: normals.length, nbr, ice, perm, num, K };
   }
 
-  // Hvor langt fremme en celle er i retning d (til at afgøre hvem der flytter først)
+  // How far ahead a cell is in direction d (to decide who moves first)
   function progress(g, c, d) {
     const x = c % g.w, y = (c / g.w) | 0;
     return d === 0 ? -y : d === 1 ? x : d === 2 ? y : -x;
@@ -85,10 +85,10 @@
       if (this.g.num[c]) this.numDone--;
       if (k < 32) this.lo &= ~(1 << k); else this.hi &= ~(1 << (k - 32));
     }
-    // Simulér ét tryk fra brikpositionerne (x, y). Skriver [x2, y2, landX, landY] i this.res. false hvis intet flytter sig.
+    // Simulate one press from the piece positions (x, y). Writes [x2, y2, landX, landY] to this.res. false if nothing moves.
     press(x, y, d) {
       const g = this.g, types = g.types, nbr = g.nbr, vis = this.visited, r = this.res, num = g.num;
-      let nd = this.numDone; // poster taget, inkl. en post den første brik lander på i samme tryk
+      const nd = this.numDone; // checkpoints taken before this press: both pieces move at once, so one press cannot take two checkpoints
       const pos0 = x, pos1 = y;
       let p0 = x, p1 = y, l0 = 0, l1 = 0;
       const firstIs1 = y >= 0 && progress(g, y, d) > progress(g, x, d);
@@ -111,7 +111,6 @@
             if (tn !== ICE) break;
           }
         }
-        if (types[q] === NORMAL && num[q]) nd++;
         if (k === 0) { p0 = q; l0 = types[q] === NORMAL ? 1 : 0; } else { p1 = q; l1 = types[q] === NORMAL ? 1 : 0; }
       }
       if (p0 === pos0 && p1 === pos1) return false;
@@ -119,8 +118,8 @@
       return true;
     }
     pairIndex(x, y) { return x * (this.g.N + 1) + (y + 1); }
-    // Alle hændelser (tryk der bruger nye felter) man kan nå via gratis bevægelser. Returnerer liste af [la, lb, x, y]
-    // hvor la/lb = nyt felt for brik 1/2 eller -1. Brikkerne er ens, så (x, y) normaliseres med x < y.
+    // All events (presses that use new tiles) reachable via free movement. Returns a list of [la, lb, x, y]
+    // where la/lb = new tile for piece 1/2 or -1. The pieces are identical, so (x, y) is normalized with x < y.
     events() {
       const g = this.g, N = g.N, seen = this.seen, q = this.queue, r = this.res;
       const m = ++this.stamp;
@@ -148,7 +147,7 @@
     }
     apply(e) { if (e[0] >= 0) this.visit(e[0]); if (e[1] >= 0) this.visit(e[1]); this.a = e[2]; this.b = e[3]; }
     unapply(e, a, b) { if (e[0] >= 0) this.unvisit(e[0]); if (e[1] >= 0) this.unvisit(e[1]); this.a = a; this.b = b; }
-    // Korteste række tryk fra nuværende stilling til hændelsen e. Returnerer streng af retninger.
+    // Shortest sequence of presses from the current position to event e. Returns a string of directions.
     routeTo(e) {
       const N = this.g.N, r = this.res;
       let x0 = this.a, y0 = this.b;
@@ -177,14 +176,14 @@
       }
       return null;
     }
-    // "Åbenlyst død" (sikre regler): et felt uden vej ind, for mange tvungne slutfelter,
-    // eller resterende felter fordelt på flere områder end brikkerne kan nå.
+    // "Obviously dead" (safe rules): a tile with no way in, too many forced end tiles,
+    // or remaining tiles spread over more areas than the pieces can reach.
     ok() {
       if (this.remaining === 0) return true;
       const g = this.g, types = g.types, nbr = g.nbr, vis = this.visited;
       const P = this.b >= 0 ? [this.a, this.b] : [this.a];
       const m = ++this.stamp, mark = this.mark;
-      // naboer til brikker der står på et brugt felt (kan træde direkte ind)
+      // neighbors of pieces standing on a used tile (can step straight in)
       for (const p of P) if (types[p] === NORMAL) for (let d = 0; d < 4; d++) { const c = nbr[p * 4 + d]; if (c >= 0) mark[c] = m; }
       let forced = 0, u0 = -1;
       for (const u of g.normals) {
@@ -202,10 +201,10 @@
         if (nn + re + pa === 0) return false;
         if (re === 0 && nn + pa <= 1 && ++forced > P.length) return false;
       }
-      // områder af (ubrugte felter + is + kryds); hvert område med ubrugte felter skal kunne nås af sin egen brik
+      // areas of (unused tiles + ice + crossings); each area with unused tiles must be reachable by its own piece
       const s = ++this.stamp, comp = this.comp, mark2 = this.mark2;
       const q = this.queue;
-      const touches = []; // pr. område: bitmaske over brikker der står i/ved området
+      const touches = []; // per area: bitmask of pieces standing in/next to the area
       let nComp = 0;
       for (const u of g.normals) {
         if (vis[u] || mark2[u] === s) continue;
@@ -260,9 +259,9 @@
     return { count, minRem };
   }
 
-  // Kan man stadig nå i mål fra en given stilling? Bruges af "Tjek kurs" i browseren, så siden ikke behøver
-  // at indeholde løsningen. used = brugte felter (cellenumre), pos = brikkernes positioner.
-  // Returnerer true/false, eller null hvis budgettet sprænges.
+  // Can you still reach the goal from a given position? Used by "Check course" in the browser, so the page doesn't need
+  // to contain the solution. used = used tiles (cell numbers), pos = the pieces' positions.
+  // Returns true/false, or null if the budget is exceeded.
   function solvableFrom(g, pieces, used, pos, budget = 3e6) {
     const S = new MixSearch(g, pieces);
     S.visited.fill(0);
@@ -271,7 +270,7 @@
     S.a = pos[0]; S.b = pieces === 2 ? pos[1] : -1;
     if (S.remaining === 0) return true;
     if (!S.ok()) return false;
-    const dead = new Set(); // stillinger der er bevist umulige
+    const dead = new Set(); // positions proven impossible
     const key = () => {
       if (g.n <= 40) return S.key();
       let x = S.a, y = S.b;
@@ -297,9 +296,9 @@
     try { return dfs(); } catch (e) { if (e instanceof Budget) return null; throw e; }
   }
 
-  // Samme sværhedsmodel som de andre spil, med hændelser som træk.
+  // Same difficulty model as the other games, with events as moves.
   function analyze(g, pieces, a0, b0, opts = {}) {
-    if (g.n > 40) throw new Error('for mange felter');
+    if (g.n > 40) throw new Error('too many tiles');
     const budget = opts.budget || 3e6;
     const S = new MixSearch(g, pieces);
     S.reset(a0, b0);
@@ -341,7 +340,7 @@
     const P = Array.from(root.subarray(2));
     const res = { solutions: root[0], states: nodes, P, bits: P.map(p => (p > 0 ? -Math.log2(p) : Infinity)) };
     if (root[0] !== 1) return res;
-    // Gå den unikke løsning igennem
+    // Walk through the unique solution
     S.reset(a0, b0);
     const events = [];
     let dirs = '', maxTrap = 0, choices = 0;
@@ -365,7 +364,7 @@
     return Object.assign(res, { dirs, events, maxTrap, choices }, playStats(g, pieces, a0, b0, dirs));
   }
 
-  // Statistik over en konkret række tryk: glid på is, besøg på kryds, felter pr. brik, træk med kun én brik
+  // Statistics for a concrete sequence of presses: slides on ice, visits to crossings, tiles per piece, moves with only one piece
   function playStats(g, pieces, a0, b0, dirs) {
     const S = new MixSearch(g, pieces);
     S.reset(a0, b0);
@@ -388,7 +387,7 @@
     return { iceMoves, permVisits, solo, lens, presses: dirs.length };
   }
 
-  // Naiv spiller: tilfældig hændelse blandt alle mulige. Tæller næsten-løsninger.
+  // Naive player: random event among all possible ones. Counts near-solutions.
   function analyzeRaw(g, pieces, a0, b0, opts = {}) {
     const budget = opts.budget || 3e6;
     const S = new MixSearch(g, pieces);
@@ -419,8 +418,8 @@
     } catch (e) { if (e instanceof Budget) return null; throw e; }
   }
 
-  // Bane som tekst: '#' felt, '.' hul, '~' is, '+' kryds, '1'-'9' nummererede poster (tages i rækkefølge),
-  // 'S'/'A' første brik, 'B' anden brik (på et felt), 'a'/'b' brik der starter på et kryds.
+  // Level as text: '#' tile, '.' hole, '~' ice, '+' crossing, '1'-'9' numbered checkpoints (taken in order),
+  // 'S'/'A' first piece, 'B' second piece (on a tile), 'a'/'b' piece that starts on a crossing.
   function parseLevel(rows) {
     const h = rows.length, w = rows[0].length;
     const types = new Uint8Array(w * h), nums = new Int8Array(w * h);

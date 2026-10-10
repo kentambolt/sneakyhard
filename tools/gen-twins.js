@@ -1,8 +1,8 @@
 'use strict';
-// Banegenerator til "I takt" (to brikker, én styring).
-//   node gen-twins.js exhaustive 4          (alle brætter x alle startpar)
-//   node gen-twins.js anneal 5 [sekunder]   (simulated annealing på alle kerner)
-// Resultat flettes ind i twins_WxH.json.
+// Level generator for "Lockstep" (two pieces, one control).
+//   node gen-twins.js exhaustive 4          (all boards x all start pairs)
+//   node gen-twins.js anneal 5 [seconds]    (simulated annealing on all cores)
+// Result is merged into twins_WxH.json.
 const { Worker, isMainThread, parentPort, workerData } = require('worker_threads');
 const { data } = require('./paths');
 const os = require('os');
@@ -11,7 +11,7 @@ const T = require('./twins');
 
 const TOPK = 300;
 
-// Samme mål som det første spil: sum af gætte-bits for lookahead 0..LMAX.
+// Same measure as the first game: sum of guessing bits for lookahead 0..LMAX.
 function score(a) {
   let s = 0;
   for (let L = 0; L <= T.LMAX; L++) s += a.bits[L];
@@ -25,7 +25,7 @@ function spansBox(W, H, mask) {
   return r0 && r1 && c0 && c1;
 }
 
-// Ø-nummer for hvert felt (kompakt indeks)
+// Island number for each tile (compact index)
 function compLabels(g) {
   const lab = new Int32Array(g.n).fill(-1);
   let c = 0;
@@ -68,7 +68,7 @@ class TopK {
   }
 }
 
-// ---------- Udtømmende ----------
+// ---------- Exhaustive ----------
 function exhaustiveWorker({ W, H, from, to }) {
   const N = W * H;
   const top = new TopK(TOPK);
@@ -113,7 +113,7 @@ function evalState(W, H, mask, a, b) {
   const an = T.analyze(g, ka, kb, { budget: 3e6 });
   if (an.solutions !== 1) return { fitness: -40 };
   const sc = score(an);
-  // Unik, men den ene brik laver for lidt: lad annealing passere, men gem den ikke
+  // Unique, but one piece does too little: let annealing pass through, but don't keep it
   if (!T.shapeOK(an, g.n)) return { fitness: sc * 0.3 };
   return { fitness: sc, item: itemFor(W, H, mask, a, b, an, sc, g.n) };
 }
@@ -198,12 +198,12 @@ if (!isMainThread) {
     pump();
   });
   Promise.all(Array.from({ length: threads }, runNext)).then(() => {
-    console.log(`${mode} ${W}x${H}: ${JSON.stringify(stats)} på ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+    console.log(`${mode} ${W}x${H}: ${JSON.stringify(stats)} in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
     const out = data(`twins_${W}x${H}.json`);
     if (fs.existsSync(out)) for (const it of JSON.parse(fs.readFileSync(out, 'utf8'))) all.add(W, H, it);
     fs.writeFileSync(out, JSON.stringify(all.items, null, 1));
     for (const it of all.items.slice(0, 4)) {
-      console.log(`score=${it.score.toFixed(1)} n=${it.n} bits=[${it.bits.map(x => x.toFixed(1)).join(' ')}] fælde=${it.maxTrap} valg=${it.choices} solo=${it.solo} træk=${it.moves.length} sving=[${it.turns}] felter=[${it.lens}]`);
+      console.log(`score=${it.score.toFixed(1)} n=${it.n} bits=[${it.bits.map(x => x.toFixed(1)).join(' ')}] trap=${it.maxTrap} choices=${it.choices} solo=${it.solo} moves=${it.moves.length} turns=[${it.turns}] tiles=[${it.lens}]`);
       console.log('   ' + it.rows.join('\n   '));
     }
   });

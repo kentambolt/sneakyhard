@@ -1,5 +1,5 @@
 'use strict';
-// Fælles stier: kandidatbaner i data/, udviklerversionen i dev/, den offentlige side i docs/.
+// Shared paths: candidate levels in data/, the developer version in dev/, the public page in docs/.
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
 

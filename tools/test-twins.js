@@ -1,6 +1,6 @@
 'use strict';
-// Krydstjek af twins.js: beskåret optælling og analyse skal give samme antal løsninger som naiv brute-force,
-// og den unikke løsning skal kunne afspilles fra start til alle felter er betrådt.
+// Cross-check of twins.js: pruned counting and analysis must give the same number of solutions as naive brute force,
+// and the unique solution must replay from the start until every tile has been stepped on.
 const T = require('./twins');
 let seed = 4242;
 const rand = () => ((seed = (seed * 1103515245 + 12345) >>> 0) / 4294967296);
@@ -60,4 +60,4 @@ for (let t = 0; t < 1500; t++) {
     }
   }
 }
-console.log(`${tested} (bane, startpar) testet, ${uniq} med unik løsning, ${fails} fejl`);
+console.log(`${tested} (level, start pair) tested, ${uniq} with a unique solution, ${fails} failures`);

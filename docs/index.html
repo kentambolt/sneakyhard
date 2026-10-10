@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="da">
+<html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Hvert felt én gang</title>
+<title>Every Tile Once</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
-  /* Tre søsterspil på samme bræt: fysiske fliser på en kølig grund, kobolt og rav som brikfarver, is som blank flade. */
+  /* Sister games on one board: physical tiles on a cool ground, cobalt and amber for the pieces, ice as a glossy surface. */
   :root {
     --ground: #dde3e1;
     --panel: #e8edeb;
@@ -132,7 +132,7 @@
     -webkit-text-fill-color: transparent;
   }
 
-  /* ---------- startside ---------- */
+  /* ---------- home ---------- */
   .hero { display: grid; gap: 12px; padding-block: 12px 6px; }
   .hero .brand { font-size: clamp(44px, 8vw, 88px); }
   .lede { margin: 0; max-width: 58ch; color: var(--muted); font-size: 17px; text-wrap: pretty; }
@@ -179,14 +179,15 @@
   }
   .card .go { color: var(--ink); font-weight: 600; }
   .mini {
-    --w: 5;
+    --w: 5; --h: 5;
     display: grid;
-    grid-template-columns: repeat(var(--w), 1fr);
+    grid-template-columns: repeat(var(--w), minmax(0, 1fr));
+    grid-template-rows: repeat(var(--h), minmax(0, 1fr));
     gap: 3px;
     width: min(100%, 150px);
-    aspect-ratio: 1;
+    aspect-ratio: var(--w) / var(--h);
   }
-  .mini span { border-radius: 22%; position: relative; display: grid; place-items: center; font: 600 10px/1 var(--mono); color: var(--muted); }
+  .mini span { min-width: 0; min-height: 0; overflow: hidden; border-radius: 22%; position: relative; display: grid; place-items: center; font: 600 10px/1 var(--mono); color: var(--muted); }
   .mini .t { background: var(--tile); box-shadow: 0 2px 0 var(--tile-edge); }
   .mini .p { background: var(--perm); box-shadow: 0 2px 0 var(--perm-edge); }
   .mini .p.sa::after, .mini .p.sb::after { content: ""; position: absolute; inset: 28%; border-radius: 50%; background: var(--ink); }
@@ -200,7 +201,7 @@
     background: var(--ink);
   }
   .mini .t.sb::after { background: var(--amber); }
-  /* ---------- spilvisning ---------- */
+  /* ---------- game view ---------- */
   .top {
     display: flex;
     flex-wrap: wrap;
@@ -335,7 +336,7 @@
   }
   .cell.num-next .num { color: var(--ink); opacity: 1; }
   .cell.used-a .num, .cell.used-b .num { transform: translateY(var(--lift)); opacity: 0.3; }
-  .cell.has-num.next-a::after { display: none; }
+  .cell.has-num.next-a::after, .cell.has-num.next-b::after { display: none; }
   .cell.next-a::after, .cell.next-b::after {
     content: "";
     position: absolute;
@@ -445,14 +446,14 @@
     transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
   }
   .btn:hover { border-color: var(--ink); }
-  /* kørt fast: Forfra er det eneste, man kan gøre */
+  /* stuck: Restart is the only way forward */
   .btn.alert { background: var(--ink); border-color: var(--ink); color: var(--ink-contrast); }
-  /* banen er løst: knappen bliver grøn og går videre */
+  /* level solved: the button turns green and moves on */
   .btn.go { background: var(--good); border-color: var(--good); color: var(--good-ink); }
   button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
   .keys { margin: 0; font-size: 12.5px; color: var(--muted); line-height: 1.5; }
 
-  /* info-ikon og regler (kun på mobil; på større skærme står reglerne under titlen) */
+  /* info icon and rules (mobile only; on larger screens the rules sit under the title) */
   .info {
     display: none;
     place-items: center;
@@ -495,7 +496,7 @@
     .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 780px) {
-    /* forside: kompakt gitter uden beskrivelser */
+    /* home: compact grid without descriptions */
     .app { padding-block: 12px; }
     .hero { padding-block: 4px 0; gap: 6px; }
     .hero .brand { font-size: clamp(36px, 11vw, 48px); }
@@ -507,7 +508,7 @@
     .card .mini { width: min(100%, 96px); gap: 2px; }
     .mini span { font-size: 8px; }
 
-    /* spil: alt på én skærm uden scroll */
+    /* game: everything on one screen, no scrolling */
     #game { height: calc(100vh - 24px); height: calc(100dvh - 24px); display: flex; flex-direction: column; gap: 10px; }
     .top { flex-wrap: nowrap; align-items: center; gap: 12px; }
     .title-block { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
@@ -535,8 +536,8 @@
 <main class="app">
   <section class="view" id="home">
     <header class="hero">
-      <h1 class="brand">Hvert felt <em>én</em> gang</h1>
-      <p class="lede">Seks simple spil med samme regel: brug hvert felt præcis én gang.</p>
+      <h1 class="brand">Every Tile <em>Once</em></h1>
+      <p class="lede">Six simple games, one rule: use every tile exactly once.</p>
     </header>
     <div class="cards" id="cards"></div>
   </section>
@@ -544,18 +545,18 @@
   <section class="view" id="game" hidden>
     <header class="top">
       <div class="title-block">
-        <button class="back" id="back" type="button">← Alle spil</button>
+        <button class="back" id="back" type="button">← All games</button>
         <h1 class="brand" id="gameName"></h1>
       </div>
       <p class="tagline" id="gameRules"></p>
-      <button class="info" id="info" type="button" aria-label="Sådan spiller du" aria-controls="infoPanel">i</button>
+      <button class="info" id="info" type="button" aria-label="How to play" aria-controls="infoPanel">i</button>
     </header>
 
-    <nav class="levels" id="levels" aria-label="Baner"></nav>
+    <nav class="levels" id="levels" aria-label="Levels"></nav>
 
     <section class="play">
       <div class="board-wrap">
-        <div class="board" id="board" tabindex="0" aria-label="Spillebræt. Brug piletasterne for at flytte."></div>
+        <div class="board" id="board" tabindex="0" aria-label="Game board. Use the arrow keys to move."></div>
       </div>
 
       <aside class="side" id="side">
@@ -565,13 +566,13 @@
         </div>
 
         <div class="progress">
-          <div class="count"><span><b id="cnt">1</b> / <span id="tot">0</span> felter · <span id="moves">0</span> træk</span><span id="fails"></span></div>
+          <div class="count"><span><b id="cnt">1</b> / <span id="tot">0</span> tiles · <span id="moves">0</span> moves</span><span id="fails"></span></div>
           <div class="bar"><i id="bar"></i></div>
         </div>
 
         <div class="actions">
           <p class="status" id="status" aria-live="polite"></p>
-          <button class="btn" id="restart" type="button">Forfra</button>
+          <button class="btn" id="restart" type="button">Restart</button>
         </div>
 
         <p class="keys" id="keys"></p>
@@ -580,26 +581,26 @@
 
     <div class="info-panel" id="infoPanel" role="dialog" aria-modal="true" aria-labelledby="infoTitle" hidden>
       <div class="info-card">
-        <h2 id="infoTitle">Sådan spiller du</h2>
+        <h2 id="infoTitle">How to play</h2>
         <p id="infoRules"></p>
         <p id="infoKeys"></p>
-        <p class="close-hint">Tryk et vilkårligt sted for at lukke.</p>
+        <p class="close-hint">Tap anywhere to close.</p>
       </div>
     </div>
   </section>
 </main>
 
 <script>
-// SOLVER-BEGIN (kopieres fra tools/mix.js af tools/build-public.js)
+// SOLVER-BEGIN (copied from tools/mix.js by tools/build-public.js)
 'use strict';
-// Generel motor for alle varianter: 1 eller 2 brikker (fælles styring), felttyper:
-//   hul, almindeligt felt (bruges én gang og forsvinder), is (permanent; man glider), kryds (permanent; man stopper).
-// Et tryk flytter alle brikker i samme retning; står de på samme linje, flytter den forreste først.
-// Glider man på is, fortsætter man til man rammer noget man ikke kan gå på (stop på isen),
-// eller et almindeligt felt/kryds (man lander/stopper på det).
-// Mål: alle almindelige felter brugt. Bevægelser på is/kryds uden nye felter er gratis; et "træk" i
-// sværhedsmodellen er derfor en "hændelse" = et tryk der bruger nye felter (1 eller 2).
-// Virker i Node og browser (window.MixSolver).
+// General engine for all variants: 1 or 2 pieces (shared control), tile types:
+//   hole, normal tile (used once and disappears), ice (permanent; you slide), crossing (permanent; you stop).
+// A press moves all pieces in the same direction; if they are on the same line, the one in front moves first.
+// When sliding on ice you keep going until you hit something you can't walk on (stop on the ice),
+// or a normal tile/crossing (you land/stop on it).
+// Goal: every normal tile used. Movement on ice/crossings without new tiles is free; a "move" in
+// the difficulty model is therefore an "event" = a press that uses new tiles (1 or 2).
+// Works in Node and the browser (window.MixSolver).
 (function (root, factory) {
   if (typeof module === 'object' && module.exports) module.exports = factory();
   else root.MixSolver = factory();
@@ -637,7 +638,7 @@
     return { w, h, N, types: Uint8Array.from(types), nid, normals, n: normals.length, nbr, ice, perm, num, K };
   }
 
-  // Hvor langt fremme en celle er i retning d (til at afgøre hvem der flytter først)
+  // How far ahead a cell is in direction d (to decide who moves first)
   function progress(g, c, d) {
     const x = c % g.w, y = (c / g.w) | 0;
     return d === 0 ? -y : d === 1 ? x : d === 2 ? y : -x;
@@ -678,10 +679,10 @@
       if (this.g.num[c]) this.numDone--;
       if (k < 32) this.lo &= ~(1 << k); else this.hi &= ~(1 << (k - 32));
     }
-    // Simulér ét tryk fra brikpositionerne (x, y). Skriver [x2, y2, landX, landY] i this.res. false hvis intet flytter sig.
+    // Simulate one press from the piece positions (x, y). Writes [x2, y2, landX, landY] to this.res. false if nothing moves.
     press(x, y, d) {
       const g = this.g, types = g.types, nbr = g.nbr, vis = this.visited, r = this.res, num = g.num;
-      let nd = this.numDone; // poster taget, inkl. en post den første brik lander på i samme tryk
+      const nd = this.numDone; // checkpoints taken before this press: both pieces move at once, so one press cannot take two checkpoints
       const pos0 = x, pos1 = y;
       let p0 = x, p1 = y, l0 = 0, l1 = 0;
       const firstIs1 = y >= 0 && progress(g, y, d) > progress(g, x, d);
@@ -704,7 +705,6 @@
             if (tn !== ICE) break;
           }
         }
-        if (types[q] === NORMAL && num[q]) nd++;
         if (k === 0) { p0 = q; l0 = types[q] === NORMAL ? 1 : 0; } else { p1 = q; l1 = types[q] === NORMAL ? 1 : 0; }
       }
       if (p0 === pos0 && p1 === pos1) return false;
@@ -712,8 +712,8 @@
       return true;
     }
     pairIndex(x, y) { return x * (this.g.N + 1) + (y + 1); }
-    // Alle hændelser (tryk der bruger nye felter) man kan nå via gratis bevægelser. Returnerer liste af [la, lb, x, y]
-    // hvor la/lb = nyt felt for brik 1/2 eller -1. Brikkerne er ens, så (x, y) normaliseres med x < y.
+    // All events (presses that use new tiles) reachable via free movement. Returns a list of [la, lb, x, y]
+    // where la/lb = new tile for piece 1/2 or -1. The pieces are identical, so (x, y) is normalized with x < y.
     events() {
       const g = this.g, N = g.N, seen = this.seen, q = this.queue, r = this.res;
       const m = ++this.stamp;
@@ -741,7 +741,7 @@
     }
     apply(e) { if (e[0] >= 0) this.visit(e[0]); if (e[1] >= 0) this.visit(e[1]); this.a = e[2]; this.b = e[3]; }
     unapply(e, a, b) { if (e[0] >= 0) this.unvisit(e[0]); if (e[1] >= 0) this.unvisit(e[1]); this.a = a; this.b = b; }
-    // Korteste række tryk fra nuværende stilling til hændelsen e. Returnerer streng af retninger.
+    // Shortest sequence of presses from the current position to event e. Returns a string of directions.
     routeTo(e) {
       const N = this.g.N, r = this.res;
       let x0 = this.a, y0 = this.b;
@@ -770,14 +770,14 @@
       }
       return null;
     }
-    // "Åbenlyst død" (sikre regler): et felt uden vej ind, for mange tvungne slutfelter,
-    // eller resterende felter fordelt på flere områder end brikkerne kan nå.
+    // "Obviously dead" (safe rules): a tile with no way in, too many forced end tiles,
+    // or remaining tiles spread over more areas than the pieces can reach.
     ok() {
       if (this.remaining === 0) return true;
       const g = this.g, types = g.types, nbr = g.nbr, vis = this.visited;
       const P = this.b >= 0 ? [this.a, this.b] : [this.a];
       const m = ++this.stamp, mark = this.mark;
-      // naboer til brikker der står på et brugt felt (kan træde direkte ind)
+      // neighbors of pieces standing on a used tile (can step straight in)
       for (const p of P) if (types[p] === NORMAL) for (let d = 0; d < 4; d++) { const c = nbr[p * 4 + d]; if (c >= 0) mark[c] = m; }
       let forced = 0, u0 = -1;
       for (const u of g.normals) {
@@ -795,10 +795,10 @@
         if (nn + re + pa === 0) return false;
         if (re === 0 && nn + pa <= 1 && ++forced > P.length) return false;
       }
-      // områder af (ubrugte felter + is + kryds); hvert område med ubrugte felter skal kunne nås af sin egen brik
+      // areas of (unused tiles + ice + crossings); each area with unused tiles must be reachable by its own piece
       const s = ++this.stamp, comp = this.comp, mark2 = this.mark2;
       const q = this.queue;
-      const touches = []; // pr. område: bitmaske over brikker der står i/ved området
+      const touches = []; // per area: bitmask of pieces standing in/next to the area
       let nComp = 0;
       for (const u of g.normals) {
         if (vis[u] || mark2[u] === s) continue;
@@ -853,9 +853,9 @@
     return { count, minRem };
   }
 
-  // Kan man stadig nå i mål fra en given stilling? Bruges af "Tjek kurs" i browseren, så siden ikke behøver
-  // at indeholde løsningen. used = brugte felter (cellenumre), pos = brikkernes positioner.
-  // Returnerer true/false, eller null hvis budgettet sprænges.
+  // Can you still reach the goal from a given position? Used by "Check course" in the browser, so the page doesn't need
+  // to contain the solution. used = used tiles (cell numbers), pos = the pieces' positions.
+  // Returns true/false, or null if the budget is exceeded.
   function solvableFrom(g, pieces, used, pos, budget = 3e6) {
     const S = new MixSearch(g, pieces);
     S.visited.fill(0);
@@ -864,7 +864,7 @@
     S.a = pos[0]; S.b = pieces === 2 ? pos[1] : -1;
     if (S.remaining === 0) return true;
     if (!S.ok()) return false;
-    const dead = new Set(); // stillinger der er bevist umulige
+    const dead = new Set(); // positions proven impossible
     const key = () => {
       if (g.n <= 40) return S.key();
       let x = S.a, y = S.b;
@@ -890,9 +890,9 @@
     try { return dfs(); } catch (e) { if (e instanceof Budget) return null; throw e; }
   }
 
-  // Samme sværhedsmodel som de andre spil, med hændelser som træk.
+  // Same difficulty model as the other games, with events as moves.
   function analyze(g, pieces, a0, b0, opts = {}) {
-    if (g.n > 40) throw new Error('for mange felter');
+    if (g.n > 40) throw new Error('too many tiles');
     const budget = opts.budget || 3e6;
     const S = new MixSearch(g, pieces);
     S.reset(a0, b0);
@@ -934,7 +934,7 @@
     const P = Array.from(root.subarray(2));
     const res = { solutions: root[0], states: nodes, P, bits: P.map(p => (p > 0 ? -Math.log2(p) : Infinity)) };
     if (root[0] !== 1) return res;
-    // Gå den unikke løsning igennem
+    // Walk through the unique solution
     S.reset(a0, b0);
     const events = [];
     let dirs = '', maxTrap = 0, choices = 0;
@@ -958,7 +958,7 @@
     return Object.assign(res, { dirs, events, maxTrap, choices }, playStats(g, pieces, a0, b0, dirs));
   }
 
-  // Statistik over en konkret række tryk: glid på is, besøg på kryds, felter pr. brik, træk med kun én brik
+  // Statistics for a concrete sequence of presses: slides on ice, visits to crossings, tiles per piece, moves with only one piece
   function playStats(g, pieces, a0, b0, dirs) {
     const S = new MixSearch(g, pieces);
     S.reset(a0, b0);
@@ -981,7 +981,7 @@
     return { iceMoves, permVisits, solo, lens, presses: dirs.length };
   }
 
-  // Naiv spiller: tilfældig hændelse blandt alle mulige. Tæller næsten-løsninger.
+  // Naive player: random event among all possible ones. Counts near-solutions.
   function analyzeRaw(g, pieces, a0, b0, opts = {}) {
     const budget = opts.budget || 3e6;
     const S = new MixSearch(g, pieces);
@@ -1012,8 +1012,8 @@
     } catch (e) { if (e instanceof Budget) return null; throw e; }
   }
 
-  // Bane som tekst: '#' felt, '.' hul, '~' is, '+' kryds, '1'-'9' nummererede poster (tages i rækkefølge),
-  // 'S'/'A' første brik, 'B' anden brik (på et felt), 'a'/'b' brik der starter på et kryds.
+  // Level as text: '#' tile, '.' hole, '~' ice, '+' crossing, '1'-'9' numbered checkpoints (taken in order),
+  // 'S'/'A' first piece, 'B' second piece (on a tile), 'a'/'b' piece that starts on a crossing.
   function parseLevel(rows) {
     const h = rows.length, w = rows[0].length;
     const types = new Uint8Array(w * h), nums = new Int8Array(w * h);
@@ -1072,7 +1072,7 @@
 // SOLVER-END
 </script>
 <script>
-// Baner genereret af gen.js/gen-twins.js/gen-ice.js og skrevet ind af build.js/build-twins.js/build-ice.js.
+// Levels are generated by tools/gen*.js and written here by tools/build*.js.
 // LEVELS-VEJ-BEGIN
 const LEVELS_VEJ = [
   {"id":"3-1","w":3,"h":3,"rows":["S##","###","#.."]},
@@ -1128,13 +1128,20 @@ const LEVELS_KRYDS = [
 // LEVELS-KRYDS-END
 // LEVELS-MESTER-BEGIN
 const LEVELS_MESTER = [
-  {"id":"m4-1","w":4,"h":4,"rows":["#..#","####","##b#",".#a~"]},
-  {"id":"m4-2","w":4,"h":4,"rows":["#~##","##.#","B###","#a.#"]},
-  {"id":"m4-3","w":4,"h":4,"rows":["###~",".#.A","+##+","#b##"]},
-  {"id":"m5-1","w":5,"h":5,"rows":["#+A##","b~##.","++##.","+.###","+###."]},
-  {"id":"m5-2","w":5,"h":5,"rows":["A#+~~","##.#.","#####","#+###","#.+B#"]},
-  {"id":"m5-3","w":5,"h":5,"rows":["+A#..","##~#.","##.~#","####.","#b.+#"]},
-  {"id":"m5-4","w":5,"h":5,"rows":["B##..","####.","##+##","#+A~.","##.#."]}
+  {"id":"m3-1","w":3,"h":3,"rows":["##a","#~~","#.#"]},
+  {"id":"m3-2","w":3,"h":3,"rows":["#43","2##","#a1"]},
+  {"id":"m4-1","w":4,"h":4,"rows":["A###","+~#+","..#B","#~##"]},
+  {"id":"m4-2","w":4,"h":4,"rows":["#b.#","+###","A#.#","#+##"]},
+  {"id":"m4-3","w":4,"h":4,"rows":["####","a###","~###","#.#."]},
+  {"id":"m4-4","w":4,"h":4,"rows":["2B+#","3+~#","1##A","###."]},
+  {"id":"m4-5","w":4,"h":4,"rows":["2B+1","####","3.##","4#+a"]},
+  {"id":"m4-6","w":4,"h":4,"rows":["3###","A###","2#1#","#54B"]},
+  {"id":"m5-1","w":5,"h":5,"rows":[".A##.","###~#","~~#B~",".###.","##~##"]},
+  {"id":"m5-2","w":5,"h":5,"rows":["..###","####.","+###+","###~#","##+a#"]},
+  {"id":"m5-3","w":5,"h":5,"rows":["B##..","####.","##+##","#+A~.","##.#."]},
+  {"id":"m5-4","w":5,"h":5,"rows":["#2#.1","#A43#","#####",".####","B###."]},
+  {"id":"m5-5","w":5,"h":5,"rows":["#++#4","##a#2","####3","1+###","#~##."]},
+  {"id":"m5-6","w":5,"h":5,"rows":[".#b##",".####","##+++","###.+","1.~2A"]}
 ];
 // LEVELS-MESTER-END
 // LEVELS-POST-BEGIN
@@ -1151,16 +1158,16 @@ const LEVELS_POST = [
 // LEVELS-POST-END
 
 (() => {
-  // Den offentlige version (docs/) bygges med PUBLIC = true: ingen "Vis løsning" og ingen løsninger i siden.
+  // The public version (docs/) is built with PUBLIC = true: no "show solution" and no solutions in the page.
   const PUBLIC = true;
   const $ = (id) => document.getElementById(id);
-  const fmt = (x) => Number(x).toLocaleString('da-DK');
+  const fmt = (x) => Number(x).toLocaleString('en-US');
   const SVGNS = 'http://www.w3.org/2000/svg';
   const DX = [0, 1, 0, -1], DY = [-1, 0, 1, 0], DIRS = 'URDL';
   const HOLE = 0, TILE = 1, ICE = 2, PERM = 3;
 
-  // ---------- fælles banehjælpere ----------
-  // '#' felt, '.' hul, '~' is, '+' kryds, '1'-'9' poster i rækkefølge, 'S'/'A' første brik, 'B' anden brik, 'a'/'b' brik der starter på et kryds
+  // ---------- shared level helpers ----------
+  // '#' tile, '.' hole, '~' ice, '+' crossing, '1'-'9' checkpoints in order, 'S'/'A' first piece, 'B' second piece, 'a'/'b' a piece starting on a crossing
   function parseGrid(lv) {
     const w = lv.w, h = lv.h, type = new Uint8Array(w * h), num = new Int8Array(w * h);
     let n = 0, ice = 0, perm = 0, a = -1, b = -1;
@@ -1182,14 +1189,14 @@ const LEVELS_POST = [
   }
   const dirBetween = (B, from, to) => { for (let d = 0; d < 4; d++) if (B.nb(from, d) === to) return d; return -1; };
 
-  // ---------- Kun én vej ----------
+  // ---------- One Path and Checkpoints ----------
   function makeVej(lv) {
     const B = parseGrid(lv), start = B.a;
     const path = [start], used = new Uint8Array(B.N);
     used[start] = 1;
-    let numDone = 0; // antal tagne poster
+    let numDone = 0; // checkpoints taken so far
     const head = () => path[path.length - 1];
-    // en post kan kun betrædes, når det er dens tur
+    // a checkpoint can only be entered when it is its turn
     const open = (c) => c >= 0 && B.type[c] === TILE && !used[c] && (!B.num[c] || B.num[c] === numDone + 1);
     const add = (c) => { path.push(c); used[c] = 1; if (B.num[c]) numDone++; };
     const pop = () => { const c = path.pop(); used[c] = 0; if (B.num[c]) numDone--; };
@@ -1209,7 +1216,7 @@ const LEVELS_POST = [
         return { ok: false };
       },
       undo() { if (path.length > 1) pop(); },
-      // træk-og-tegn med mus/finger
+      // drag to draw with the mouse or a finger
       touch(c, isDown) {
         if (c < 0 || c === head()) return false;
         const d = dirBetween(B, head(), c);
@@ -1219,7 +1226,7 @@ const LEVELS_POST = [
         return false;
       },
       solverState: () => ({ used: path.slice(), pos: [head()] }),
-      stuckMsg: (left) => left === 1 ? 'Så tæt på! Kun ét felt mangler, men der er ingen vej derhen.' : `Kørt fast med ${left} felter tilbage.`,
+      stuckMsg: (left) => left === 1 ? 'So close! One tile left, but there is no way to it.' : `Stuck with ${left} tiles left.`,
       serialize: () => path.slice(1).map((c, k) => DIRS[dirBetween(B, path[k], c)]).join(''),
       scene() {
         const own = new Uint8Array(B.N), order = new Int32Array(B.N), next = [];
@@ -1232,7 +1239,7 @@ const LEVELS_POST = [
     };
   }
 
-  // ---------- I takt ----------
+  // ---------- Lockstep ----------
   function makeTakt(lv) {
     const B = parseGrid(lv);
     let a = B.a, b = B.b, used = 2;
@@ -1268,7 +1275,7 @@ const LEVELS_POST = [
         for (let c = 0; c < B.N; c++) if (owner[c]) used.push(c);
         return { used, pos: [a, b] };
       },
-      stuckMsg: (left) => left === 1 ? 'Så tæt på! Kun ét felt mangler, men ingen brik kan nå det.' : `Kørt fast med ${left} felter tilbage.`,
+      stuckMsg: (left) => left === 1 ? 'So close! One tile left, but neither piece can reach it.' : `Stuck with ${left} tiles left.`,
       serialize: () => hist.map(h => DIRS[h.d]).join(''),
       scene() {
         const own = owner.slice(), next = [];
@@ -1288,10 +1295,10 @@ const LEVELS_POST = [
     };
   }
 
-  // ---------- Glatis, Korsvej og Mesterprøven: én fælles motor ----------
-  // 1-2 brikker med fælles styring. Felter bruges én gang; is og kryds forsvinder aldrig.
-  // På is glider man videre, til man rammer noget man ikke kan gå på (stop på isen), eller et felt/kryds (stop dér).
-  // Står brikkerne på samme linje, flytter den forreste først.
+  // ---------- Black Ice, Crossroads and The Gauntlet: one shared engine ----------
+  // 1-2 pieces sharing one control, optional checkpoints. Tiles are used once; ice and crossings never disappear.
+  // On ice you keep sliding until you hit something you cannot step on (stop on the ice) or a tile/crossing (stop there).
+  // When the pieces are in the same line, the front one moves first.
   function makeMix(lv) {
     const B = parseGrid(lv);
     const two = B.b >= 0;
@@ -1299,14 +1306,16 @@ const LEVELS_POST = [
     const starts = pos.slice();
     const own = new Uint8Array(B.N), order = new Int32Array(B.N), hist = [];
     let used = 0;
+    let numDone = 0; // checkpoints taken so far
     pos.forEach((p, k) => { if (B.type[p] === TILE) { own[p] = k + 1; used++; } });
     const prog = (c, d) => { const x = c % B.w, y = Math.floor(c / B.w); return [-y, x, y, -x][d]; };
-    // ét tryk fra positionerne p: returnerer { out, land } eller null hvis intet flytter sig
+    // one press from positions p: returns { out, land }, or null if nothing moves
     const press = (p, d) => {
       const out = p.slice(), land = p.map(() => false);
+      const nd = numDone; // checkpoints taken before this press: both pieces move at once, so one press cannot take two checkpoints
       const seq = p.length === 2 && prog(p[1], d) > prog(p[0], d) ? [1, 0] : p.map((_, k) => k);
       const free = (c, k) => c >= 0 && !out.some((q, j) => j !== k && q === c) &&
-        (B.type[c] === ICE || B.type[c] === PERM || (B.type[c] === TILE && !own[c]));
+        (B.type[c] === ICE || B.type[c] === PERM || (B.type[c] === TILE && !own[c] && (!B.num[c] || B.num[c] === nd + 1)));
       for (const k of seq) {
         let q = B.nb(out[k], d);
         if (!free(q, k)) continue;
@@ -1318,7 +1327,7 @@ const LEVELS_POST = [
       }
       return out.some((q, k) => q !== p[k]) ? { out, land } : null;
     };
-    // alle hændelser (tryk der bruger nye felter) man kan nå via gratis bevægelser på is og kryds
+    // every event (a press that uses new tiles) reachable through free moves on ice and crossings
     const events = () => {
       const key = (p) => p.slice().sort((x, y) => x - y).join();
       const seen = new Set([key(pos)]), q = [pos], out = [];
@@ -1347,7 +1356,7 @@ const LEVELS_POST = [
         const r = press(pos, d);
         if (!r) return { ok: false };
         hist.push({ d, prev: pos, land: r.land });
-        r.out.forEach((c, k) => { if (r.land[k]) { own[c] = k + 1; used++; order[c] = hist.length; } });
+        r.out.forEach((c, k) => { if (r.land[k]) { own[c] = k + 1; used++; order[c] = hist.length; if (B.num[c]) numDone++; } });
         durs = r.out.map((c, k) => 60 + 55 * dist(pos[k], c));
         const blocked = two && r.out[0] === pos[0] ? 0 : two && r.out[1] === pos[1] ? 1 : -1;
         pos = r.out;
@@ -1356,7 +1365,7 @@ const LEVELS_POST = [
       undo() {
         const h = hist.pop();
         if (!h) return;
-        pos.forEach((c, k) => { if (h.land[k]) { own[c] = 0; used--; } });
+        pos.forEach((c, k) => { if (h.land[k]) { own[c] = 0; used--; if (B.num[c]) numDone--; } });
         durs = pos.map(() => 90);
         pos = h.prev;
       },
@@ -1366,7 +1375,7 @@ const LEVELS_POST = [
         for (let c = 0; c < B.N; c++) if (own[c]) used.push(c);
         return { used, pos: pos.slice() };
       },
-      stuckMsg: (left) => left === 1 ? 'Så tæt på! Kun ét felt mangler, men det kan ikke nås.' : `Kørt fast: ingen af de ${left} resterende felter kan nås.`,
+      stuckMsg: (left) => left === 1 ? 'So close! One tile left, but it cannot be reached.' : `Stuck: none of the ${left} remaining tiles can be reached.`,
       serialize: () => hist.map(h => DIRS[h.d]).join(''),
       scene() {
         const next = [];
@@ -1379,8 +1388,10 @@ const LEVELS_POST = [
           const after = i + 1 < hist.length ? hist[i + 1].prev : pos;
           after.forEach((c, k) => { if (c !== h.prev[k]) trails[k].push(c); });
         });
+        let numNext = -1;
+        for (let c = 0; c < B.N; c++) if (B.num[c] === numDone + 1) numNext = c;
         return {
-          own, order, next,
+          own, order, next, numNext,
           trails: trails.map((t, k) => [k ? 'b' : 'a', t]),
           pieces: pos.map((c, k) => [k ? 'b' : 'a', c, durs[k]]),
           rings: starts.map((c, k) => [k ? 'b' : 'a', c]),
@@ -1389,51 +1400,51 @@ const LEVELS_POST = [
     };
   }
 
-  // ---------- spillene ----------
+  // ---------- the games ----------
   const GAMES = {
     vej: {
-      id: 'vej', name: 'Kun én vej', brand: 'Kun <em>én</em> vej', levels: LEVELS_VEJ, make: makeVej,
-      rules: 'Besøg hvert felt præcis én gang. Der findes kun én rute fra start.',
-      card: 'Én brik. Gå felt for felt, og besøg hvert felt præcis én gang. Felterne forsvinder bag dig.',
-      keys: 'Træk med fingeren eller musen hen over felterne, eller brug piletasterne. Træk tilbage, eller tryk på et felt du har besøgt, for at fortryde.',
+      id: 'vej', name: 'One Path', brand: '<em>One</em> Path', levels: LEVELS_VEJ, make: makeVej,
+      rules: 'Visit every tile exactly once. There is only one route from the start.',
+      card: 'One piece. Step tile by tile and visit every tile exactly once. Tiles disappear behind you.',
+      keys: 'Drag your finger or the mouse across the tiles, or use the arrow keys. Drag back, or tap a tile you have visited, to undo.',
     },
     takt: {
-      id: 'takt', name: 'I takt', brand: '<em>I</em> <span class="b">takt</span>', levels: LEVELS_TAKT, make: makeTakt,
-      rules: 'To brikker, én styring. Begge flytter samme vej, og en brik der ikke kan, bliver stående. Hvert felt kan kun bruges én gang.',
-      card: 'To brikker, én styring. Begge flytter samme vej, og en brik der ikke kan, bliver stående.',
-      keys: 'Swipe på brættet, tryk på et felt på linje med en brik, eller brug piletasterne. Prikkerne viser, hvor hver brik kan gå hen.',
+      id: 'takt', name: 'Lockstep', brand: '<em>Lock</em><span class="b">step</span>', levels: LEVELS_TAKT, make: makeTakt,
+      rules: 'Two pieces, one control. Both move the same way, and a piece that cannot move stays put. Every tile can only be used once.',
+      card: 'Two pieces, one control. Both move the same way, and a piece that cannot move stays put.',
+      keys: 'Swipe on the board, tap a tile in line with a piece, or use the arrow keys. The dots show where each piece can go.',
     },
     is: {
-      id: 'is', name: 'Glatis', brand: 'Glat<span class="ice">is</span>', levels: LEVELS_IS, make: makeMix,
-      rules: 'Brug hvert felt præcis én gang. Is forsvinder aldrig, men på is glider du, til du rammer et felt (og lander på det) eller noget, du ikke kan gå på.',
-      card: 'Én brik og et nyt felt: is. Den forsvinder aldrig, men du glider, til du rammer noget.',
-      keys: 'Swipe på brættet, tryk på et felt på linje med brikken, eller brug piletasterne. Prikkerne viser, hvor hvert tryk fører dig hen.',
+      id: 'is', name: 'Black Ice', brand: 'Black <span class="ice">Ice</span>', levels: LEVELS_IS, make: makeMix,
+      rules: 'Use every tile exactly once. Ice never disappears, but on ice you slide until you hit a tile (and land on it) or something you cannot step on.',
+      card: 'One piece and a new surface: ice. It never disappears, but you slide until you hit something.',
+      keys: 'Swipe on the board, tap a tile in line with the piece, or use the arrow keys. The dots show where each press takes you.',
     },
     kryds: {
-      id: 'kryds', name: 'Korsvej', brand: 'Kors<span class="perm">vej</span>', levels: LEVELS_KRYDS, make: makeMix,
-      rules: 'Brug hvert felt præcis én gang. Kryds (de mørke sten) forsvinder aldrig, så dem kan du gå over lige så tit, du vil.',
-      card: 'Én brik og et nyt felt: kryds. Det forsvinder aldrig, så du kan krydse din egen vej.',
-      keys: 'Swipe på brættet, tryk på et felt på linje med brikken, eller brug piletasterne. Prikkerne viser, hvor hvert tryk fører dig hen.',
+      id: 'kryds', name: 'Crossroads', brand: 'Cross<span class="perm">roads</span>', levels: LEVELS_KRYDS, make: makeMix,
+      rules: 'Use every tile exactly once. Crossings (the dark stones) never disappear, so you can cross them as often as you like.',
+      card: 'One piece and a new tile: the crossing. It never disappears, so you can cross your own path.',
+      keys: 'Swipe on the board, tap a tile in line with the piece, or use the arrow keys. The dots show where each press takes you.',
     },
     post: {
-      id: 'post', name: 'Postløb', brand: 'Post<em>løb</em>', levels: LEVELS_POST, make: makeVej,
-      rules: 'Besøg hvert felt præcis én gang, og tag posterne i rækkefølge: du kan ikke gå ind på post 2, før du har stået på post 1. Posterne forsvinder bag dig ligesom de andre felter.',
-      card: 'Én brik og nummererede poster, der skal tages i rækkefølge.',
-      keys: 'Træk med fingeren eller musen hen over felterne, eller brug piletasterne. Den næste post, du må tage, står med blåt.',
+      id: 'post', name: 'Checkpoints', brand: 'Check<em>points</em>', levels: LEVELS_POST, make: makeVej,
+      rules: 'Visit every tile exactly once, and take the checkpoints in order: you cannot step on checkpoint 2 before you have stood on checkpoint 1. Checkpoints disappear behind you like any other tile.',
+      card: 'One piece and numbered checkpoints that must be taken in order.',
+      keys: 'Drag your finger or the mouse across the tiles, or use the arrow keys. The next checkpoint you may take is shown in blue.',
     },
     mester: {
-      id: 'mester', name: 'Mesterprøven', brand: 'Mester<em>prøven</em>', levels: LEVELS_MESTER, make: makeMix,
-      rules: 'Alt på én gang: to brikker med fælles styring, is du glider på, og kryds der aldrig forsvinder. Brug hvert felt præcis én gang.',
-      card: 'Alt på én gang: to brikker med fælles styring, is og kryds.',
-      keys: 'Swipe på brættet, tryk på et felt på linje med en brik, eller brug piletasterne. Står brikkerne på samme linje, flytter den forreste først.',
+      id: 'mester', name: 'The Gauntlet', brand: 'The <em>Gauntlet</em>', levels: LEVELS_MESTER, make: makeMix,
+      rules: 'Everything combined, a few things at a time: two pieces sharing one control, ice you slide on, crossings that never disappear, and checkpoints taken in order. Use every tile exactly once.',
+      card: 'Everything combined: two pieces, ice, crossings and checkpoints, mixed in new ways.',
+      keys: 'Swipe on the board, tap a tile in line with a piece, or use the arrow keys. When the pieces are in the same line, the front one moves first.',
     },
   };
   const ORDER = ['vej', 'takt', 'is', 'kryds', 'post', 'mester'];
 
-  // ---------- tilstand ----------
+  // ---------- state ----------
   let game = null;     // GAMES[...]
-  let li = 0;          // banenummer
-  let G = null;        // aktiv bane (variant-objekt)
+  let li = 0;          // level index
+  let G = null;        // active level (variant object)
   let fails = 0, wasStuck = false, hintMsg = null;
   let revealed = false, animTimer = null, armTimer = null;
   let cells = [], ink = null;
@@ -1442,7 +1453,7 @@ const LEVELS_POST = [
   function getSolved(g) { try { return new Set(JSON.parse(localStorage.getItem(solvedKey(g)) || '[]')); } catch (e) { return new Set(); } }
   function addSolved(g, id) { const s = getSolved(g); s.add(id); try { localStorage.setItem(solvedKey(g), JSON.stringify([...s])); } catch (e) {} }
 
-  // ---------- startside ----------
+  // ---------- home ----------
   function renderHome() {
     const wrap = $('cards');
     wrap.textContent = '';
@@ -1451,13 +1462,14 @@ const LEVELS_POST = [
       const card = document.createElement('button');
       card.type = 'button';
       card.className = 'card';
-      card.setAttribute('aria-label', `Spil ${g.name}`);
+      card.setAttribute('aria-label', `Play ${g.name}`);
       const hardest = g.levels[g.levels.length - 1];
       const mini = document.createElement('div');
       mini.className = 'mini';
       mini.setAttribute('aria-hidden', 'true');
       if (hardest) {
         mini.style.setProperty('--w', hardest.w);
+        mini.style.setProperty('--h', hardest.h);
         hardest.rows.join('').split('').forEach(ch => {
           const s = document.createElement('span');
           const base = ch === '+' || ch === 'a' || ch === 'b' ? 'p' : 't';
@@ -1473,9 +1485,8 @@ const LEVELS_POST = [
       p.textContent = g.card;
       const meta = document.createElement('div');
       meta.className = 'meta';
-      const sizes = [...new Set(g.levels.map(l => l.w))];
       const solved = g.levels.filter(l => getSolved(g).has(l.id)).length;
-      meta.innerHTML = `<span>${sizes.length ? `${sizes[0]}×${sizes[0]}–${sizes[sizes.length - 1]}×${sizes[sizes.length - 1]}` : ''} · ${solved} af ${g.levels.length} løst</span><span class="go">Spil →</span>`;
+      meta.innerHTML = `<span>${solved} of ${g.levels.length} solved</span><span class="go">Play →</span>`;
       card.append(mini, h, p, meta);
       card.addEventListener('click', () => openGame(id));
       wrap.appendChild(card);
@@ -1485,20 +1496,32 @@ const LEVELS_POST = [
   function showView(v) {
     $('home').hidden = v !== 'home';
     $('game').hidden = v === 'home';
-    try { history.replaceState(null, '', v === 'home' ? location.pathname + location.search : '#' + v); } catch (e) {}
   }
-  function goHome() {
+  // Browser history: going from home to a game adds an entry, so the phone's back button first closes the info
+  // panel, then returns to the home page, and only then leaves the site. Our entries are tagged { mine: true }.
+  const pushState = (state, url) => { try { history.pushState(state, '', url === undefined ? location.href : url); } catch (e) {} };
+  const replaceState = (state, url) => { try { history.replaceState(state, '', url); } catch (e) {} };
+  const homeUrl = () => location.pathname + location.search;
+  function goHome(fromHistory) {
+    // back to an entry we pushed ourselves: let the browser go back, and popstate does the rest
+    if (!fromHistory && history.state && history.state.mine && history.state.view !== 'home') { history.back(); return; }
     stopAnim();
     game = null;
+    $('infoPanel').hidden = true;
     renderHome();
     showView('home');
+    if (!fromHistory) replaceState({ view: 'home', mine: true }, homeUrl());
     window.scrollTo(0, 0);
   }
-  function openGame(id, li0, moves) {
+  function openGame(id, li0, moves, fromHistory) {
+    if (!fromHistory) {
+      if (!game) pushState({ view: id, mine: true }, '#' + id); // from home: a new entry
+      else replaceState({ view: id, mine: true }, '#' + id);    // game to next game: same entry
+    }
     game = GAMES[id];
     $('gameName').innerHTML = game.brand;
     $('gameRules').textContent = game.rules;
-    $('keys').textContent = game.keys + ' Tastatur: Z fortryder, R starter forfra.';
+    $('keys').textContent = game.keys + ' Keyboard: Z undoes, R restarts.';
     $('infoRules').textContent = game.rules;
     $('infoKeys').textContent = game.keys;
     $('infoPanel').hidden = true;
@@ -1509,8 +1532,17 @@ const LEVELS_POST = [
     loadLevel(Number.isInteger(li0) && game.levels[li0] ? li0 : first, moves);
     window.scrollTo(0, 0);
   }
+  function openInfo() {
+    $('infoPanel').hidden = false;
+    pushState({ view: game.id, info: true, mine: true });
+  }
+  function closeInfo() {
+    if ($('infoPanel').hidden) return;
+    if (history.state && history.state.info) history.back(); // popstate hides the panel
+    else $('infoPanel').hidden = true;
+  }
 
-  // ---------- bane ----------
+  // ---------- level ----------
   function renderLevelNav() {
     const nav = $('levels');
     nav.textContent = '';
@@ -1533,7 +1565,7 @@ const LEVELS_POST = [
         const done = solved.has(game.levels[i].id);
         btn.className = 'chip' + (done ? ' solved' : '');
         btn.textContent = String(k + 1);
-        btn.setAttribute('aria-label', `${key}, bane ${k + 1}${done ? ' (løst)' : ''}`);
+        btn.setAttribute('aria-label', `${key}, level ${k + 1}${done ? ' (solved)' : ''}`);
         if (i === li) btn.setAttribute('aria-current', 'true');
         btn.addEventListener('click', () => loadLevel(i));
         g.appendChild(btn);
@@ -1570,7 +1602,7 @@ const LEVELS_POST = [
       board.appendChild(d);
       cells.push(d);
     }
-    // SVG-lag: stier, startringe og brikker (antal givet af varianten)
+    // SVG layer: trails, start rings and pieces (counts come from the variant)
     const sc = G.scene();
     const svg = (tag, attrs) => { const el = document.createElementNS(SVGNS, tag); for (const k in attrs) el.setAttribute(k, attrs[k]); return el; };
     const root = svg('svg', { class: 'ink', viewBox: `0 0 ${lv.w} ${lv.h}`, 'aria-hidden': 'true' });
@@ -1583,20 +1615,20 @@ const LEVELS_POST = [
     board.appendChild(root);
 
     const same = game.levels.filter(o => o.w === lv.w && o.h === lv.h);
-    $('lvlEyebrow').textContent = `Bane ${i + 1} af ${game.levels.length} · ${G.B.n} felter` + (G.B.ice ? ` + ${G.B.ice} is` : '') + (G.B.perm ? ` + ${G.B.perm} kryds` : '');
+    $('lvlEyebrow').textContent = `Level ${i + 1} of ${game.levels.length} · ${G.B.n} tiles` + (G.B.ice ? ` + ${G.B.ice} ice` : '') + (G.B.perm ? ` + ${G.B.perm} ${G.B.perm === 1 ? 'crossing' : 'crossings'}` : '');
     $('lvlTitle').textContent = `${lv.w} × ${lv.h}` + (same.length > 1 ? ` · ${same.indexOf(lv) + 1}` : '');
     $('tot').textContent = G.B.n;
     renderLevelNav();
     update();
   }
 
-  // Midten af fliseoverfladen. Brugte felter og is er trykket ned (--lift = 0,065 felt); nye felter og kryds står oppe.
+  // Centre of the tile surface. Used tiles and ice are pressed down (--lift = 0.065 tile); fresh tiles and crossings stand up.
   function center(c, own) {
     const w = game.levels[li].w, t = G.B.type[c];
     const dy = t === ICE ? 0.565 : t === TILE && own && own[c] ? 0.55 : 0.485;
     return [c % w + 0.5, Math.floor(c / w) + dy];
   }
-  // Brikkerne flyttes med SVG-attributten transform (ens i alle browsere) og glider med requestAnimationFrame.
+  // Pieces are moved with the SVG transform attribute (consistent across browsers) and glide with requestAnimationFrame.
   function placePiece(el, x, y, dur) {
     cancelAnimationFrame(el._raf);
     const from = el._at;
@@ -1616,7 +1648,7 @@ const LEVELS_POST = [
     openGame(ORDER[(ORDER.indexOf(game.id) + 1) % ORDER.length]);
   }
 
-  // ---------- handlinger ----------
+  // ---------- actions ----------
   function step(d) {
     if (animTimer || G.won()) return;
     const r = G.dir(d);
@@ -1640,7 +1672,7 @@ const LEVELS_POST = [
     void board.offsetWidth;
     board.classList.add('bump');
   }
-  // Tjek kurs: motoren (MixSolver) regner ud, om banen stadig kan løses herfra. Ingen gemt løsning nødvendig.
+  // Check route (key H): the engine (MixSolver) works out whether the level can still be solved from here. No stored solution needed.
   let solverCache = null;
   function solvableAfter(moves, k) {
     const lv = game.levels[li];
@@ -1656,21 +1688,21 @@ const LEVELS_POST = [
   function hint() {
     if (G.won() || revealed || animTimer) return;
     const moves = G.serialize();
-    if (!moves.length) { hintMsg = ['good', 'Du står ved start. Alle veje er stadig åbne.']; update(); return; }
-    hintMsg = ['', 'Tjekker kursen …'];
+    if (!moves.length) { hintMsg = ['good', 'You are at the start. Every route is still open.']; update(); return; }
+    hintMsg = ['', 'Checking your route …'];
     update();
     setTimeout(() => {
       const now = solvableAfter(moves, moves.length);
       let msg;
-      if (now === null) msg = ['', 'Banen er for stor til at tjekke herfra. Prøv igen lidt senere i banen.'];
-      else if (now) msg = ['good', 'Du er stadig på den eneste rute.'];
+      if (now === null) msg = ['', 'This level is too big to check from here. Try again a little later in the level.'];
+      else if (now) msg = ['good', 'You are still on the only route.'];
       else {
-        // seneste stilling, hvorfra banen stadig kan løses (fra start kan den altid)
+        // the latest position from which the level can still be solved (always true at the start)
         let lo = 0, hi = moves.length;
         while (hi - lo > 1) { const mid = (lo + hi) >> 1; if (solvableAfter(moves, mid) === false) hi = mid; else lo = mid; }
-        msg = ['bad', `Det gik galt i træk ${lo + 1}. Fortryd ${moves.length - lo} træk.`];
+        msg = ['bad', `It went wrong at move ${lo + 1}. Undo ${moves.length - lo} ${moves.length - lo === 1 ? 'move' : 'moves'}.`];
       }
-      // svaret gælder kun, hvis spilleren ikke har flyttet imens
+      // the answer only applies if the player has not moved in the meantime
       hintMsg = G.serialize() === moves ? msg : null;
       update();
     }, 30);
@@ -1678,7 +1710,7 @@ const LEVELS_POST = [
   let armed = 0;
   function revealKey() {
     if (PUBLIC || revealed || animTimer || G.won()) return;
-    if (Date.now() - armed > 3000) { armed = Date.now(); hintMsg = ['', 'Tryk L igen for at vise løsningen.']; update(); return; }
+    if (Date.now() - armed > 3000) { armed = Date.now(); hintMsg = ['', 'Press L again to show the solution.']; update(); return; }
     armed = 0;
     hintMsg = null;
     revealed = true;
@@ -1696,7 +1728,7 @@ const LEVELS_POST = [
     update();
   }
 
-  // ---------- visning ----------
+  // ---------- rendering ----------
   function update(blocked) {
     const board = $('board');
     const won = G.won();
@@ -1733,20 +1765,20 @@ const LEVELS_POST = [
     $('cnt').textContent = used;
     $('moves').textContent = G.moves();
     $('bar').style.width = `${(used / n) * 100}%`;
-    $('fails').textContent = fails ? `kørt fast ${fails}×` : '';
+    $('fails').textContent = fails ? `stuck ${fails}×` : '';
     const rb = $('restart');
     rb.classList.toggle('go', won);
     rb.classList.toggle('alert', stuck);
-    rb.textContent = won ? (li < game.levels.length - 1 ? 'Næste bane →' : 'Næste spil →') : 'Forfra';
+    rb.textContent = won ? (li < game.levels.length - 1 ? 'Next level →' : 'Next game →') : 'Restart';
 
     let cls = '', msg = '';
-    if (revealed) msg = animTimer ? 'Viser løsningen …' : 'Her er den eneste løsning. Tryk Forfra for at prøve selv.';
+    if (revealed) msg = animTimer ? 'Showing the solution …' : 'Here is the only solution. Press Restart to try it yourself.';
     else if (won) {
       cls = 'good';
-      msg = fails === 0 ? 'Løst i første forsøg!' : `Løst! Kørt fast ${fails}× undervejs.`;
+      msg = fails === 0 ? 'Solved on the first try!' : `Solved! Stuck ${fails}× along the way.`;
     } else if (stuck) { cls = 'bad'; msg = G.stuckMsg(left); }
     else if (hintMsg) [cls, msg] = hintMsg;
-    else msg = `${left} ${left === 1 ? 'felt' : 'felter'} tilbage.`;
+    else msg = `${left} ${left === 1 ? 'tile' : 'tiles'} left.`;
     const st = $('status');
     st.className = 'status' + (cls ? ' ' + cls : '');
     st.textContent = msg;
@@ -1781,7 +1813,7 @@ const LEVELS_POST = [
     const dx = e.clientX - down.x, dy = e.clientY - down.y;
     down = null;
     if (Math.max(Math.abs(dx), Math.abs(dy)) > 24) return step(Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? 1 : 3) : (dy > 0 ? 2 : 0));
-    // tryk på et felt på linje med en brik = den retning
+    // tapping a tile in line with a piece = that direction
     const c = cellAt(e, false), w = game.levels[li].w;
     if (c < 0) return;
     for (const p of G.pieces()) {
@@ -1796,7 +1828,7 @@ const LEVELS_POST = [
   const KEYDIR = { arrowup: 0, w: 0, arrowright: 1, d: 1, arrowdown: 2, s: 2, arrowleft: 3, a: 3 };
   document.addEventListener('keydown', (e) => {
     if (!G || $('game').hidden || e.altKey || e.metaKey) return;
-    if (!$('infoPanel').hidden) { if (e.key === 'Escape') $('infoPanel').hidden = true; return; }
+    if (!$('infoPanel').hidden) { if (e.key === 'Escape') closeInfo(); return; }
     const k = e.key.toLowerCase();
     if (e.ctrlKey && k !== 'z') return;
     if (k in KEYDIR) { e.preventDefault(); step(KEYDIR[k]); return; }
@@ -1808,9 +1840,9 @@ const LEVELS_POST = [
     else if (k === 'escape') goHome();
   });
   $('restart').addEventListener('click', () => { if (G && G.won()) nextLevel(); else restart(); });
-  $('info').addEventListener('click', () => { $('infoPanel').hidden = false; });
-  $('infoPanel').addEventListener('click', () => { $('infoPanel').hidden = true; });
-  $('back').addEventListener('click', goHome);
+  $('info').addEventListener('click', openInfo);
+  $('infoPanel').addEventListener('click', closeInfo);
+  $('back').addEventListener('click', () => goHome());
 
   // ---------- start ----------
   const hot = window.claude && window.claude.hot;
@@ -1820,17 +1852,23 @@ const LEVELS_POST = [
   const boot = (data) => {
     const d = data || {};
     let view = d.view;
-    if (!view) { const h = (location.hash || '').slice(1); if (GAMES[h]) view = h; }
-    if (view && GAMES[view]) openGame(view, d.li, d.moves);
-    else goHome();
+    if (!view) { const hv = (location.hash || '').slice(1); if (GAMES[hv]) view = hv; }
+    // the home page always sits at the bottom of our history, also when arriving via a link to a game
+    replaceState({ view: 'home', mine: true }, homeUrl());
+    if (view && GAMES[view]) {
+      pushState({ view, mine: true }, '#' + view);
+      openGame(view, d.li, d.moves, true);
+    } else goHome(true);
   };
   if (hot && typeof hot.ready === 'function') hot.ready(boot);
   else boot(hot && hot.data ? hot.data : {});
-  // frem/tilbage i browseren eller et link med #spil
-  window.addEventListener('hashchange', () => {
-    const h = (location.hash || '').slice(1);
-    if (GAMES[h] && (!game || game.id !== h)) openGame(h);
-    else if (!h && game) goHome();
+  // back/forward in the browser (and the phone's back button)
+  window.addEventListener('popstate', (e) => {
+    const st = e.state || {};
+    if (!st.info) $('infoPanel').hidden = true;
+    const hv = (location.hash || '').slice(1);
+    if (GAMES[hv]) { if (!game || game.id !== hv) openGame(hv, undefined, undefined, true); }
+    else if (game) goHome(true);
   });
 })();
 </script>

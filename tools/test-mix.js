@@ -1,10 +1,10 @@
 'use strict';
-// Krydstjek af den generelle motor (mix.js):
-//  1) mod solver.js på almindelige baner (1 brik)
-//  2) mod twins.js på baner med 2 brikker
-//  3) mod ice.js på baner med is (1 brik)
-//  4) mod en uafhængig, naiv implementering på baner med kryds, is og 1-2 brikker
-// Hver unik løsning afspilles desuden tryk for tryk.
+// Cross-check of the general engine (mix.js):
+//  1) against solver.js on normal levels (1 piece)
+//  2) against twins.js on levels with 2 pieces
+//  3) against ice.js on levels with ice (1 piece)
+//  4) against an independent, naive implementation on levels with crossings, ice and 1-2 pieces
+// Each unique solution is also replayed press by press.
 const M = require('./mix');
 const P = require('./solver');
 const T = require('./twins');
@@ -13,7 +13,7 @@ let seed = 2026;
 const rand = () => ((seed = (seed * 1103515245 + 12345) >>> 0) / 4294967296);
 const DX = [0, 1, 0, -1], DY = [-1, 0, 1, 0];
 
-// ---- uafhængig naiv implementering ----
+// ---- independent naive implementation ----
 function naivePress(w, h, types, used, pos, d, nums) {
   let done = 0;
   if (nums) for (const c of used) if (nums[c]) done++;
@@ -33,11 +33,10 @@ function naivePress(w, h, types, used, pos, d, nums) {
     while (types[q] === 2) { const nx = step(q); if (!free(nx, k)) break; q = nx; }
     out[k] = q;
     land[k] = types[q] === 1;
-    if (land[k] && nums && nums[q]) done++;
   }
   return { out, land, moved: out.some((p, k) => p !== pos[k]) };
 }
-// Optælling op til CAP løsninger; null hvis den naive søgning bliver for stor (tilfældet springes over)
+// Count up to CAP solutions; null if the naive search gets too large (the case is skipped)
 const CAP = 500;
 function naiveCount(w, h, types, starts, nums) {
   let total = 0;
@@ -91,20 +90,20 @@ function check(label, want, w, h, types, pieces, a, b, nums) {
   if (want === null || want < 0) return false;
   const g = M.buildBoard(w, h, types, nums);
   const c = M.countSolutions(g, pieces, a, b, CAP, 1e7).count;
-  if (c !== want) { fails.push(`${label}: forventet ${want}, fik ${c} ${M.levelToRows(w, h, types, a, b).join('/')}`); return true; }
+  if (c !== want) { fails.push(`${label}: expected ${want}, got ${c} ${M.levelToRows(w, h, types, a, b).join('/')}`); return true; }
   if (want >= CAP) return true;
   const an = M.analyze(g, pieces, a, b);
-  if (an.solutions >= 0 && an.solutions !== want) fails.push(`${label}: analyse fandt ${an.solutions}, forventet ${want}`);
+  if (an.solutions >= 0 && an.solutions !== want) fails.push(`${label}: analysis found ${an.solutions}, expected ${want}`);
   if (want === 1) {
     uniq++;
-    if (!naiveReplay(w, h, types, pieces === 2 ? [a, b] : [a], an.dirs, nums)) fails.push(`${label}: afspilning fejlede ${an.dirs}`);
+    if (!naiveReplay(w, h, types, pieces === 2 ? [a, b] : [a], an.dirs, nums)) fails.push(`${label}: replay failed ${an.dirs}`);
   }
   return true;
 }
 
 for (let t = 0; t < 700; t++) {
   const W = 3 + (t % 2), N = W * W;
-  // 1) almindelig bane, 1 brik
+  // 1) normal level, 1 piece
   {
     const mask = new Uint8Array(N);
     for (let i = 0; i < N; i++) mask[i] = rand() < 0.8 ? 1 : 0;
@@ -113,7 +112,7 @@ for (let t = 0; t < 700; t++) {
       if (check('vej', P.countSolutions(g, s, CAP, 1e7), W, W, mask, 1, g.cells[s], -1)) n1++;
     }
   }
-  // 2) to brikker
+  // 2) two pieces
   {
     const mask = new Uint8Array(N);
     for (let i = 0; i < N; i++) mask[i] = rand() < 0.8 ? 1 : 0;
@@ -123,7 +122,7 @@ for (let t = 0; t < 700; t++) {
       if (check('takt', T.countSolutions(g, a, b, CAP, 1e7).count, W, W, mask, 2, g.cells[a], g.cells[b])) n2++;
     }
   }
-  // 3) is, 1 brik
+  // 3) ice, 1 piece
   {
     const types = new Uint8Array(N);
     for (let i = 0; i < N; i++) { const r = rand(); types[i] = r < 0.15 ? 0 : r < 0.42 ? 2 : 1; }
@@ -132,7 +131,7 @@ for (let t = 0; t < 700; t++) {
       if (check('is', I.countSolutions(g, s, CAP, 1e7).count, W, W, types, 1, s, -1)) n3++;
     }
   }
-  // 4) alt blandet: kryds, is, 1-2 brikker, mod naiv implementering
+  // 4) everything mixed: crossings, ice, 1-2 pieces, against the naive implementation
   {
     const types = new Uint8Array(N);
     for (let i = 0; i < N; i++) { const r = rand(); types[i] = r < 0.12 ? 0 : r < 0.27 ? 2 : r < 0.42 ? 3 : 1; }
@@ -144,12 +143,12 @@ for (let t = 0; t < 700; t++) {
       const pieces = rand() < 0.5 ? 1 : 2;
       if (pieces === 2 && a === b) continue;
       if (pieces === 1) b = -1;
-      if (check('blandet', naiveCount(W, W, types, pieces === 2 ? [a, b] : [a]), W, W, types, pieces, a, b)) n4++;
+      if (check('mixed', naiveCount(W, W, types, pieces === 2 ? [a, b] : [a]), W, W, types, pieces, a, b)) n4++;
     }
   }
 }
 
-// 5) nummererede poster: rene Postløb-baner og blandet med is, kryds og 2 brikker
+// 5) numbered checkpoints: pure Checkpoints levels and mixed with ice, crossings and 2 pieces
 for (let t = 0; t < 900; t++) {
   const W = 3 + (t % 2), N = W * W;
   const mixed = t % 3 === 0;
@@ -165,7 +164,7 @@ for (let t = 0; t < 900; t++) {
   const K = 1 + ((rand() * 3) | 0);
   const free = normals.filter(c => c !== a && c !== b);
   for (let k = 1; k <= K && free.length; k++) nums[free.splice((rand() * free.length) | 0, 1)[0]] = k;
-  if (check('poster', naiveCount(W, W, types, pieces === 2 ? [a, b] : [a], nums), W, W, types, pieces, a, b, nums)) n5++;
+  if (check('post', naiveCount(W, W, types, pieces === 2 ? [a, b] : [a], nums), W, W, types, pieces, a, b, nums)) n5++;
 }
 for (const f of fails.slice(0, 8)) console.log(f);
-console.log(`vej ${n1}, takt ${n2}, is ${n3}, blandet ${n4}, poster ${n5} tilfælde; ${uniq} unikke løsninger afspillet; ${fails.length} fejl`);
+console.log(`vej ${n1}, takt ${n2}, is ${n3}, mixed ${n4}, post ${n5} cases; ${uniq} unique solutions replayed; ${fails.length} failures`);
