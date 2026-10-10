@@ -851,7 +851,7 @@
     return { count, minRem };
   }
 
-  // Can you still reach the goal from a given position? Used by "Check course" in the browser, so the page doesn't need
+  // Can you still reach the goal from a given position? Used by "Check route" in the browser, so the page doesn't need
   // to contain the solution. used = used tiles (cell numbers), pos = the pieces' positions.
   // Returns true/false, or null if the budget is exceeded.
   function solvableFrom(g, pieces, used, pos, budget = 3e6) {

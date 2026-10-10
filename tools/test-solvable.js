@@ -1,5 +1,5 @@
 'use strict';
-// Cross-check of solvableFrom (used by "Check course"): from random positions mid-game the answer must
+// Cross-check of solvableFrom (used by "Check route"): from random positions mid-game the answer must
 // match an independent, naive search for a way to the goal. Covers all tile types, checkpoints and 1-2 pieces.
 const M = require('./mix');
 let seed = 99;
